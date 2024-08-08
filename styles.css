@@ -1,0 +1,266 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #004080;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+nav .card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav .card {
+    background: #ffffff;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 0 10px;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav .card h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #004080;
+}
+
+nav .card p {
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+nav .card:hover {
+    background: #f0f0f0;
+    transform: translateY(-5px);
+}
+
+button.home-button {
+    background: #004080;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin: 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button.home-button:hover {
+    background: #002a60;
+}
+
+section.qa,
+section.experience,
+section.projects,
+section.social {
+    background: #ffffff;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    margin-top: 0;
+    font-size: 1.75em;
+    color: #004080;
+    display: flex;
+    align-items: center;
+}
+
+.company-logo {
+    width: 80px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.question {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #004080;
+    border-radius: 5px;
+    background: #ffffff;
+    margin-bottom: 10px;
+    transition: background 0.3s ease;
+}
+
+.question:hover {
+    background: #f0f0f0;
+}
+
+.answer {
+    display: none;
+    padding: 10px;
+    border-left: 3px solid #004080;
+    margin-bottom: 20px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+.answer.active {
+    display: block;
+}
+
+.profile {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.profile h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #004080;
+}
+
+.profile p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.profile-photo {
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.skills {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.skills h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #004080;
+    text-align: center;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.skills ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.skills ul li:last-child {
+    border-bottom: none;
+}
+
+.education {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.education h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #004080;
+    text-align: center;
+}
+
+.education h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.education ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.education ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.education ul li:last-child {
+    border-bottom: none;
+}
+
+.social {
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 10px;
+}
+
+.social-links li {
+    margin: 10px 0;
+}
+
+.social-links li a {
+    color: #004080;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 1.2em;
+}
+
+.social-links li a:hover {
+    color: #002a60;
+}
+
+.social-links li a i {
+    margin-right: 8px;
+}

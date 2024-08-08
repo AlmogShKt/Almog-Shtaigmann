@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Lab Page</title>
+    <link rel="stylesheet" href="hubrow_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap&subset=hebrew"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>C Lab Questions and Answers</h1>
+    </header>
+    <button class="home-button" onclick="location.href='index.html'">Home</button>
+    <section class="qa">
+        <div class="question">
+            <h2>שאלות תשובות שחייבים! לקרוא לפני תחילת הקורס</h2>
+        </div>
+        <div class="answer">
+            <p><strong>A:</strong> A pointer is a variable that stores the memory address of another variable.</p>
+        </div>
+    </section>
+    <section class="qa">
+        <div class="question">
+            <h2>איך לעבוד עם מקבוק בקורס - חובה לכל בעל מק!</h2>
+        </div>
+        <div class="answer">
+            <p><strong>A:</strong> You declare a pointer by specifying the type it points to, followed by an asterisk
+                (*) and the pointer name, e.g., <code>int *ptr;</code>.</p>
+        </div>
+    </section>
+    <section class="qa">
+        <div class="question">
+            <h2>דוגמה למטלות עבר - ציון 100</h2>
+        </div>
+        <div class="answer">
+            <p><strong>A:</strong> You declare a pointer by specifying the type it points to, followed by an asterisk
+                (*) and the pointer name, e.g., <code>int *ptr;</code>.</p>
+        </div>
+    </section>
+    <section class="qa">
+        <div class="question">
+            <h2>דוגמה לפרוייקט עבר - ציון 100</h2>
+            <p><strong></strong> הפרוייקט הזה עזר להמון סטודנטים (מעל 20,000) צפיות! </p>
+        </div>
+        <div class="answer">
+            <p><button class="home-button"
+                    onclick="location.href='https://github.com/AlmogShKt/Labratory-C-Final-Project'">View on
+                    GitHub</button></p>
+        </div>
+    </section>
+    <script>
+        document.querySelectorAll('.question').forEach(question => {
+            question.addEventListener('click', () => {
+                question.nextElementSibling.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
