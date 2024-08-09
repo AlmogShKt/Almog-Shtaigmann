@@ -125,6 +125,68 @@ section h2:hover {
     display: block;
 }
 
+/* Guide Section */
+.guide {
+    margin: 20px auto;
+    padding: 40px;
+    /* Increased padding */
+    max-width: 800px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: right;
+    direction: rtl;
+}
+
+.guide h2 {
+    font-size: 1.75em;
+    margin-bottom: 20px;
+    /* Added more margin */
+    color: #004080;
+}
+
+.guide h3 {
+    font-size: 1.5em;
+    padding: 50px;
+    margin-bottom: 15px;
+    /* Added more margin */
+    color: #004080;
+}
+
+.guide p {
+    font-size: 1.2em;
+    padding: 10px;
+    color: #333;
+    margin-bottom: 15px;
+    /* Added more margin */
+    line-height: 1.6;
+    /* Improved readability */
+}
+
+.guide ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.guide ul li {
+    background: #f4f4f4;
+    padding: 15px;
+    /* Increased padding */
+    margin-bottom: 15px;
+    /* Added more margin */
+    border-radius: 5px;
+}
+
+.guide a {
+    color: #004080;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.guide a:hover {
+    color: #002a60;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     header h1 {

@@ -264,6 +264,39 @@ section h2 {
     margin-right: 8px;
 }
 
+/* Adding padding to each section */
+.project-overview {
+    padding: 20px;
+}
+
+.key-components {
+    padding: 20px;
+}
+
+.getting-started {
+    padding: 20px;
+}
+
+.usage {
+    padding: 20px;
+}
+
+.testing {
+    padding: 20px;
+}
+
+.documentation {
+    padding: 20px;
+}
+
+.contribution {
+    padding: 20px;
+}
+
+.authors {
+    padding: 20px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
