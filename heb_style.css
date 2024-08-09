@@ -124,3 +124,75 @@ section h2:hover {
 .answer.active {
     display: block;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .grid-item {
+        padding: 15px;
+    }
+
+    .grid-item h3 {
+        font-size: 1.2em;
+    }
+
+    .grid-item p {
+        font-size: 0.9em;
+    }
+
+    section.qa {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.75em;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .grid-item {
+        padding: 10px;
+    }
+
+    .grid-item h3 {
+        font-size: 1em;
+    }
+
+    .grid-item p {
+        font-size: 0.8em;
+    }
+
+    section.qa {
+        padding: 10px;
+        margin: 5px;
+    }
+
+    section h2 {
+        font-size: 1.2em;
+    }
+
+    button.home-button {
+        padding: 5px 10px;
+        margin: 10px;
+    }
+}
