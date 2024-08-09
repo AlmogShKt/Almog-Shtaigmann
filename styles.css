@@ -7,6 +7,24 @@ body {
     background-color: #f4f4f4;
     color: #333;
 }
+footer {
+    background-color: #004080;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
 
 header {
     background: #004080;
@@ -26,7 +44,60 @@ nav {
     justify-content: center;
     padding: 20px 0;
 }
+/* General Styles */
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
 
+.card {
+    background: #ffffff;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 0 10px;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #004080;
+}
+
+.card p {
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+.card:hover {
+    background: #f0f0f0;
+    transform: translateY(-5px);
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        /* Adjust width for mobile screens */
+        margin: 10px 0;
+        /* Add space between cards */
+    }
+}
 nav .card-container {
     display: flex;
     justify-content: center;
@@ -134,32 +205,50 @@ section h2 {
     display: block;
 }
 
-.profile {
+/* Greeting Style */
+.greeting {
+    font-size: 2.5em;
+    color: #004080;
     text-align: center;
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 800px;
-    background: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Section */
+section.profile {
+    background: #fcfcfc;
     border-radius: 10px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
 }
 
 .profile h2 {
     font-size: 2em;
-    margin-bottom: 10px;
     color: #004080;
+    margin-bottom: 15px;
 }
 
 .profile p {
     font-size: 1.2em;
     color: #555;
-}
-
-.profile-photo {
-    width: 40%;
-    height: 40%;
-    border-radius: 50%;
-    margin-bottom: 20px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .skills {
@@ -233,8 +322,30 @@ section h2 {
     border-bottom: none;
 }
 
-.social {
+section.social {
+    background: #fcfcfc;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+}
+
+section.social h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #004080;
+}
+
+section.social .contact-info {
+    color: #555;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    max-width: 80%;
 }
 
 .social-links {
@@ -245,6 +356,7 @@ section h2 {
 }
 
 .social-links li {
+    list-style: none;
     margin: 10px 0;
 }
 
