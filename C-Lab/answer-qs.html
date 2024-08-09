@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Answer and Qs</title>
+    <link rel="stylesheet" href="../heb_style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Answer and Qs</h1>
+    </header>
+    <button class="home-button" onclick="location.href='c-lab.html'">חזרה</button>
+    <section class="qa">
+        <div class="question">
+            <h2>שאלות תשובות שחייבים! לקרוא לפני תחילת הקורס</h2>
+        </div>
+        <div class="answer">
+            <p><strong>A:</strong> A pointer is a variable that stores the memory address of another variable.</p>
+        </div>
+    </section>
+    <script>
+        document.querySelectorAll('.question').forEach(question => {
+            question.addEventListener('click', () => {
+                question.nextElementSibling.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
