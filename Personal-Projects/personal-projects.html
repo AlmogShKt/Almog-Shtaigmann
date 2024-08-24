@@ -1,53 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Projects</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="../styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-34DFKV9RWM"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-34DFKV9RWM");
+  </script>
+
+  <body>
     <header>
-        <h1>Personal Projects</h1>
+      <h1>Personal Projects</h1>
     </header>
-    <button class="home-button" onclick="location.href='../index.html'">Home</button>
+    <button class="home-button" onclick="location.href='../index.html'">
+      Home
+    </button>
     <section class="projects">
-        <h2>Dog Feeder</h2>
-        <p><strong>Description:</strong> This project is an ESP32-based automatic dog feeder system that uses the Blynk
-            platform for monitoring and controlling.
-            It allows the user to schedule meal times, reset the feeding tank, and feed the dog automatically. The
-            system also has a
-            web dashboard and LEDs that indicate the status of the feeding tank, and a servo motor that controls the
-            feeding
-            mechanism.</p>
-        <p><strong>Technologies Used:</strong> IOT, ESP32, C, C++</p>
-        <p><strong>GitHub Statistics:</strong></p>
-        <ul id="dog-feeder-stats"></ul>
-        <button class="home-button" onclick="location.href='https://github.com/DogFeederDevelopers/Dog-Feeder'">View on GitHub</button>
+      <h2>Dog Feeder</h2>
+      <p>
+        <strong>Description:</strong> This project is an ESP32-based automatic
+        dog feeder system that uses the Blynk platform for monitoring and
+        controlling. It allows the user to schedule meal times, reset the
+        feeding tank, and feed the dog automatically. The system also has a web
+        dashboard and LEDs that indicate the status of the feeding tank, and a
+        servo motor that controls the feeding mechanism.
+      </p>
+      <p><strong>Technologies Used:</strong> IOT, ESP32, C, C++</p>
+      <p><strong>GitHub Statistics:</strong></p>
+      <ul id="dog-feeder-stats"></ul>
+      <button
+        class="home-button"
+        onclick="location.href='https://github.com/DogFeederDevelopers/Dog-Feeder'"
+      >
+        View on GitHub
+      </button>
     </section>
     <section class="projects">
-        <h2>Hands Detection</h2>
-        <p><strong>Description:</strong> This project uses computer vision techniques to detect and recognize hand
-            gestures for various applications.</p>
-        <p><strong>Technologies Used:</strong> OpenCV, Python, MediaPipe-Google</p>
-        <ul id="hands-detection-stats"></ul>
-                <button class="home-button" onclick="location.href='https://github.com/AlmogShKt/HandDetection'">View on
-                    GitHub</button>
+      <h2>Hands Detection</h2>
+      <p>
+        <strong>Description:</strong> This project uses computer vision
+        techniques to detect and recognize hand gestures for various
+        applications.
+      </p>
+      <p>
+        <strong>Technologies Used:</strong> OpenCV, Python, MediaPipe-Google
+      </p>
+      <ul id="hands-detection-stats"></ul>
+      <button
+        class="home-button"
+        onclick="location.href='https://github.com/AlmogShKt/HandDetection'"
+      >
+        View on GitHub
+      </button>
     </section>
     <section class="projects">
-        <h2>IMS Weather API</h2>
-        <p><strong>Description:</strong> Pull weather data using IMS API from your terminal</p>
-        <p><strong>Technologies Used:</strong> Python, RestFul API</p>
-    
-        <ul id="hands-detection-stats"></ul>
-        <button class="home-button" onclick="location.href='https://github.com/AlmogShKt/IMSWeatherApi'">View on
-            GitHub</button>
-    
-    </section>
+      <h2>IMS Weather API</h2>
+      <p>
+        <strong>Description:</strong> Pull weather data using IMS API from your
+        terminal
+      </p>
+      <p><strong>Technologies Used:</strong> Python, RestFul API</p>
 
-</body>
-
+      <ul id="hands-detection-stats"></ul>
+      <button
+        class="home-button"
+        onclick="location.href='https://github.com/AlmogShKt/IMSWeatherApi'"
+      >
+        View on GitHub
+      </button>
+    </section>
+  </body>
 </html>
