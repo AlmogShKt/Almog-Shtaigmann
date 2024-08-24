@@ -1,145 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Laboratory C Final Project</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles.css" />
     <style>
-        body {
-            background-color: #f0f4f8;
-            color: #333;
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+      body {
+        background-color: #f0f4f8;
+        color: #333;
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
 
-        header {
-            background-color: #004080;
-            color: #ffffff;
-            padding: 20px 0;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-        }
+      header {
+        background-color: #004080;
+        color: #ffffff;
+        padding: 20px 0;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      }
 
-        header h1 {
-            font-size: 2.5em;
-            margin: 0;
-        }
+      header h1 {
+        font-size: 2.5em;
+        margin: 0;
+      }
 
-        header img {
-            margin-top: 10px;
-        }
+      header img {
+        margin-top: 10px;
+      }
 
-        .home-button {
-            background-color: #004080;
-            color: #ffffff;
-            border: none;
-            padding: 10px 20px;
-            margin: 20px;
-            border-radius: 5px;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: background 0.3s ease;
-            display: block;
-            width: fit-content;
-            margin-left: auto;
-            margin-right: auto;
-        }
+      .home-button {
+        background-color: #004080;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        margin: 20px;
+        border-radius: 5px;
+        font-size: 1.1em;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        display: block;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-        .home-button:hover {
-            background-color: #002a60;
-        }
+      .home-button:hover {
+        background-color: #002a60;
+      }
 
-        section {
-            background: #ffffff;
-            margin: 20px auto;
-            padding: 30px;
-            max-width: 800px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
+      section {
+        background: #ffffff;
+        margin: 20px auto;
+        padding: 30px;
+        max-width: 800px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
 
-        section h2 {
-            font-size: 2em;
-            color: #004080;
-            margin-bottom: 20px;
-        }
+      section h2 {
+        font-size: 2em;
+        color: #004080;
+        margin-bottom: 20px;
+      }
 
-        section p {
-            font-size: 1.2em;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
+      section p {
+        font-size: 1.2em;
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
 
-        section strong {
-            color: #004080;
-        }
+      section strong {
+        color: #004080;
+      }
 
-        .contact-link {
-            color: #004080;
-            text-decoration: none;
-            font-weight: bold;
-        }
+      .contact-link {
+        color: #004080;
+        text-decoration: none;
+        font-weight: bold;
+      }
 
-        .contact-link:hover {
-            text-decoration: underline;
-        }
+      .contact-link:hover {
+        text-decoration: underline;
+      }
 
-        .buy-me-coffee img {
-            width: 200px;
-            margin: 20px 0;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
+      .buy-me-coffee img {
+        width: 200px;
+        margin: 20px 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-        .authors ul {
-            list-style-type: none;
-            padding: 0;
-        }
+      .authors ul {
+        list-style-type: none;
+        padding: 0;
+      }
 
-        .authors ul li {
-            font-size: 1.2em;
-        }
+      .authors ul li {
+        font-size: 1.2em;
+      }
     </style>
-</head>
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-34DFKV9RWM"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-<body>
+    gtag("config", "G-34DFKV9RWM");
+  </script>
+
+  <body>
     <header>
-        <h1>🚀 Laboratory C Final Project 🚀</h1>
-        <img src="https://komarev.com/ghpvc/?username=BreadcrumbsLabratory-C-Final-Project&label=Repo%20views&color=0e75b6&style=flat"
-            alt="C-Final-Project" />
+      <h1>🚀 Laboratory C Final Project 🚀</h1>
+      <img
+        src="https://komarev.com/ghpvc/?username=BreadcrumbsLabratory-C-Final-Project&label=Repo%20views&color=0e75b6&style=flat"
+        alt="C-Final-Project"
+      />
     </header>
-    <button class="home-button" onclick="location.href='../C-Lab/c-lab.html'">Back to course page</button>
+    <button class="home-button" onclick="location.href='../C-Lab/c-lab.html'">
+      Back to course page
+    </button>
 
     <!-- Project Overview Section -->
     <section class="project-overview">
-        <h2>Project Overview</h2>
-        <p><strong>Grade: 💯</strong></p>
-        <p>This project is the final assignment (mmn 14) for the "Systems Programming Laboratory" (20465 - 2023B) course
-            at the Open University. It involves developing a comprehensive assembler program for a specific assembly
-            language in C, simulating the operation of common system programs.</p>
+      <h2>Project Overview</h2>
+      <p><strong>Grade: 💯</strong></p>
+      <p>
+        This project is the final assignment (mmn 14) for the "Systems
+        Programming Laboratory" (20465 - 2023B) course at the Open University.
+        It involves developing a comprehensive assembler program for a specific
+        assembly language in C, simulating the operation of common system
+        programs.
+      </p>
 
-        <p><strong>Contact:</strong> For private lessons and project assistance, please reach out at
-            <a href="mailto:a.shtaigmann@gmail.com" class="contact-link">a.shtaigmann@gmail.com</a>
-        </p>
+      <p>
+        <strong>Contact:</strong> For private lessons and project assistance,
+        please reach out at
+        <a href="mailto:a.shtaigmann@gmail.com" class="contact-link"
+          >a.shtaigmann@gmail.com</a
+        >
+      </p>
 
-        <div class="buy-me-coffee">
-            <a href="https://www.buymeacoffee.com/ALmogShtaigmann" target="_blank">
-                <img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee">
-            </a>
-        </div>
+      <div class="buy-me-coffee">
+        <a href="https://www.buymeacoffee.com/ALmogShtaigmann" target="_blank">
+          <img
+            src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png"
+            alt="Buy Me A Coffee"
+          />
+        </a>
+      </div>
     </section>
 
     <!-- Authors Section -->
     <section class="authors">
-        <h2>Project Authors</h2>
-        <ul>
-            <li>Almog Shtaimgann and Tamir Shemsh ©</li>
-        </ul>
+      <h2>Project Authors</h2>
+      <ul>
+        <li>Almog Shtaimgann and Tamir Shemsh ©</li>
+      </ul>
     </section>
-</body>
-
+  </body>
 </html>
