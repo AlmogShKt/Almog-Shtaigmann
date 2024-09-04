@@ -171,6 +171,27 @@ section h2 {
     display: flex;
     align-items: center;
 }
+ /* Floating Action Button Styles */
+ .contact-fab {
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+     z-index: 1000;
+ }
+
+ .contact-fab a img {
+     padding: 10px;
+     width: 50px;
+     height: 50px;
+     object-fit: contain;
+     border-radius: 30%;
+     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+     transition: transform 0.3s;
+ }
+
+ .contact-fab a img:hover {
+     transform: scale(1.1);
+ }
 
 .company-logo {
     width: 80px;
