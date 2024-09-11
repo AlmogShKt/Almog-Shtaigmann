@@ -163,6 +163,20 @@ section h2:hover {
  .contact-fab a img:hover {
      transform: scale(1.1);
  }
+ .image-gallery {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     flex-wrap: wrap;
+     gap: 15px;
+ }
+
+ .image-gallery img {
+     max-width: 30%;
+     height: auto;
+     border-radius: 8px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ }
 
  @keyframes bounce {
 
@@ -353,4 +367,31 @@ ul {
         padding: 5px 10px;
         margin: 10px;
     }
+}
+
+
+
+@HiltViewModle
+fun viewModelAlmog 
+@Inject constarctor(
+
+    val useCAseApiservice: UseCase
+    val dbServise: DbService
+): ViewModle(){
+    
+
+    ViewModleScope: .luach{
+
+        uiState=api.getUserDate().collcet{ userData->
+            it.update{
+                userDate = userData
+            }
+        
+        }
+    }
+
+    fun addUserAge(userAge:Int){
+        sdservie.addUSerAge((userAge))
+    }
+    
 }
