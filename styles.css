@@ -200,6 +200,12 @@ section h2 {
     margin-right: 15px;
 }
 
+.company-logo-microsoft {
+    width: 120px;
+    height: auto;
+    margin-right: 15px;
+}
+
 .question {
     cursor: pointer;
     padding: 10px;
