@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Laboratory C Final Project Score Sheet - Grading criteria for the 20465 course project"
+    />
+    <title>Project Score Sheet | Almog Shtaigmann</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-34DFKV9RWM"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-34DFKV9RWM");
+    </script>
+
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+
+      th,
+      td {
+        border: 1px solid var(--border-color);
+        padding: 12px;
+        text-align: right;
+      }
+
+      th {
+        background-color: var(--accent-color);
+        color: var(--light-text);
+        font-weight: 600;
+      }
+
+      tr:nth-child(even) {
+        background-color: var(--bg-secondary);
+      }
+
+      tr:hover {
+        background-color: var(--bg-hover);
+      }
+
+      td ul {
+        margin: 0;
+        padding-right: 20px;
+      }
+
+      .disclaimer {
+        font-style: italic;
+        color: var(--text-muted);
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container header-container">
+        <h1 class="site-title">Laboratory C Final Project Score Sheet</h1>
+
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span class="visually-hidden">Toggle menu</span>
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="nav-main collapsed" id="main-nav">
+          <a href="/">Home</a>
+          <a href="/pages/work-experience/">Work Experience</a>
+          <a href="/pages/projects/">Personal Projects</a>
+          <a href="/pages/c-lab/">C-Lab Course</a>
+        </nav>
+      </div>
+    </header>
+    <!-- Header Banner -->
+    <div
+      class="header-banner"
+      style="
+        background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+        color: white;
+        padding: 20px;
+        text-align: center;
+      "
+    >
+      <h2 style="color: #fff">
+        Check Out My New Course on Univeli! Hero To Zero
+      </h2>
+      <h2 style="color: #fff">קורס למציאת משרה ראשונה</h2>
+      <p>Prepare for high-tech interviews with practical tips and guidance.</p>
+      <a
+        href="https://www.univeli.com/link/4BP8Zb?url=https%3A%2F%2Fwww.univeli.com%2Fcourse%2Fprepare-me-for-high-tech"
+        target="_blank"
+        style="color: #fff; text-decoration: underline"
+        >Learn More</a
+      >
+    </div>
+    <main>
+      <!-- Navigation Button -->
+      <section class="section">
+        <div class="container">
+          <a href="/pages/c-lab/" class="btn mb-lg">
+            <i class="fas fa-arrow-left"></i> Back to Course Page
+          </a>
+        </div>
+      </section>
+
+      <!-- Main Content -->
+      <section class="section">
+        <div class="container">
+          <div class="card">
+            <h2>Project Grading Criteria</h2>
+
+            <table>
+              <thead>
+                <tr>
+                  <th style="color: black">#</th>
+                  <th style="color: black">קטגוריה</th>
+                  <th style="color: black">פירוט</th>
+                  <th style="color: black">משקל</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>קומפילציה וריצה</td>
+                  <td>
+                    <ul>
+                      <li>שימוש נכון ב- makefile</li>
+                      <li>קומפילציה ללא הערות</li>
+                      <li>ריצת תקינה ללא שגיאות ריצה.</li>
+                      <li>נכונות הקוד - מונע על כל דרישות הפרויקט</li>
+                    </ul>
+                  </td>
+                  <td>20</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>תיעוד</td>
+                  <td>
+                    <ul>
+                      <li>תיאור בראש התכנית.</li>
+                      <li>תיאור הגדרת מב טיפוס</li>
+                      <li>תיאור פקציות בראש הפונקציה</li>
+                      <li>תיאור משתנים משמעותיים</li>
+                    </ul>
+                  </td>
+                  <td>20</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>תכנות</td>
+                  <td>
+                    <ul>
+                      <li>חלוקת קבצים על פי משימות</li>
+                      <li>הקלה לפונקציות</li>
+                      <li>הגדרת טיפוסים מורכבים ב-typedef</li>
+                      <li>שמות משמעותיים לפונקציות ומשתנים</li>
+                      <li>היגנות מספרי "קסם" וקבועים בקוד</li>
+                      <li>שימוש באקרו</li>
+                      <li>הסתרת מידע</li>
+                      <li>היגנות משתנים גלובלים</li>
+                      <li>אלגנטיות הקוד</li>
+                    </ul>
+                  </td>
+                  <td>40</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>יעילות והתרשמות כללית</td>
+                  <td>
+                    <ul>
+                      <li>נכונות תוצאות ההרצה על קלטים שונים</li>
+                      <li>טיפול בשגיאות</li>
+                      <li>פרמטרים בשורת הפקודה</li>
+                      <li>הגשת מספר קבצים קלט כולל מאקרו</li>
+                      <li>הגשת מספר קבצי פלט</li>
+                      <li>הגשת צילומי הרצות</li>
+                      <li>ממשק משתמש</li>
+                    </ul>
+                  </td>
+                  <td>20</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>קנס אי הגשת קבצי makefile</td>
+                  <td></td>
+                  <td>-20</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>קנס שמות קבצים</td>
+                  <td>
+                    <ul>
+                      <li>
+                        הגשת קובץ עם שם שונה/שם פונקציה שונה/פרמטר שונה מהמוגדר
+                        בחוברת קורס
+                      </li>
+                    </ul>
+                  </td>
+                  <td>-10</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>קנס איחור</td>
+                  <td></td>
+                  <td>-10</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p class="disclaimer">
+              ** אין התחייבות שאלו יהיו הנקודות, יתכן ויהיו שינויים
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <p>Found an error? Want to add relevant information?</p>
+            <p>
+              <a
+                href="mailto:a.shtaigmann@gmail.com"
+                title="Send me an email"
+                style="color: var(--light-text)"
+                >Contact me</a
+              >
+              and I'll be happy to add it.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <ul class="social-links-footer">
+              <li>
+                <a href="mailto:a.shtaigmann@gmail.com" aria-label="Email">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/almog-shtaigmann"
+                  target="_blank"
+                  aria-label="LinkedIn"
+                >
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/almogshkt"
+                  target="_blank"
+                  aria-label="GitHub"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="site-metrics">
+          <img
+            src="https://komarev.com/ghpvc/?username=almogshkt&color=blue"
+            alt="Site-Views"
+          />
+        </div>
+      </div>
+    </footer>
+
+    <!-- Contact Floating Action Button -->
+    <div class="contact-fab">
+      <a href="mailto:a.shtaigmann@gmail.com" title="Contact Me">
+        <img src="/assets/images/chat.png" alt="Contact Me" />
+      </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/assets/js/main.js"></script>
+    <script>
+      // Update the current year
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>

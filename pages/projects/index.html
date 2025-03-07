@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Almog Shtaigmann's Personal Projects in software development."
+    />
+    <title>Personal Projects | Almog Shtaigmann</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-34DFKV9RWM"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-34DFKV9RWM");
+    </script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container header-container">
+        <h1 class="site-title">Personal Projects</h1>
+
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span class="visually-hidden">Toggle menu</span>
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="nav-main collapsed" id="main-nav">
+          <a href="/">Home</a>
+          <a href="/pages/work-experience/">Work Experience</a>
+          <a href="/pages/projects/">Personal Projects</a>
+          <a href="/pages/c-lab/">C-Lab Course</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Navigation Button -->
+      <section class="section">
+        <div class="container">
+          <a href="/" class="btn mb-lg">
+            <i class="fas fa-arrow-left"></i> Back to Home
+          </a>
+        </div>
+      </section>
+
+      <!-- Main Content -->
+      <section class="section">
+        <div class="container">
+          <div class="card">
+            <h2>Projects Showcase</h2>
+
+            <div class="project">
+              <h3>Dog Feeder</h3>
+              <p>
+                <strong>Description:</strong> This project is an ESP32-based
+                automatic dog feeder system that uses the Blynk platform for
+                monitoring and controlling. It allows the user to schedule meal
+                times, reset the feeding tank, and feed the dog automatically.
+                The system also has a web dashboard and LEDs that indicate the
+                status of the feeding tank, and a servo motor that controls the
+                feeding mechanism.
+              </p>
+              <p><strong>Technologies Used:</strong> IOT, ESP32, C, C++</p>
+              <p><strong>GitHub Statistics:</strong></p>
+              <ul id="dog-feeder-stats"></ul>
+              <button
+                class="view-on-github"
+                onclick="location.href='https://github.com/DogFeederDevelopers/Dog-Feeder'"
+              >
+                View on GitHub
+              </button>
+            </div>
+
+            <div class="project">
+              <h3>Hands Detection</h3>
+              <p>
+                <strong>Description:</strong> This project uses computer vision
+                techniques to detect and recognize hand gestures for various
+                applications.
+              </p>
+              <p>
+                <strong>Technologies Used:</strong> OpenCV, Python,
+                MediaPipe-Google
+              </p>
+              <ul id="hands-detection-stats"></ul>
+              <button
+                class="view-on-github"
+                onclick="location.href='https://github.com/AlmogShKt/HandDetection'"
+              >
+                View on GitHub
+              </button>
+            </div>
+
+            <div class="project">
+              <h3>IMS Weather API</h3>
+              <p>
+                <strong>Description:</strong> Pull weather data using IMS API
+                from your terminal
+              </p>
+              <p><strong>Technologies Used:</strong> Python, RestFul API</p>
+
+              <ul id="hands-detection-stats"></ul>
+              <button
+                class="view-on-github"
+                onclick="location.href='https://github.com/AlmogShKt/IMSWeatherApi'"
+              >
+                View on GitHub
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <p>Found an error? Want to add relevant information?</p>
+            <p>
+              <a
+                href="mailto:a.shtaigmann@gmail.com"
+                title="Send me an email"
+                style="color: var(--light-text)"
+                >Contact me</a
+              >
+              and I'll be happy to add it.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <ul class="social-links-footer">
+              <li>
+                <a href="mailto:a.shtaigmann@gmail.com" aria-label="Email">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/almog-shtaigmann"
+                  target="_blank"
+                  aria-label="LinkedIn"
+                >
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/almogshkt"
+                  target="_blank"
+                  aria-label="GitHub"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="site-metrics">
+          <img
+            src="https://komarev.com/ghpvc/?username=almogshkt&color=blue"
+            alt="Site-Views"
+          />
+        </div>
+      </div>
+    </footer>
+
+    <!-- Contact Floating Action Button -->
+    <div class="contact-fab">
+      <a href="mailto:a.shtaigmann@gmail.com" title="Contact Me">
+        <img src="/assets/images/chat.png" alt="Contact Me" />
+      </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/assets/js/main.js"></script>
+    <script>
+      // Update the current year
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>

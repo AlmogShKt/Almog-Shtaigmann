@@ -3,16 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Almog Shtaigmann's Site</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta
+      name="description"
+      content="Almog Shtaigmann's personal portfolio website showcasing skills, projects, and professional experience in software development."
+    />
+    <title>Almog Shtaigmann | Software Developer</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+
+    <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+
+    <!-- Google Analytics -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-34DFKV9RWM"
@@ -23,115 +39,226 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-34DFKV9RWM");
     </script>
   </head>
 
   <body>
+    <!-- Header -->
     <header>
-      <h1>Hi There 🤙🏼</h1>
-      <script>
-        fetch(
-          "https://komarev.com/ghpvc/?username=almogshkt&label=Repo%20views&color=0e75b6&style=flat"
-        );
-      </script>
+      <div class="container header-container">
+        <h1 class="site-title">Hi There 🤙🏼</h1>
+
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span class="visually-hidden">Toggle navigation</span>
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="nav-main collapsed" id="main-nav">
+          <a href="/">Home</a>
+          <a href="/pages/work-experience/">Work Experience</a>
+          <a href="/pages/projects/">Personal Projects</a>
+          <a href="/pages/c-lab/">C-Lab Course</a>
+        </nav>
+      </div>
     </header>
-    <br />
-    <section class="profile">
-      <img src="logos/my_photo.JPG" alt="My Photo" class="profile-photo" />
-      <h2>About Me</h2>
-      <p>
-        I'm a 3rd year Computer Science student with hands-on experience in
-        frontend, backend development, mobile application development, and
-        DevOps.
-      </p>
-    </section>
-    <section class="social">
-      <h2>Connect with Me</h2>
-      <p class="contact-info">
-        You can reach out to me via email or connect with me on social media:
-      </p>
-      <ul class="social-links">
-        <li>
-          <a href="mailto:a.shtaigmann@gmail.com"
-            ><i class="fas fa-envelope"></i> Email</a
-          >
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/almog-shtaigmann" target="_blank"
-            ><i class="fab fa-linkedin"></i> LinkedIn</a
-          >
-        </li>
-        <li>
-          <a href="https://github.com/almogshkt" target="_blank"
-            ><i class="fab fa-github"></i> GitHub</a
-          >
-        </li>
-      </ul>
-    </section>
-    <nav class="card-container">
-      <button
-        class="card"
-        onclick="location.href='./Work-Experience/work-experience.html'"
-      >
-        <h3>Work Experience</h3>
-        <p>Read about my professional experience and roles.</p>
-      </button>
-      <button
-        class="card"
-        onclick="location.href='./Personal-Projects/personal-projects.html'"
-      >
-        <h3>Personal Projects</h3>
-        <p>Discover my personal projects and the technologies I used.</p>
-      </button>
-      <button class="card" onclick="location.href='./C-Lab/c-lab.html'">
-        <h3>C Lab Course - Open University</h3>
-        <p>
-          Explore my final project (mmn 14) in Laboratory C 20465 -course at the
-          Open University - Grade 100 and over 20,000 Views
-        </p>
-      </button>
-    </nav>
 
-    <section class="education">
-      <h2>Education</h2>
-      <h3>The Open University (graduation 2026-2027)</h3>
-      <ul>
-        <li><strong>B.Sc. Computer Science, 2nd Year</strong></li>
-        <li>GPA: 86</li>
-        <li>
-          Relevant Coursework: Data Structures (87), Algorithms (87),
-          Introduction to Computer Science (85), C-Linux (98)
-        </li>
-      </ul>
-    </section>
+    <main>
+      <!-- Hero/Profile Section -->
+      <section class="section profile-section">
+        <div class="container">
+          <div class="profile-content">
+            <img
+              src="/assets/images/my_photo.JPG"
+              alt="Almog Shtaigmann"
+              class="profile-photo animate-on-scroll"
+            />
 
-    <section class="skills">
-      <h2>My Skills</h2>
-      <ul>
-        <li>Kotlin & Java</li>
-        <li>
-          Android Development (Jetpack Compose, Material Design, Complex Image
-          manipulate)
-        </li>
-        <li>Modern Design patterns like MVVM</li>
-        <li>Python & Flask</li>
-        <li>DevOps (CI/CD, GitHub Actions, Azure Runbooks)</li>
-        <li>Web Development (React, JavaScript, HTML, CSS)</li>
-        <li>SQL & Databases</li>
-        <li>PowerShell & Automation</li>
-      </ul>
-    </section>
+            <div class="profile-info">
+              <h2 class="animate-on-scroll">About Me</h2>
+              <p class="animate-on-scroll">
+                I'm a 3rd year Computer Science student with hands-on experience
+                in frontend, backend development, mobile application
+                development, and DevOps.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="section skills-section">
+        <div class="container">
+          <h2 class="text-center animate-on-scroll">My Skills</h2>
+
+          <ul class="skills-list animate-on-scroll">
+            <li class="skill-tag">Kotlin & Java</li>
+            <li class="skill-tag">TypeScript & Angular</li>
+            <li class="skill-tag">Android Development</li>
+            <li class="skill-tag">Modern Design Patterns (MVVM)</li>
+            <li class="skill-tag">Python & Flask</li>
+            <li class="skill-tag">DevOps (CI/CD, GitHub Actions)</li>
+            <li class="skill-tag">Web Development</li>
+            <li class="skill-tag">SQL & Databases</li>
+            <li class="skill-tag">PowerShell & Automation</li>
+            <li class="skill-tag">Signals & Reactivity</li>
+            <li class="skill-tag">Scalable Architecture</li>
+            <li class="skill-tag">Design Patterns</li>
+            <li class="skill-tag">Cross-Team Collaboration</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Main Navigation Cards -->
+      <section class="section">
+        <div class="container">
+          <div class="grid grid-1 grid-md-3 card-container">
+            <a href="/pages/work-experience/" class="card animate-on-scroll">
+              <h3 class="card-title">Work Experience</h3>
+              <p class="card-content">
+                Read about my professional experience and roles.
+              </p>
+              <div class="card-action">
+                <span class="btn">View Experience</span>
+              </div>
+            </a>
+
+            <a href="/pages/projects/" class="card animate-on-scroll">
+              <h3 class="card-title">Personal Projects</h3>
+              <p class="card-content">
+                Discover my personal projects and the technologies I used.
+              </p>
+              <div class="card-action">
+                <span class="btn">View Projects</span>
+              </div>
+            </a>
+
+            <a href="/pages/c-lab/" class="card animate-on-scroll">
+              <h3 class="card-title">C Lab Course</h3>
+              <p class="card-content">
+                Explore my final project in Laboratory C 20465 - Grade 100 and
+                over 20,000 Views!
+              </p>
+              <div class="card-action">
+                <span class="btn">Learn More</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education Section -->
+      <section class="section education-section">
+        <div class="container">
+          <h2 class="animate-on-scroll">Education</h2>
+
+          <div class="education-item animate-on-scroll">
+            <h3>The Open University (graduation 2026-2027)</h3>
+            <p class="education-meta">B.Sc. Computer Science, 3rd Year</p>
+            <p><strong>GPA:</strong> 86</p>
+            <p>
+              <strong>Relevant Coursework:</strong> Data Structures (87),
+              Algorithms (87), Introduction to Computer Science (85), C-Linux
+              (98)
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Social Section -->
+      <section class="section social-section">
+        <div class="container">
+          <h2 class="animate-on-scroll">Connect with Me</h2>
+          <p class="animate-on-scroll">
+            You can reach out to me via email or connect with me on social
+            media:
+          </p>
+
+          <ul class="social-links animate-on-scroll">
+            <li>
+              <a href="mailto:a.shtaigmann@gmail.com">
+                <i class="fas fa-envelope"></i> Email
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/almog-shtaigmann"
+                target="_blank"
+              >
+                <i class="fab fa-linkedin"></i> LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/almogshkt" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
     <footer>
-      <p>
-        View the source code on
-        <a href="https://github.com/AlmogShKt/" target="_blank">GitHub</a>.
-      </p>
-      <img
-        src="https://komarev.com/ghpvc/?username=almogshkt&color=blue"
-        alt="Site-Views"
-      />
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <p>
+              &copy; <span id="current-year">2025</span> Almog Shtaigmann. All
+              rights reserved.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <ul class="social-links-footer">
+              <li>
+                <a href="mailto:a.shtaigmann@gmail.com" aria-label="Email">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/almog-shtaigmann"
+                  target="_blank"
+                  aria-label="LinkedIn"
+                >
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/almogshkt"
+                  target="_blank"
+                  aria-label="GitHub"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="site-metrics">
+          <img
+            src="https://komarev.com/ghpvc/?username=almogshkt&color=blue"
+            alt="Site-Views"
+          />
+        </div>
+      </div>
     </footer>
+
+    <!-- Contact Floating Action Button -->
+    <div class="contact-fab">
+      <a href="mailto:a.shtaigmann@gmail.com" title="Contact Me">
+        <img src="/assets/images/chat.png" alt="Contact Me" />
+      </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/assets/js/main.js"></script>
   </body>
 </html>

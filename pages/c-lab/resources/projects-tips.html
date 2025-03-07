@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="טיפים חשובים לפרויקט בקורס Laboratory C 20465 באוניברסיטה הפתוחה"
+    />
+    <title>טיפים לפרויקט | Almog Shtaigmann</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <link rel="stylesheet" href="/assets/css/rtl.css" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Rubik:wght@400;500;700&display=swap&subset=hebrew"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-34DFKV9RWM"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-34DFKV9RWM");
+    </script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container header-container">
+        <h1 class="site-title">טיפים חשובים לפרויקט</h1>
+
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span class="visually-hidden">פתח תפריט</span>
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="nav-main collapsed" id="main-nav">
+          <a href="/">דף הבית</a>
+          <a href="/pages/work-experience/">ניסיון מקצועי</a>
+          <a href="/pages/projects/">פרויקטים אישיים</a>
+          <a href="/pages/c-lab/">קורס C-Lab</a>
+        </nav>
+      </div>
+    </header>
+    <!-- Header Banner -->
+    <div
+      class="header-banner"
+      style="
+        background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+        color: white;
+        padding: 20px;
+        text-align: center;
+      "
+    >
+      <h2 style="color: #fff">
+        Check Out My New Course on Univeli! Hero To Zero
+      </h2>
+      <h2 style="color: #fff">קורס למציאת משרה ראשונה</h2>
+      <p>Prepare for high-tech interviews with practical tips and guidance.</p>
+      <a
+        href="https://www.univeli.com/link/4BP8Zb?url=https%3A%2F%2Fwww.univeli.com%2Fcourse%2Fprepare-me-for-high-tech"
+        target="_blank"
+        style="color: #fff; text-decoration: underline"
+        >Learn More</a
+      >
+    </div>
+
+    <main>
+      <!-- Navigation Button -->
+      <section class="section">
+        <div class="container">
+          <a href="/pages/c-lab/" class="btn mb-lg">
+            <i class="fas fa-arrow-right"></i> חזרה לעמוד הקורס
+          </a>
+        </div>
+      </section>
+
+      <!-- Main Content -->
+      <section class="section">
+        <div class="container">
+          <!-- Card 0 -->
+          <div class="card">
+            <h2>המלצה לשימוש בצ'אט מותאם לפרויקטים בתכנות מערכות</h2>
+            <p>
+              למי שמחפש את הדרך הטובה ביותר לקבל 100 בפרויקט הסופי בקורס תכנות
+              מערכות, מומלץ להשתמש בצ'אט המותאם לפרויקטים של תכנות מערכות. הצ'אט
+              מבוסס על פרויקטים שקיבלו 100 ומספק תמיכה מותאמת אישית.
+            </p>
+            <p>
+              <a
+                href="https://chatgpt.com/g/g-67bc38d123fc8191b3ec9b2565ad0d74-m-bdh-btknvt-m-rkvt-prvyyqt-svpy"
+                target="_blank"
+              >
+                לחצו כאן למידע נוסף ולהרשמה
+              </a>
+            </p>
+          </div>
+
+          <!-- Card 1 -->
+          <div class="card">
+            <h2>טיפים חשובים לפרויקט:</h2>
+            <p><strong>מה התקן של הקוד בו יהיה עליכם לעבוד בפרויקט?</strong></p>
+            <ul>
+              <li>
+                <strong>גרסת שפת C:</strong> שימוש בתקן ANSI C (עד C89).
+                <em>דוגמה:</em> בעת כתיבת פונקציות יש להקפיד על השימוש במבנה
+                סטנדרטי הנתמך בכל המהדרים.
+              </li>
+              <li>
+                <strong
+                  >מחרוזות (strings) תמיד יכילו את Null-terminator:</strong
+                >
+                <ul>
+                  <li>
+                    בגלל שהקוד מתקמפל על לינוקס בגרסה מאוד ישנה, אינכם יכולים
+                    להשתמש בפונקציות מתקדמות כמו <code>strcpy</code>,
+                    <code>strcat</code>, <code>strncat</code> ועוד.
+                    <em>דוגמה:</em> מומלץ לממש פונקציות משלכם שמוודאות כי
+                    המחרוזת מסתיימת בתו <code>\0</code> (Null-terminator) כדי
+                    למנוע בעיות בזמן ריצה.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>ייצוג מחרוזות:</strong> מחרוזות הן מערכים של תווים כאשר
+                הייצוג נעשה באמצעות ASCII Encoding.
+              </li>
+              <li>
+                <strong>הרצת הקוד בטרמינל/Command Line:</strong> הקוד צריך לעבוד
+                בצורה חלקה בסביבת טרמינל, עם תמיכה בקלט מקובצים (באמצעות command
+                line arguments) או בקלט ישיר מהמשתמש.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card">
+            <h2>
+              אוסף טיפים להתחלה של הממן הסופי (מעבדה בתכנות מערכות - MMN14):
+            </h2>
+            <ol>
+              <li>
+                <strong>הכרת מבנה הפרויקט:</strong>
+                <p>
+                  עיינו בקבצים שהועלו, ובמיוחד בקובץ
+                  <code>assembler.c</code> המציג את הזרימה המרכזית של התוכנית.
+                  יש להבין את חלוקת השלבים:
+                  <em
+                    >טרום עיבוד (preprocessing) → מעבר ראשון (First Pass) → מעבר
+                    שני (Second Pass) → המרת קוד לבסיס 64 וכתיבת קובץ פלט</em
+                  >. <strong>הסבר:</strong> בכל שלב, יש קובץ או פונקציה שמבצעת
+                  חלק מהמשימה – לדוגמה, במעבר הראשון נאספות תוויות והוראות.
+                </p>
+              </li>
+              <li>
+                <strong>הכנת הסביבה:</strong>
+                <p>
+                  יש להקמפל את הקוד עם <code>gcc</code> תוך שימוש בדגלים
+                  <code>-ansi -Wall -pedantic</code> לקבלת כל האזהרות האפשריות.
+                  ודאו שכל הקבצים (.c ו-.h) מסודרים כראוי, כולל Makefile במידת
+                  הצורך. השתמשו בפקודת <code>valgrind</code> לבדיקת דליפות
+                  זיכרון.
+                </p>
+              </li>
+              <li>
+                <strong>שלבי הביצוע:</strong>
+                <ol type="a">
+                  <li>
+                    <strong>טרום עיבוד (Preprocessing):</strong>
+                    <p>
+                      הקובץ <code>preproc.c</code> אחראי על טיפול במקרואים והסרת
+                      רווחים מיותרים. <strong>הערה:</strong> ודאו שהמקרואים
+                      מוגדרים ומפורשים בצורה נכונה.
+                    </p>
+                  </li>
+                  <li>
+                    <strong>מעבר ראשון (First Pass):</strong>
+                    <p>
+                      הקובץ <code>first_pass.h</code> מציין את הפונקציה
+                      <code>exe_first_pass</code> שהיא הליבה של המעבר הראשון.
+                      בשלב זה נאספות הגדרות תוויות (labels) ומנוהלים זיכרון
+                      והוראות. <strong>טיפ:</strong> השתמשו בפונקציה
+                      <code>handle_allocation</code> כדי לוודא שאין דליפות
+                      זיכרון.
+                    </p>
+                  </li>
+                  <li>
+                    <strong>מעבר שני (Second Pass):</strong>
+                    <p>
+                      מתבצע בקובץ <code>second_pass.c</code> ומטרתו לוודא
+                      שהתוויות מוגדרות כראוי ולהמיר פקודות לבסיס 64.
+                      <strong>דגש:</strong> יש לבדוק שאין תוויות כפולות, למשל
+                      באמצעות <code>check_each_label_once</code>.
+                    </p>
+                  </li>
+                  <li>
+                    <strong>המרת קוד לבסיס 64 וכתיבת פלט:</strong>
+                    <p>
+                      הפונקציה <code>conv_code_base64</code> ממירה את קוד המכונה
+                      לבסיס 64 וכותבת אותו לקובץ <code>.ob</code>.
+                    </p>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <strong>טיפול בשגיאות וניהול זיכרון:</strong>
+                <p>
+                  השתמשו בקובץ <code>Errors.c</code> כדי להבין את סוגי השגיאות
+                  האפשריים ואת אופן הטיפול בהן. הקובץ <code>util.c</code> מכיל
+                  פונקציות עזר כגון <code>handle_malloc</code> לטיפול בזיכרון
+                  ו-<code>twos_compliment</code> לייצוג מספרים.
+                </p>
+              </li>
+              <li>
+                <strong>עבודה עם תוויות (Labels) וטבלאות:</strong>
+                <p>
+                  בקובץ <code>table.h</code> תמצאו את הגדרות מבני הנתונים
+                  הקשורים לתוויות וטבלאות סמליות. ודאו שאתם משתמשים בפונקציות
+                  <code>insert_label_table</code> ו-<code
+                    >insert_other_labels</code
+                  >
+                  לניהול הטבלאות.
+                </p>
+              </li>
+              <li>
+                <strong>טיפים לכתיבת קוד נקי ומסודר:</strong>
+                <p>
+                  הקפידו להשתמש בשמות משתנים ברורים ולהימנע מהגדרת משתנים
+                  גלובליים אם אין בכך צורך. חלקו את הקוד לפונקציות קטנות שכל אחת
+                  ממוקדת במשימה אחת בלבד.
+                  <strong>דוגמה:</strong> במקום פונקציה ארוכה המכילה את כל
+                  הלוגיקה, חלקו אותה לפונקציות כמו <code>calculate_sum()</code>,
+                  <code>validate_input()</code> וכו'. בנוסף, הוסיפו תיעוד
+                  (comments) מעל כל פונקציה להקל על בדיקה ותחזוקה.
+                </p>
+              </li>
+              <li>
+                <strong>בדיקות ודיבוג:</strong>
+                <p>
+                  בצעו הרצות בדיקה על קבצי קלט עם סוגים שונים של פקודות ותוויות.
+                  ודאו כי אין שורות ארוכות מדי (הגדרת
+                  <code>MAX_LINE_LENGTH = 81</code>). השתמשו בקבצים
+                  <code>lexer.c</code> ו-<code>handle_text.c</code> לבדיקת
+                  תווים, זיהוי אופקודים ותוויות.
+                </p>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card">
+            <h2>חלוקת עבודה נכונה בזוגות + עבודה מסודרת עם GitHub:</h2>
+            <ol>
+              <li>
+                <strong>חלוקת עבודה נכונה בזוגות:</strong>
+                <p>
+                  יש להגדיר אחריות לכל אחד מהשותפים.
+                  <em>דוגמה:</em> אחד מתמקד בפרה-פרוססינג ובמעבר הראשון, והשני
+                  במעבר השני ובהמרת הקוד לבסיס 64, כאשר שניכם בודקים את ניהול
+                  הזיכרון והטיפול בשגיאות.
+                </p>
+              </li>
+              <li>
+                <strong>עבודה במקביל:</strong>
+                <p>
+                  חלקו את העבודה לפונקציות קטנות שכל אחד יכול לעבוד עליהן בנפרד.
+                  <em>דוגמה:</em> אם אחד עובד על <code>lexer.c</code>, השני יכול
+                  לבדוק את <code>code_conversion.c</code>.
+                </p>
+              </li>
+              <li>
+                <strong>בדיקות מקיפות ושילוב הקוד:</strong>
+                <p>
+                  כל אחד צריך לבדוק את הקוד של השותף לפני שמחברים את כל החלקים.
+                  לאחר המיזוג, הריצו בדיקות עם קלטים שונים לוודא שהכל פועל
+                  כראוי.
+                </p>
+              </li>
+              <li>
+                <strong>עבודה נכונה עם GitHub:</strong>
+                <ol type="a">
+                  <li>
+                    <strong>יצירת מאגר (Repository) מסודר:</strong>
+                    <p>
+                      פתחו ריפו ב-GitHub מהיום הראשון.
+                      <em>טיפ:</em> עבודה ב-repository מסודר מקטינה את הסיכון
+                      לאיבוד קוד.
+                    </p>
+                  </li>
+                  <li>
+                    <strong>שימוש בענפים (Branches) לעבודה מקבילה:</strong>
+                    <p>
+                      השתמשו ב-<code>main</code> כקוד יציב ובענפים נפרדים כגון
+                      <code>feature-first-pass</code> ו-<code
+                        >feature-second-pass</code
+                      >
+                      לעבודה על חלקים שונים. <strong>הסבר:</strong> כך ניתן
+                      לבדוק שינויים בנפרד ולמזג רק לאחר בדיקות.
+                    </p>
+                  </li>
+                  <li>
+                    <strong>כתיבת Commitים מסודרים:</strong>
+                    <p>
+                      כל שינוי חשוב יש לתעד עם commit מתאים.
+                      <em>דוגמה:</em>
+                      <code>git commit -m "הוספת תמיכה בטבלאות"</code>.
+                    </p>
+                  </li>
+                  <li>
+                    <strong>שימוש ב-GitHub Issues לניהול משימות:</strong>
+                    <p>
+                      תעדו כל משימה עם סטטוס ברור (למשל: In Progress, Done)
+                      והערות רלוונטיות.
+                      <strong>טיפ:</strong> רשימת משימות מסודרת עוזרת למעקב
+                      ולארגון העבודה.
+                    </p>
+                  </li>
+                  <li>
+                    <strong>ביצוע Code Review:</strong>
+                    <p>
+                      לפני מיזוג הקוד (merge), על השותף השני לקרוא ולהעיר הערות
+                      על הקוד.
+                      <em>הסבר:</em> זהו תהליך חשוב לשמירה על איכות הקוד ולהפחתת
+                      שגיאות.
+                    </p>
+                  </li>
+                  <li>
+                    <strong>שימוש בתגיות (Tags) או גירסאות (Releases):</strong>
+                    <p>
+                      לאחר סיום חלק משמעותי, תייגו את הקוד עם
+                      <code>git tag</code> (למשל:
+                      <code>git tag v1.0-first-pass</code>).
+                      <strong>הערה:</strong> כך ניתן לחזור בקלות לגרסאות קודמות
+                      במקרה הצורך.
+                    </p>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+
+            <p>
+              אם תעקבו אחרי הטיפים האלה, תוכלו להתחיל את העבודה בצורה מסודרת,
+              לחסוך זמן בדיבוג ולהבטיח שהפרויקט יתקדם על פי התקנים הטובים ביותר!
+              🚀
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <p>מצאתם טעות? רוצים להוסיף מידע רלוונטי?</p>
+            <p>
+              <a
+                href="mailto:a.shtaigmann@gmail.com"
+                title="Send me an email"
+                style="color: var(--light-text)"
+                >צורו איתי קשר</a
+              >
+              ואשמח להוסיף.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <ul class="social-links-footer">
+              <li>
+                <a href="mailto:a.shtaigmann@gmail.com" aria-label="Email">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/almog-shtaigmann"
+                  target="_blank"
+                  aria-label="LinkedIn"
+                >
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/almogshkt"
+                  target="_blank"
+                  aria-label="GitHub"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="site-metrics">
+          <img
+            src="https://komarev.com/ghpvc/?username=almogshkt&color=blue"
+            alt="Site-Views"
+          />
+        </div>
+      </div>
+    </footer>
+
+    <!-- Contact Floating Action Button -->
+    <div class="contact-fab">
+      <a href="mailto:a.shtaigmann@gmail.com" title="צור קשר">
+        <img src="/assets/images/chat.png" alt="צור קשר" />
+      </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/assets/js/main.js"></script>
+    <script>
+      // Update the current year
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>
