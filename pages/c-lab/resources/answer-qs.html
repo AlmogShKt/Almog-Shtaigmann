@@ -10,10 +10,10 @@
     <title>שאלות ותשובות | Almog Shtaigmann</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/assets/css/main.css" />
-    <link rel="stylesheet" href="/assets/css/responsive.css" />
-    <link rel="stylesheet" href="/assets/css/rtl.css" />
-    <link rel="stylesheet" href="/assets/css/qa.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <link rel="stylesheet" href="./assets/css/rtl.css" />
+    <link rel="stylesheet" href="./assets/css/qa.css" />
 
     <!-- Fonts -->
     <link
@@ -58,9 +58,9 @@
 
         <nav class="nav-main collapsed" id="main-nav">
           <a href="/">דף הבית</a>
-          <a href="/pages/work-experience/">ניסיון מקצועי</a>
-          <a href="/pages/projects/">פרויקטים אישיים</a>
-          <a href="/pages/c-lab/">קורס C-Lab</a>
+          <a href="/.pages/work-experience/">ניסיון מקצועי</a>
+          <a href="/.pages/projects/">פרויקטים אישיים</a>
+          <a href="/.pages/c-lab/">קורס C-Lab</a>
         </nav>
       </div>
     </header>
@@ -92,7 +92,11 @@
       <!-- Navigation Button -->
       <section class="section">
         <div class="container">
-          <a href="/pages/c-lab/" class="btn mb-lg">
+          <a
+            href="javascript:void(0)"
+            onclick="location.href='./pages/c-lab/index.html'"
+            class="btn mb-lg"
+          >
             <i class="fas fa-arrow-right"></i> חזרה לעמוד הקורס
           </a>
         </div>
@@ -271,7 +275,7 @@
               <div class="answer" id="answer7">
                 <p>
                   תראה את המדריך
-                  <a href="/pages/c-lab/guides/macbook-guide.html">כאן</a>.
+                  <a href="/.pages/c-lab/guides/macbook-guide.html">כאן</a>.
                 </p>
               </div>
             </div>
@@ -283,7 +287,7 @@
               <div class="answer" id="answer8">
                 <p>
                   תראה את המדריך
-                  <a href="/pages/c-lab/resources/projects-tips.html">כאן</a>.
+                  <a href="/.pages/c-lab/resources/projects-tips.html">כאן</a>.
                 </p>
               </div>
             </div>
@@ -351,12 +355,12 @@
     <!-- Contact Floating Action Button -->
     <div class="contact-fab">
       <a href="mailto:a.shtaigmann@gmail.com" title="צור קשר">
-        <img src="/assets/images/chat.png" alt="צור קשר" />
+        <img src="./assets/images/chat.png" alt="צור קשר" />
       </a>
     </div>
 
     <!-- JavaScript -->
-    <script src="/assets/js/main.js"></script>
+    <script src="./assets/js/main.js"></script>
     <script>
       // Update the current year
       if (document.getElementById("current-year")) {
