@@ -10,8 +10,9 @@
     <title>Project Score Sheet | Almog Shtaigmann</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./assets/css/main.css" />
-    <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <link rel="stylesheet" href="../../../assets/css/main.css" />
+    <link rel="stylesheet" href="../../../assets/css/responsive.css" />
+    <link rel="stylesheet" href="../../../assets/css/rtl.css" />
 
     <!-- Fonts -->
     <link
@@ -95,10 +96,24 @@
         </button>
 
         <nav class="nav-main collapsed" id="main-nav">
-          <a href="/">Home</a>
-          <a href="/.pages/work-experience/">Work Experience</a>
-          <a href="/.pages/projects/">Personal Projects</a>
-          <a href="/.pages/c-lab/">C-Lab Course</a>
+          <a
+            href="javascript:void(0)"
+            onclick="location.href='../../../index.html'"
+            >דף הבית</a
+          >
+          <a
+            href="javascript:void(0)"
+            onclick="location.href='../../../pages/work-experience/index.html'"
+            >ניסיון מקצועי</a
+          >
+          <a
+            href="javascript:void(0)"
+            onclick="location.href='../../../pages/projects/index.html'"
+            >פרויקטים אישיים</a
+          >
+          <a href="javascript:void(0)" onclick="location.href='../index.html'"
+            >קורס C-Lab</a
+          >
         </nav>
       </div>
     </header>
@@ -128,8 +143,12 @@
       <!-- Navigation Button -->
       <section class="section">
         <div class="container">
-          <a href="/.pages/c-lab/" class="btn mb-lg">
-            <i class="fas fa-arrow-left"></i> Back to Course Page
+          <a
+            href="javascript:void(0)"
+            onclick="location.href='../index.html'"
+            class="btn mb-lg"
+          >
+            <i class="fas fa-arrow-right"></i> חזרה לעמוד הקורס
           </a>
         </div>
       </section>
@@ -303,13 +322,13 @@
 
     <!-- Contact Floating Action Button -->
     <div class="contact-fab">
-      <a href="mailto:a.shtaigmann@gmail.com" title="Contact Me">
-        <img src="./assets/images/chat.png" alt="Contact Me" />
+      <a href="mailto:a.shtaigmann@gmail.com" title="צור קשר">
+        <img src="../../../assets/images/chat.png" alt="צור קשר" />
       </a>
     </div>
 
     <!-- JavaScript -->
-    <script src="./assets/js/main.js"></script>
+    <script src="../../../assets/js/main.js"></script>
     <script>
       // Update the current year
       document.getElementById("current-year").textContent =
