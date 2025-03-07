@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="מדריך למשתמשי Mac בקורס Laboratory C 20465 באוניברסיטה הפתוחה"
+    />
+    <title>מדריך למשתמשי Mac | Almog Shtaigmann</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <link rel="stylesheet" href="/assets/css/rtl.css" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Rubik:wght@400;500;700&display=swap&subset=hebrew"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-34DFKV9RWM"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-34DFKV9RWM");
+    </script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container header-container">
+        <h1 class="site-title">מדריך למשתמשי Mac</h1>
+
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span class="visually-hidden">פתח תפריט</span>
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="nav-main collapsed" id="main-nav">
+          <a href="/">דף הבית</a>
+          <a href="/pages/work-experience/">ניסיון מקצועי</a>
+          <a href="/pages/projects/">פרויקטים אישיים</a>
+          <a href="/pages/c-lab/">קורס C-Lab</a>
+        </nav>
+      </div>
+    </header>
+    <!-- Header Banner -->
+    <div
+      class="header-banner"
+      style="
+        background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+        color: white;
+        padding: 20px;
+        text-align: center;
+      "
+    >
+      <h2 style="color: #fff">
+        Check Out My New Course on Univeli! Hero To Zero
+      </h2>
+      <h2 style="color: #fff">קורס למציאת משרה ראשונה</h2>
+      <p>Prepare for high-tech interviews with practical tips and guidance.</p>
+      <a
+        href="https://www.univeli.com/link/4BP8Zb?url=https%3A%2F%2Fwww.univeli.com%2Fcourse%2Fprepare-me-for-high-tech"
+        target="_blank"
+        style="color: #fff; text-decoration: underline"
+        >Learn More</a
+      >
+    </div>
+
+    <main>
+      <!-- Navigation Button -->
+      <section class="section">
+        <div class="container">
+          <a href="/pages/c-lab/" class="btn mb-lg">
+            <i class="fas fa-arrow-right"></i> חזרה לעמוד הקורס
+          </a>
+        </div>
+      </section>
+
+      <!-- Main Content -->
+      <section class="section">
+        <div class="container">
+          <div class="card">
+            <p><strong>*נכון ל-2025</strong></p>
+
+            <h2>איך לעבוד עם מק בעל מעבד מסדרת M בקורס:</h2>
+
+            <p>
+              עשיתי את הקורס ב2023b, באמת ניסינו כל הסטודנטים שהיה להם מק למצוא
+              פתרון, אין פתרון קסם או פשוט, יש מספר פתרונות שיכולים לעזור
+              ושבעזרתם תצליחו לעבוד על המק שלכם אך עם שינויים מסויימים.חשוב
+              להבין שאי אפשר להריץ את הסביבה שלהם על מק עם מעבד מסדרת M ללא
+              שינויים או התאמות מיוחדות. כל מה שאני רושם פה הוא מתוך כוונה ליצור
+              שמור ידע ולחסוך לכם זמן.
+            </p>
+            <p style="color: blueviolet; font-size: large">
+              לא מאמינים? תגללו לסוף העמוד ותראו דוגמאות
+            </p>
+
+            <h3>בואו נבין מה הפער שבגללו אי אפשר:</h3>
+            <p>
+              צריך להריץ במסגרת הקורס את הקוד שיתמוך במכונה שרצה על x32, שזה חלק
+              ממשפחת המעבדים של x86. (יש x86_32, לעיתים מכונה i386, ויש x86_64 -
+              לפעמים מכונה amd64). בעוד שהמחשבים של אפל עם המעבדים מסדרת M
+              עובדים על ארכיטקטורה שונה לחלוטין, על arm64. (מוזמנים לעשות גוגל
+              כדי להעמיק את הידע והמונחים השונים).
+            </p>
+
+            <h3>שאלה שחוזרת על עצמה:</h3>
+            <p>
+              ״אבל אמרו לי שאין בעיה לכתוב בשפת C על מק״ - נכון אין בעיה, זה
+              אפילו אחד הפתרונות שיש בהמשך, אבל בגלל הפער שהסברתי, זאת לא אותה
+              סביבה, ולכן קיים סיכוי שהקוד לא יתקמפל ללא שום הערה או שגיאה על
+              הלינוקס אם הוא נכתב על המק שלכם.
+            </p>
+
+            <p>
+              לכן גם אם תריצו אובונטו, זאת לא הגרסה שלהם ולא הסביבה שלהם, ולכן
+              זה לא יעזור לכם, זה לא יקדם אתכם וזה לא יפתור את הבעיה. בנוסף קיים
+              סיכוי שאותו קוד שעובד אצלכם לא יעבוד / יתקמפל כמצופה בסביבה שלהם
+              (קרה לי). באמת שחבל על הזמן של לנסות למצוא פתרון כי זה גם ייקח
+              יותר זמן מאשר לעשות את אחד הפתרונות המוצגים וגם תגיעו למסקנה שאיתה
+              פתחתי את הפסקה.
+            </p>
+
+            <h3>
+              יש כמה פתרונות אפשריים<br />הם מדורגים מהקל והנגיש ביותר ועד הקשה
+              יותר שמיועד למי שיצא לעשות דברים כאלו בעבר:
+            </h3>
+            <ul>
+              <li>
+                <strong>פתרון 1:</strong> למצוא מחשב ישן / אחר בבית שיש עליו
+                Windows, להתקין שם הכל כרגיל, בדיוק כמו שיש באתר הקורס. על המחשב
+                להתקין בנוסף TeamViewer / Any Desk או כל תוכנה אחרת שמאפשרת
+                שליטה מרחוק על המחשב. להתחבר דרך המק ולעבוד שם.
+              </li>
+              <li>
+                <strong>פתרון 1 משודרג ומהמומלץ:</strong> לעבוד על המק רגיל, עם
+                CLion או כל IDE אחר, לעבוד עם GitHub, ולפני כל הגשה למשוך את
+                הקוד על המחשב שעליו מותקן Windows, לקמפל, לעלות את הקבצים החדשים
+                חזרה ל-GitHub ולהגיש אותם. <br />על הדרך מרוויחים ניסיון עם
+                GitHub.
+              </li>
+              <li>
+                <strong>פתרון 2:</strong> לדבר עם השותף לפרויקט / חבר / כל מישהו
+                קרוב אליכם שאפשר לבקש ממנו לקמפל את הקוד אצלו במחשב (כמובן דורש
+                להתקין שם את כל מה שנדרש).
+              </li>
+              <li>
+                <strong>פתרון 3:</strong>
+                <a
+                  href="https://github.com/utmapp/UTM/releases/latest/download/UTM.dmg"
+                  target="_blank"
+                  >שימוש ב-UTM</a
+                >
+                כדי להפעיל מכונה וירטואלית על גבי המק, עם אובונטו תואם. ניתן
+                להוריד את אובונטו עבור i386
+                <a
+                  href="https://releases.ubuntu.com/xenial/ubuntu-16.04.6-desktop-i386.iso"
+                  target="_blank"
+                  >כאן</a
+                >
+                ולצפות בהדרכה כיצד להגדיר זאת
+                <a href="https://youtu.be/MVLbb1aMk24" target="_blank">כאן</a>.
+              </li>
+              <li>
+                <strong>פתרון 4:</strong>
+                שימוש במונוריפו וב-GitHub Actions לבדיקה אוטומטית של תקינות הקוד
+                במערכות האוניברסיטה. פרויקט לדוגמה שמתעד איך להשתמש במונוריפו
+                יחד עם GitHub Actions זמין
+                <a
+                  href="https://github.com/Avivbens/c-programming-uni-portfolio"
+                  target="_blank"
+                  >כאן</a
+                >. הפרויקט מתמקד בכתיבת קוד ANSI C, ומפעיל בדיקות תקינות על
+                סביבת Windows-2019 עבור כל PR.
+              </li>
+            </ul>
+
+            <p>
+              <strong
+                >דוגמה לפתרונות של מטלות עבר, איך צריך להגיש, איזה קבצים ועוד
+                שווה לשמור את הקישור</strong
+              >
+              <a
+                href="https://github.com/AlmogShKt/Labratory-C-20465-2023B"
+                target="_blank"
+                >GitHub Repository</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Evidence Section -->
+      <section class="section">
+        <div class="container">
+          <div class="card">
+            <h2>
+              אני אומר שוב, כל מה שרשום פה זה מתוך כוונה לעזור לכם ולחסוך לכם
+              זמן, אין טעם לנסות להוכיח שאפשר להריץ את זה על המק או שאפשר לעבוד
+              רגיל והכל טוב.
+            </h2>
+            <p>
+              הנה לקט של תיעודים שאספתי במהלך הסמסטרים האחרונים שמראים את הבעיה
+              בלעבוד על סביבה שונה ממה שמסופק, ולמה חשוב כל הזמן לקמפל על הסביבה
+              שלהם ולוודא שהכל עובד כמצופה.
+            </p>
+
+            <div class="image-gallery grid grid-1 grid-md-3">
+              <img
+                src="/assets/images/img_st_nt1.jpeg"
+                alt="תמונה 1"
+                class="img-fluid"
+              />
+              <img
+                src="/assets/images/img_st_nt2.jpeg"
+                alt="תמונה 2"
+                class="img-fluid"
+              />
+              <img
+                src="/assets/images/img_st_nt3.jpeg"
+                alt="תמונה 3"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Contact Floating Action Button -->
+    <div class="contact-fab">
+      <a href="mailto:a.shtaigmann@gmail.com" title="צור קשר">
+        <img src="/assets/images/chat.png" alt="צור קשר" />
+      </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/assets/js/main.js"></script>
+    <script>
+      // Update the current year
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>
