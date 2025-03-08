@@ -1,0 +1,18 @@
+@keyframes wave {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.learn-more-btn {
+  animation: wave 2s infinite;
+  color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #e1ebf8;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    border: 1px solid #ccc;
+    font-weight: bold;
+}
