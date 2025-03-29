@@ -196,6 +196,92 @@ header {
 }
 
 /* Cards */
+.my-course-card {
+  position: relative;
+  border-radius: 20px;
+  padding: 2rem;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  z-index: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.my-course-card::before {
+  content: '';
+  position: absolute;
+  top: -130px;
+  left: -75px;
+  right: -2px;
+  bottom: -2px;
+  width: 500px;
+  height: 500px;
+  background: conic-gradient(from 0deg,
+      #6f00ff,
+      #00dbde,
+      #00ff94,
+      #6f00ff);
+  z-index: -1;
+  border-radius: 22px;
+  animation: spin 4s linear infinite;
+}
+
+.my-course-card::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  background: #fff;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.my-course-card .card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.my-course-card .card-content {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.my-course-card .card-action {
+  position: relative;
+  z-index: 2;
+}
+
+.my-course-card .btn {
+  background: linear-gradient(to right, #6f00ff, #00dbde);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.my-course-card .btn:hover {
+  background: linear-gradient(to right, #00dbde, #6f00ff);
+}
+
 .card {
   background-color: #fff;
   border-radius: var(--border-radius-lg);
