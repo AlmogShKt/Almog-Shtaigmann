@@ -1,153 +1,382 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ניתוח שכר לפי חברות - מבוסס על נתונים אמיתיים"
+    />
+    <meta
+      property="og:image"
+      content="https://almogshkt.github.io/Almog-Shtaigmann/assets/images/meta-data-baner/Slide1.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <title>ניתוח שכר לפי חברה | Almog Shtaigmann</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="ניתוח שכר לפי חברות - מבוסס על נתונים אמיתיים" />
-  <meta property="og:image"
-    content="https://almogshkt.github.io/Almog-Shtaigmann/assets/images/meta-data-baner/Slide1.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <title>ניתוח שכר לפי חברה | Almog Shtaigmann</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../../assets/css/main.css" />
+    <link rel="stylesheet" href="../../../assets/css/responsive.css" />
+    <link rel="stylesheet" href="../../../assets/css/rtl.css" />
+    <link rel="stylesheet" href="../../../assets/css/button-animation.css" />
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="../../../assets/css/main.css" />
-  <link rel="stylesheet" href="../../../assets/css/responsive.css" />
-  <link rel="stylesheet" href="../../../assets/css/rtl.css" />
-  <link rel="stylesheet" href="../../../assets/css/button-animation.css" />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
 
-  <!-- Chart.js -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-
-<body>
-  <!-- Header Banner -->
-  <div class="header-banner" style="background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%); color: white; padding: 20px; text-align: center;">
-    <h2 style="color: #fff">Check Out My New Course on Univeli</h2>
-    <h2 style="color: #fff">Hero To Zero - קורס למציאת משרה ראשונה</h2>
-    <h2 style="color: #fff">המון מידע שימושי כמו זה ועד הרבה טיפים!</h2>
-    <p>Prepare for high-tech interviews with practical tips and guidance.</p>
-    <a href="https://www.univeli.com/link/4BP8Zb?url=https%3A%2F%2Fwww.univeli.com%2Fcourse%2Fprepare-me-for-high-tech" target="_blank" class="btn learn-more-btn">
-      <i class="fas fa-arrow-right"></i> Learn More
-    </a>
-  </div>
-
-  <!-- Main Content -->
-  <main>
-    <section class="section">
-      <div class="container">
-        <h1 class="text-center">ניתוח שכר לפי חברות</h1>
-        <p class="text-center">מינימום, ממוצע ומקסימום שכר (₪/שעה)</p>
-
-        <div class="chart-section">
-          <h3 class="text-center">חברות אמריקאיות</h3>
-          <div class="chart-container">
-            <canvas id="americanChart"></canvas>
-          </div>
-        </div>
-
-        <div class="chart-section">
-          <h3 class="text-center">חברות ישראליות</h3>
-          <div class="chart-container">
-            <canvas id="israeliChart"></canvas>
-          </div>
-        </div>
-
-        <div class="chart-section">
-          <h3 class="text-center">חברות אחרות</h3>
-          <div class="chart-container">
-            <canvas id="otherChart"></canvas>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container footer-content">
-      <div class="footer-info">
-        <p>&copy; <span id="current-year">2023</span> Almog Shtaigmann. All rights reserved.</p>
-        <p>View the source code on <a href="https://github.com/AlmogShKt/" target="_blank">GitHub</a>.</p>
-      </div>
-      <div class="footer-links">
-        <ul class="social-links-footer">
-          <li><a href="mailto:a.shtaigmann@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/almog-shtaigmann" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-          <li><a href="https://github.com/almogshkt" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
-        </ul>
-      </div>
+  <body>
+    <!-- Header Banner -->
+    <div
+      class="header-banner"
+      style="
+        background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+        color: white;
+        padding: 20px;
+        text-align: center;
+      "
+    >
+      <h2 style="color: #fff">Check Out My New Course on Univeli</h2>
+      <h2 style="color: #fff">Zero To Hero - קורס למציאת משרה ראשונה</h2>
+      <h2 style="color: #fff">המון מידע שימושי כמו זה ועד הרבה טיפים!</h2>
+      <p>Prepare for high-tech interviews with practical tips and guidance.</p>
+      <a
+        href="https://www.univeli.com/link/4BP8Zb?url=https%3A%2F%2Fwww.univeli.com%2Fcourse%2Fprepare-me-for-high-tech"
+        target="_blank"
+        class="btn learn-more-btn"
+      >
+        <i class="fas fa-arrow-right"></i> Learn More
+      </a>
     </div>
-    <div class="site-metrics text-center mt-md">
-      <img src="https://komarev.com/ghpvc/?username=almogshkt&color=blue" alt="Site-Views" />
+
+    <!-- Main Content -->
+    <main>
+      <section class="section">
+        <div class="container">
+          <h1 class="text-center">ניתוח שכר לפי חברות</h1>
+          <p class="text-center">מינימום, ממוצע ומקסימום שכר (₪/שעה)</p>
+
+          <div class="chart-section">
+            <h3 class="text-center">חברות אמריקאיות</h3>
+            <div class="chart-container">
+              <canvas id="americanChart"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-section">
+            <h3 class="text-center">חברות ישראליות</h3>
+            <div class="chart-container">
+              <canvas id="israeliChart"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-section">
+            <h3 class="text-center">חברות אחרות</h3>
+            <div class="chart-container">
+              <canvas id="otherChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-content">
+        <div class="footer-info">
+          <p>
+            &copy; <span id="current-year">2023</span> Almog Shtaigmann. All
+            rights reserved.
+          </p>
+          <p>
+            View the source code on
+            <a href="https://github.com/AlmogShKt/" target="_blank">GitHub</a>.
+          </p>
+        </div>
+        <div class="footer-links">
+          <ul class="social-links-footer">
+            <li>
+              <a href="mailto:a.shtaigmann@gmail.com" aria-label="Email"
+                ><i class="fas fa-envelope"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/almog-shtaigmann"
+                target="_blank"
+                aria-label="LinkedIn"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/almogshkt"
+                target="_blank"
+                aria-label="GitHub"
+                ><i class="fab fa-github"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-metrics text-center mt-md">
+        <img
+          src="https://komarev.com/ghpvc/?username=almogshkt&color=blue"
+          alt="Site-Views"
+        />
+      </div>
+    </footer>
+
+    <!-- Contact Floating Action Button -->
+    <div class="contact-fab">
+      <a href="mailto:a.shtaigmann@gmail.com" title="צור קשר">
+        <img src="../../../assets/images/chat.png" alt="צור קשר" />
+      </a>
     </div>
-  </footer>
 
-  <!-- Contact Floating Action Button -->
-  <div class="contact-fab">
-    <a href="mailto:a.shtaigmann@gmail.com" title="צור קשר">
-      <img src="../../../assets/images/chat.png" alt="צור קשר" />
-    </a>
-  </div>
+    <!-- Chart Script -->
+    <script>
+      function createChart(chartId, labels, minData, avgData, maxData) {
+        const filteredLabels = [];
+        const filteredMin = [];
+        const filteredAvg = [];
+        const filteredMax = [];
+        const totalData = [];
 
-  <!-- Chart Script -->
-  <script>
-    function createChart(chartId, labels, minData, avgData, maxData) {
-      new Chart(document.getElementById(chartId), {
-        type: 'bar',
-        data: {
-          labels: labels,
-          datasets: [
-            { label: "Min Salary (₪/hr)", data: minData, backgroundColor: "rgba(54, 162, 235, 0.6)" },
-            { label: "Avg Salary (₪/hr)", data: avgData, backgroundColor: "rgba(255, 206, 86, 0.6)" },
-            { label: "Max Salary (₪/hr)", data: maxData, backgroundColor: "rgba(75, 192, 192, 0.6)" }
-          ]
-        },
-        options: {
-          responsive: true,
-          plugins: { legend: { position: 'top' } },
-          scales: {
-            y: {
-              beginAtZero: true,
-              min: 0,
-              max: 160
-            }
+        for (let i = 0; i < labels.length; i++) {
+          const min = minData[i];
+          const avg = avgData[i];
+          const max = maxData[i];
+
+          if (min === avg && avg === max) {
+            // All values are the same – show only totalData
+            totalData.push(min);
+            filteredLabels.push(labels[i]);
+            filteredMin.push(null);
+            filteredAvg.push(null);
+            filteredMax.push(null);
+          } else {
+            // Values differ – show each bar
+            totalData.push(null);
+            filteredLabels.push(labels[i]);
+            filteredMin.push(min);
+            filteredAvg.push(avg);
+            filteredMax.push(max);
           }
         }
-      });
-    }
 
-    const americanCompanies = ["Amazon", "American Company", "Citadel", "Google", "Microsoft", "Salesforce"];
-    const israeliCompanies = ["Atera", "BigID", "Check Point", "CyberArk", "Jfrog", "Rafael", "Startup", "Technion"];
-    const otherCompanies = ["Bruker", "Clarifruit - Startup", "Condor Pacific", "Confidential - Small Company", "Defense Industry", "Intl Bank (Tech Division)", "Insurance Company", "Nuvei", "Via", "ZOLL Itamar Medical", "נון מיקור חוץ"];
+        new Chart(document.getElementById(chartId), {
+          type: "bar",
+          data: {
+            labels: filteredLabels,
+            datasets: [
+              {
+                label: "Total (₪/hr)",
+                data: totalData,
+                backgroundColor: "rgba(100, 100, 255, 0.6)",
+                hidden: false,
+              },
+              {
+                label: "Min Salary (₪/hr)",
+                data: filteredMin,
+                backgroundColor: "rgba(54, 162, 235, 0.6)",
+              },
+              {
+                label: "Avg Salary (₪/hr)",
+                data: filteredAvg,
+                backgroundColor: "rgba(255, 206, 86, 0.6)",
+              },
+              {
+                label: "Max Salary (₪/hr)",
+                data: filteredMax,
+                backgroundColor: "rgba(75, 192, 192, 0.6)",
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                position: "top",
+              },
+              tooltip: {
+                callbacks: {
+                  label: function (context) {
+                    if (context.raw === null) return "";
+                    return `${context.dataset.label}: ₪${context.raw}`;
+                  },
+                },
+              },
+            },
+            scales: {
+              y: {
+                beginAtZero: true,
+                min: 0,
+                max: 160,
+              },
+            },
+          },
+        });
+      }
 
-    const minSalaries = {
-      "Amazon": 140, "American Company": 100, "Citadel": 65, "Google": 150, "Microsoft": 120, "Salesforce": 95,
-      "Atera": 75, "BigID": 90, "Check Point": 75, "CyberArk": 90, "Jfrog": 77, "Rafael": 71, "Startup": 90, "Technion": 10,
-      "Bruker": 93, "Clarifruit - Startup": 42, "Condor Pacific": 90, "Confidential - Small Company": 110, "Defense Industry": 90,
-      "Intl Bank (Tech Division)": 137, "Insurance Company": 100, "Nuvei": 60, "Via": 55, "ZOLL Itamar Medical": 99, "נון מיקור חוץ": 65
-    };
+      const americanCompanies = [
+        "Amazon",
+        "American Company",
+        "Citadel",
+        "Google",
+        "Microsoft",
+        "Salesforce",
+      ];
 
-    const avgSalaries = { ...minSalaries };
-    const maxSalaries = { ...minSalaries };
+      const israeliCompanies = [
+        "Atera",
+        "BigID",
+        "Check Point",
+        "CyberArk",
+        "Jfrog",
+        "Rafael",
+        "Startup",
+        "Technion",
+      ];
 
-    function getSalaries(companies, salaryData) {
-      return companies.map(company => salaryData[company] || 0);
-    }
+      const otherCompanies = [
+        "Bruker",
+        "Clarifruit - Startup",
+        "Condor Pacific",
+        "Confidential - Small Company",
+        "Defense Industry",
+        "Intl Bank (Tech Division)",
+        "Insurance Company",
+        "Nuvei",
+        "Via",
+        "ZOLL Itamar Medical",
+        "Non-Outsourcing Co.",
+      ];
 
-    createChart("americanChart", americanCompanies, getSalaries(americanCompanies, minSalaries), getSalaries(americanCompanies, avgSalaries), getSalaries(americanCompanies, maxSalaries));
-    createChart("israeliChart", israeliCompanies, getSalaries(israeliCompanies, minSalaries), getSalaries(israeliCompanies, avgSalaries), getSalaries(israeliCompanies, maxSalaries));
-    createChart("otherChart", otherCompanies, getSalaries(otherCompanies, minSalaries), getSalaries(otherCompanies, avgSalaries), getSalaries(otherCompanies, maxSalaries));
+      const minSalaries = {
+        Amazon: 140,
+        "American Company": 100,
+        Citadel: 65,
+        Google: 150,
+        Microsoft: 110,
+        Salesforce: 95,
+        Atera: 75,
+        BigID: 90,
+        "Check Point": 75,
+        CyberArk: 90,
+        Jfrog: 77,
+        Rafael: 71,
+        Startup: 42,
+        Technion: 55,
+        Bruker: 93,
+        "Clarifruit - Startup": 42,
+        "Condor Pacific": 90,
+        "Confidential - Small Company": 85,
+        "Defense Industry": 75,
+        "Intl Bank (Tech Division)": 90,
+        "Insurance Company": 100,
+        Nuvei: 60,
+        Via: 55,
+        "ZOLL Itamar Medical": 99,
+        "Non-Outsourcing Co.": 65,
+      };
 
-    document.getElementById("current-year").textContent = new Date().getFullYear();
-  </script>
-</body>
+      const avgSalaries = {
+        Amazon: 140,
+        "American Company": 100,
+        Citadel: 65,
+        Google: 150,
+        Microsoft: 115,
+        Salesforce: 95,
+        Atera: 75,
+        BigID: 90,
+        "Check Point": 86.25,
+        CyberArk: 90,
+        Jfrog: 83.5,
+        Rafael: 76.5,
+        Startup: 81.43,
+        Technion: 55,
+        Bruker: 93,
+        "Clarifruit - Startup": 42,
+        "Condor Pacific": 90,
+        "Confidential - Small Company": 85,
+        "Defense Industry": 75,
+        "Intl Bank (Tech Division)": 90,
+        "Insurance Company": 100,
+        Nuvei: 60,
+        Via: 55,
+        "ZOLL Itamar Medical": 99,
+        "Non-Outsourcing Co.": 65,
+      };
 
+      const maxSalaries = {
+        Amazon: 140,
+        "American Company": 100,
+        Citadel: 65,
+        Google: 150,
+        Microsoft: 120,
+        Salesforce: 95,
+        Atera: 75,
+        BigID: 90,
+        "Check Point": 100,
+        CyberArk: 90,
+        Jfrog: 90,
+        Rafael: 82,
+        Startup: 100,
+        Technion: 55,
+        Bruker: 93,
+        "Clarifruit - Startup": 42,
+        "Condor Pacific": 90,
+        "Confidential - Small Company": 85,
+        "Defense Industry": 75,
+        "Intl Bank (Tech Division)": 90,
+        "Insurance Company": 100,
+        Nuvei: 60,
+        Via: 55,
+        "ZOLL Itamar Medical": 99,
+        "Non-Outsourcing Co.": 65,
+      };
+
+      function getSalaries(companies, salaryData) {
+        return companies.map((company) => salaryData[company] || 0);
+      }
+
+      createChart(
+        "americanChart",
+        americanCompanies,
+        getSalaries(americanCompanies, minSalaries),
+        getSalaries(americanCompanies, avgSalaries),
+        getSalaries(americanCompanies, maxSalaries)
+      );
+      createChart(
+        "israeliChart",
+        israeliCompanies,
+        getSalaries(israeliCompanies, minSalaries),
+        getSalaries(israeliCompanies, avgSalaries),
+        getSalaries(israeliCompanies, maxSalaries)
+      );
+      createChart(
+        "otherChart",
+        otherCompanies,
+        getSalaries(otherCompanies, minSalaries),
+        getSalaries(otherCompanies, avgSalaries),
+        getSalaries(otherCompanies, maxSalaries)
+      );
+
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
 </html>
