@@ -63,15 +63,32 @@
 
     <!-- Main Content -->
     <main>
+      <style>
+        .title-comment {
+          color: darkgrey;
+          border-width: 5px;
+          border-right: 4px solid;
+          padding-right: 10px;
+        }
+      </style>
       <section class="section">
         <div class="container">
           <h1 class="text-center">ניתוח שכר לפי חברות</h1>
-          <h5 style="color: darkgrey">
-            > המידע מבוסס על מעל 40 סטונדטים שמילאו א השכר שלהם לפי החברה -
-            מתייחס לסטודמנטים באוניבסיטיה הפוחה
+          <h5 class="title-comment">
+            המידע מבוסס על נתונים של מעל 40 סטודנטים ששיתפו את השכר שלהם.
+            הנתונים מתייחסים לסטודנטים מאוניברסיטת הפתוחה.
+            <br />
+            אין התחייבות שהמידע נכון
+            <br />
+            אם אתם רוצים להוסיף את השכר שלכם – מלאו את
+            <a href="https://forms.gle/VNcyu4GjtroWHt8z9" target="_blank"
+              >הטופס הזה</a
+            >.
           </h5>
           <p class="text-center">מינימום, ממוצע ומקסימום שכר (₪/שעה)</p>
-
+          <h5 class="title-comment">
+            המשמעות של חברות עם עמודה אחת בלבד היא שיש נתון בודד עבור אותה חברה
+          </h5>
           <div class="chart-section">
             <h3 class="text-center">חברות אמריקאיות</h3>
             <div class="chart-container">
@@ -237,11 +254,13 @@
 
       const americanCompanies = [
         "Amazon",
+        "Intel",
         "American Company",
         "Citadel",
         "Google",
         "Microsoft",
         "Salesforce",
+        "Genesys",
       ];
 
       const israeliCompanies = [
@@ -271,6 +290,7 @@
 
       const minSalaries = {
         Amazon: 140,
+        Intel: 65,
         "American Company": 100,
         Citadel: 65,
         Google: 150,
@@ -285,6 +305,7 @@
         Startup: 42,
         Technion: 55,
         Bruker: 93,
+        Genesys: 110,
         "Clarifruit - Startup": 42,
         "Condor Pacific": 90,
         "Confidential - Small Company": 85,
@@ -299,6 +320,7 @@
 
       const avgSalaries = {
         Amazon: 140,
+        Intel: 81,
         "American Company": 100,
         Citadel: 65,
         Google: 150,
@@ -308,9 +330,9 @@
         BigID: 90,
         "Check Point": 86.25,
         CyberArk: 90,
-        Jfrog: 83.5,
+        Jfrog: 85,
         Rafael: 76.5,
-        Startup: 81.43,
+        Startup: 83,
         Technion: 55,
         Bruker: 93,
         "Clarifruit - Startup": 42,
@@ -327,6 +349,7 @@
 
       const maxSalaries = {
         Amazon: 140,
+        Intel: 90,
         "American Company": 100,
         Citadel: 65,
         Google: 150,
