@@ -53,6 +53,8 @@
 
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Salary Data -->
+    <script src="salary-data.js"></script>
   </head>
 
   <body>
@@ -88,12 +90,56 @@
           border-right: 4px solid;
           padding-right: 10px;
         }
+        
+        /* Fix for Safari chart responsiveness */
+        .chart-section {
+          margin: 40px 0;
+          width: 100%;
+          overflow-x: auto;
+        }
+        
+        .chart-container {
+          position: relative;
+          width: 100%;
+          min-height: 400px;
+          height: 400px;
+          margin: 20px auto;
+          padding: 0 20px;
+        }
+        
+        .chart-container canvas {
+          width: 100% !important;
+          height: 100% !important;
+          max-width: 100%;
+          display: block;
+        }
+        
+        /* Safari specific fixes */
+        @media screen and (-webkit-min-device-pixel-ratio: 0) {
+          .chart-container {
+            min-width: 800px;
+            width: 100%;
+          }
+          
+          .chart-section {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+          }
+        }
+        
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+          .chart-container {
+            min-width: 600px;
+            padding: 0 10px;
+          }
+        }
       </style>
       <section class="section">
         <div class="container">
           <h1 class="text-center">ניתוח שכר לפי חברות</h1>
           <h5 class="title-comment">
-            המידע מבוסס על נתונים של מעל 40 סטודנטים ששיתפו את השכר שלהם.
+            המידע מבוסס על נתונים של מעל 50 סטודנטים ששיתפו את השכר שלהם.
             הנתונים מתייחסים לסטודנטים מהאוניברסיטה הפתוחה.
             <br />
             אין התחייבות שהמידע נכון
@@ -104,11 +150,13 @@
             >.
           </h5>
           <p class="text-center">מינימום, ממוצע ומקסימום שכר (₪/שעה)</p>
+          <h4 id="total-average" class="text-center" style="color: #2575fc; font-weight: bold; margin: 30px 0; padding: 15px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #2575fc;">טוען נתונים...</h4>
           <h5 class="title-comment">
             המשמעות של חברות עם עמודה אחת בלבד היא שיש נתון בודד עבור אותה חברה
           </h5>
           <div class="chart-section">
             <h3 class="text-center">חברות אמריקאיות</h3>
+            <h4 id="american-average" class="text-center" style="color: #666; margin-bottom: 20px;">טוען נתונים...</h4>
             <div class="chart-container">
               <canvas id="americanChart"></canvas>
             </div>
@@ -116,6 +164,7 @@
 
           <div class="chart-section">
             <h3 class="text-center">חברות ישראליות</h3>
+            <h4 id="israeli-average" class="text-center" style="color: #666; margin-bottom: 20px;">טוען נתונים...</h4>
             <div class="chart-container">
               <canvas id="israeliChart"></canvas>
             </div>
@@ -123,6 +172,7 @@
 
           <div class="chart-section">
             <h3 class="text-center">חברות אחרות</h3>
+            <h4 id="other-average" class="text-center" style="color: #666; margin-bottom: 20px;">טוען נתונים...</h4>
             <div class="chart-container">
               <canvas id="otherChart"></canvas>
             </div>
@@ -246,6 +296,7 @@
           },
           options: {
             responsive: true,
+            maintainAspectRatio: false,
             plugins: {
               legend: {
                 position: "top",
@@ -260,6 +311,12 @@
               },
             },
             scales: {
+              x: {
+                ticks: {
+                  maxRotation: 45,
+                  minRotation: 0,
+                },
+              },
               y: {
                 beginAtZero: true,
                 min: 0,
@@ -270,161 +327,10 @@
         });
       }
 
-      const americanCompanies = [
-        "Amazon",
-        "Intel",
-        "American Company",
-        "Citadel",
-        "Google",
-        "Microsoft",
-        "Salesforce",
-        "Genesys",
-      ];
-
-      const israeliCompanies = [
-        "Atera",
-        "BigID",
-        "Check Point",
-        "CyberArk",
-        "Jfrog",
-        "Rafael",
-        "Startup",
-        "Technion",
-      ];
-
-      const otherCompanies = [
-        "Bruker",
-        "ARM",
-        "Clarifruit - Startup",
-        "Condor Pacific",
-        "Confidential - Small Company",
-        "Defense Industry",
-        "Intl Bank (Tech Division)",
-        "Insurance Company",
-        "Nuvei",
-        "Via",
-        "ZOLL Itamar Medical",
-        "Non-Outsourcing Co.",
-      ];
-
-      const minSalaries = {
-        Amazon: 140,
-        Intel: 65,
-        "American Company": 100,
-        Citadel: 65,
-        Google: 150,
-        Microsoft: 110,
-        Salesforce: 95,
-        Genesys: 110,
-        Atera: 75,
-        BigID: 90,
-        "Check Point": 75,
-        CyberArk: 90,
-        Jfrog: 77,
-        Rafael: 71,
-        Startup: 42,
-        Technion: 55,
-        Bruker: 93,
-        ARM: 125,
-        "Clarifruit - Startup": 42,
-        "Condor Pacific": 90,
-        "Confidential - Small Company": 85,
-        "Defense Industry": 75,
-        "Intl Bank (Tech Division)": 90,
-        "Insurance Company": 100,
-        Nuvei: 60,
-        Via: 55,
-        "ZOLL Itamar Medical": 99,
-        "Non-Outsourcing Co.": 65,
-      };
-
-      const avgSalaries = {
-        Amazon: 140,
-        Intel: 81,
-        "American Company": 100,
-        Citadel: 65,
-        Google: 150,
-        Genesys: 110,
-        Microsoft: 115,
-        Salesforce: 95,
-        Atera: 75,
-        BigID: 90,
-        "Check Point": 86.25,
-        CyberArk: 90,
-        Jfrog: 85,
-        Rafael: 76.5,
-        Startup: 83,
-        Technion: 55,
-        Bruker: 93,
-        ARM: 125,
-        "Clarifruit - Startup": 42,
-        "Condor Pacific": 90,
-        "Confidential - Small Company": 85,
-        "Defense Industry": 75,
-        "Intl Bank (Tech Division)": 90,
-        "Insurance Company": 100,
-        Nuvei: 60,
-        Via: 55,
-        "ZOLL Itamar Medical": 99,
-        "Non-Outsourcing Co.": 65,
-      };
-
-      const maxSalaries = {
-        Amazon: 140,
-        Intel: 90,
-        "American Company": 100,
-        Genesys: 110,
-        Citadel: 65,
-        Google: 150,
-        Microsoft: 120,
-        Salesforce: 95,
-        Atera: 75,
-        BigID: 90,
-        "Check Point": 100,
-        CyberArk: 90,
-        Jfrog: 90,
-        Rafael: 82,
-        Startup: 100,
-        Technion: 55,
-        Bruker: 93,
-        ARM: 125,
-        "Clarifruit - Startup": 42,
-        "Condor Pacific": 90,
-        "Confidential - Small Company": 85,
-        "Defense Industry": 75,
-        "Intl Bank (Tech Division)": 90,
-        "Insurance Company": 100,
-        Nuvei: 60,
-        Via: 55,
-        "ZOLL Itamar Medical": 99,
-        "Non-Outsourcing Co.": 65,
-      };
-
-      function getSalaries(companies, salaryData) {
-        return companies.map((company) => salaryData[company] || 0);
-      }
-
-      createChart(
-        "americanChart",
-        americanCompanies,
-        getSalaries(americanCompanies, minSalaries),
-        getSalaries(americanCompanies, avgSalaries),
-        getSalaries(americanCompanies, maxSalaries)
-      );
-      createChart(
-        "israeliChart",
-        israeliCompanies,
-        getSalaries(israeliCompanies, minSalaries),
-        getSalaries(israeliCompanies, avgSalaries),
-        getSalaries(israeliCompanies, maxSalaries)
-      );
-      createChart(
-        "otherChart",
-        otherCompanies,
-        getSalaries(otherCompanies, minSalaries),
-        getSalaries(otherCompanies, avgSalaries),
-        getSalaries(otherCompanies, maxSalaries)
-      );
+      // Initialize charts when page loads
+      document.addEventListener('DOMContentLoaded', function() {
+        initializeSalaryCharts();
+      });
 
       document.getElementById("current-year").textContent =
         new Date().getFullYear();
