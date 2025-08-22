@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="המדריך המלא לסדנת בסיסי נתונים - מדריך מקיף וחינמי לפיתוח מערכת ניתוח טקסטים"
+    />
+    <meta
+      property="og:image"
+      content="https://almogshkt.github.io/Almog-Shtaigmann/assets/images/meta-data-baner/database-workshop.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <title>המדריך המלא לסדנת בסיסי נתונים | Almog Shtaigmann</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../../assets/css/main.css" />
+    <link rel="stylesheet" href="../../../assets/css/responsive.css" />
+    <link rel="stylesheet" href="../../../assets/css/rtl.css" />
+    <link rel="stylesheet" href="../../../assets/css/button-animation.css" />
+    <link rel="stylesheet" href="../workshop-styles.css" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Rubik:wght@400;500;700&display=swap&subset=hebrew"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-34DFKV9RWM"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-34DFKV9RWM");
+    </script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container header-container">
+        <h1 class="site-title">המדריך המלא לסדנת בסיסי נתונים</h1>
+
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span class="visually-hidden">Toggle navigation</span>
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="nav-main collapsed" id="main-nav">
+          <a
+            href="javascript:void(0)"
+            onclick="location.href='../../../index.html'"
+            >Home</a
+          >
+          <a
+            href="javascript:void(0)"
+            onclick="location.href='../../work-experience/index.html'"
+            >Work Experience</a
+          >
+          <a
+            href="javascript:void(0)"
+            onclick="location.href='../../projects/index.html'"
+            >Personal Projects</a
+          >
+          <a
+            href="javascript:void(0)"
+            onclick="location.href='../../c-lab/index.html'"
+            >C-Lab Course</a
+          >
+          <a href="javascript:void(0)" onclick="location.href='../index.html'"
+            >Database Workshop</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Back Button -->
+      <section class="section">
+        <div class="container">
+          <a
+            href="javascript:void(0)"
+            onclick="location.href='../index.html'"
+            class="btn btn-secondary"
+          >
+            <i class="fas fa-arrow-left"></i> חזרה לסדנת בסיסי נתונים
+          </a>
+        </div>
+      </section>
+
+      <!-- Article Content -->
+      <article class="section">
+        <div class="container">
+          <header class="text-center animate-on-scroll">
+            <h1>המדריך המלא לסדנת בסיסי נתונים</h1>
+            <p class="lead">מדריך מקיף וחינמי לפיתוח מערכת ניתוח טקסטים מתחילה ועד סוף</p>
+            <div class="article-meta">
+              <span><i class="fas fa-calendar"></i> עודכן: אוגוסט 2025</span>
+              <span><i class="fas fa-clock"></i> קריאה: 45 דקות</span>
+              <span><i class="fas fa-graduation-cap"></i> רמה: מתחילים עד מתקדמים</span>
+            </div>
+          </header>
+
+          <div class="article-content animate-on-scroll">
+            <div class="info-box">
+              <h3><i class="fas fa-gift"></i> מדריך חינמי ומקיף</h3>
+              <p>
+                המדריך הזה נכתב במיוחד עבור סטודנטים שרוצים להבין איך לבנות מערכת ניתוח טקסטים מקצה לקצה.
+                כל המידע כאן זמין בחינם ובעברית, עם דוגמאות מעשיות ושלב-אחר-שלב.
+              </p>
+            </div>
+
+            <h2>תוכן העניינים</h2>
+            <div class="workshop-grid grid-2">
+              <div class="info-box">
+                <h4><i class="fas fa-map"></i> חלק א' - התחלה</h4>
+                <ul>
+                  <li>הבנת הפרויקט והדרישות</li>
+                  <li>תכנון ארכיטקטורת המערכת</li>
+                  <li>הגדרת סביבת הפיתוח</li>
+                  <li>יצירת פרויקט בסיסי</li>
+                </ul>
+              </div>
+
+              <div class="info-box">
+                <h4><i class="fas fa-database"></i> חלק ב' - בסיס הנתונים</h4>
+                <ul>
+                  <li>עיצוב מודל הנתונים</li>
+                  <li>יצירת טבלאות ויחסים</li>
+                  <li>אינדקסים ואופטימיזציה</li>
+                  <li>שאילתות מתקדמות</li>
+                </ul>
+              </div>
+
+              <div class="info-box">
+                <h4><i class="fas fa-server"></i> חלק ג' - שרת ו-API</h4>
+                <ul>
+                  <li>בניית שרת Flask</li>
+                  <li>יצירת API endpoints</li>
+                  <li>עיבוד וניתוח טקסטים</li>
+                  <li>אבטחה וולידציה</li>
+                </ul>
+              </div>
+
+              <div class="info-box">
+                <h4><i class="fas fa-desktop"></i> חלק ד' - ממשק המשתמש</h4>
+                <ul>
+                  <li>בניית ממשק Angular</li>
+                  <li>טפסים ותצוגות</li>
+                  <li>אינטגרציה עם השרת</li>
+                  <li>עיצוב ו-UX</li>
+                </ul>
+              </div>
+            </div>
+
+            <h2>חלק א' - הבנה ותכנון</h2>
+
+            <h3>1. הבנת הפרויקט</h3>
+            <div class="info-box">
+              <h4>מה אנחנו בונים?</h4>
+              <p>
+                אנחנו בונים מערכת שמאפשרת להעלות קבצי טקסט, לנתח אותם, ולקבל מידע מפורט על התוכן.
+                המערכת תוכל לפרק טקסט למילים, למצוא דפוסים, ליצור סטטיסטיקות ועוד.
+              </p>
+              
+              <h4>יכולות המערכת:</h4>
+              <ul>
+                <li><strong>העלאת קבצים:</strong> תמיכה בקבצי .txt, .docx, .pdf</li>
+                <li><strong>ניתוח טקסט:</strong> פירוק למילים, משפטים, פסקאות</li>
+                <li><strong>חיפוש חכם:</strong> חיפוש מילים עם הקשר</li>
+                <li><strong>ניהול קטגוריות:</strong> יצירת קבוצות מילים</li>
+                <li><strong>זיהוי ביטויים:</strong> מציאת ביטויים לשוניים</li>
+                <li><strong>סטטיסטיקות:</strong> נתונים על השימוש במילים</li>
+              </ul>
+            </div>
+
+            <h3>2. ארכיטקטורת המערכת</h3>
+            <div class="workshop-grid grid-3">
+              <div class="warning-box">
+                <h4><i class="fas fa-desktop"></i> Frontend (Angular)</h4>
+                <p>
+                  ממשק המשתמש - כל מה שהמשתמש רואה ומתקשר איתו.
+                  כולל טפסים, תצוגות, וכפתורים.
+                </p>
+                <strong>טכנולוגיות:</strong>
+                <ul>
+                  <li>Angular 15+</li>
+                  <li>TypeScript</li>
+                  <li>HTML/CSS</li>
+                  <li>Bootstrap</li>
+                </ul>
+              </div>
+
+              <div class="info-box">
+                <h4><i class="fas fa-server"></i> Backend (Flask)</h4>
+                <p>
+                  השרת שמעבד את הבקשות, מנתח טקסטים,
+                  ומתקשר עם בסיס הנתונים.
+                </p>
+                <strong>טכנולוגיות:</strong>
+                <ul>
+                  <li>Python 3.9+</li>
+                  <li>Flask</li>
+                  <li>SQLAlchemy</li>
+                  <li>NLTK/spaCy</li>
+                </ul>
+              </div>
+
+              <div class="warning-box">
+                <h4><i class="fas fa-database"></i> Database (PostgreSQL)</h4>
+                <p>
+                  בסיס הנתונים שמאחסן את כל המידע -
+                  טקסטים, מילים, משתמשים ותוצאות.
+                </p>
+                <strong>טכנולוגיות:</strong>
+                <ul>
+                  <li>PostgreSQL 14+</li>
+                  <li>pgAdmin</li>
+                  <li>Redis (Cache)</li>
+                </ul>
+              </div>
+            </div>
+
+            <h2>חלק ב' - עיצוב בסיס הנתונים</h2>
+
+            <h3>3. מודל הנתונים</h3>
+            <div class="info-box">
+              <h4><i class="fas fa-sitemap"></i> הטבלאות העיקריות</h4>
+              <p>בסיס הנתונים שלנו יכלול את הטבלאות הבאות:</p>
+            </div>
+
+            <div class="workshop-grid grid-2">
+              <div class="info-box">
+                <h4>📄 Documents</h4>
+                <ul>
+                  <li>id (Primary Key)</li>
+                  <li>title (כותרת המסמך)</li>
+                  <li>file_path (נתיב הקובץ)</li>
+                  <li>upload_date (תאריך העלאה)</li>
+                  <li>file_size (גודל הקובץ)</li>
+                  <li>status (סטטוס עיבוד)</li>
+                </ul>
+              </div>
+
+              <div class="info-box">
+                <h4>📝 Sentences</h4>
+                <ul>
+                  <li>id (Primary Key)</li>
+                  <li>document_id (Foreign Key)</li>
+                  <li>content (תוכן המשפט)</li>
+                  <li>position (מיקום במסמך)</li>
+                  <li>paragraph_number (מספר פסקה)</li>
+                </ul>
+              </div>
+
+              <div class="info-box">
+                <h4>💬 Words</h4>
+                <ul>
+                  <li>id (Primary Key)</li>
+                  <li>word (המילה עצמה)</li>
+                  <li>root_word (שורש המילה)</li>
+                  <li>word_type (סוג המילה)</li>
+                  <li>frequency (תדירות)</li>
+                </ul>
+              </div>
+
+              <div class="info-box">
+                <h4>🔗 Word_Occurrences</h4>
+                <ul>
+                  <li>id (Primary Key)</li>
+                  <li>word_id (Foreign Key)</li>
+                  <li>sentence_id (Foreign Key)</li>
+                  <li>position_in_sentence (מיקום במשפט)</li>
+                  <li>context_before (הקשר לפני)</li>
+                  <li>context_after (הקשר אחרי)</li>
+                </ul>
+              </div>
+
+              <div class="info-box">
+                <h4>📂 Categories</h4>
+                <ul>
+                  <li>id (Primary Key)</li>
+                  <li>name (שם הקטגוריה)</li>
+                  <li>description (תיאור)</li>
+                  <li>color (צבע לתצוגה)</li>
+                  <li>created_date (תאריך יצירה)</li>
+                </ul>
+              </div>
+
+              <div class="info-box">
+                <h4>🏷️ Word_Categories</h4>
+                <ul>
+                  <li>word_id (Foreign Key)</li>
+                  <li>category_id (Foreign Key)</li>
+                  <li>confidence_score (רמת ביטחון)</li>
+                  <li>assigned_by (מי הקצה)</li>
+                </ul>
+              </div>
+            </div>
+
+            <h3>4. יצירת בסיס הנתונים</h3>
+            <div class="warning-box">
+              <h4><i class="fas fa-code"></i> סקריפט SQL ליצירת הטבלאות</h4>
+              <p>הנה הקוד המלא ליצירת כל הטבלאות:</p>
+              
+              <pre style="background: #f8f9fa; padding: 1rem; border-radius: 8px; overflow-x: auto; font-size: 0.9rem;">
+-- יצירת בסיס הנתונים
+CREATE DATABASE text_analysis_system;
+
+-- יצירת טבלת מסמכים
+CREATE TABLE documents (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    file_path VARCHAR(500) NOT NULL,
+    upload_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    file_size INTEGER,
+    status VARCHAR(50) DEFAULT 'pending',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- יצירת טבלת משפטים
+CREATE TABLE sentences (
+    id SERIAL PRIMARY KEY,
+    document_id INTEGER REFERENCES documents(id) ON DELETE CASCADE,
+    content TEXT NOT NULL,
+    position INTEGER NOT NULL,
+    paragraph_number INTEGER,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- יצירת טבלת מילים
+CREATE TABLE words (
+    id SERIAL PRIMARY KEY,
+    word VARCHAR(100) NOT NULL UNIQUE,
+    root_word VARCHAR(100),
+    word_type VARCHAR(50),
+    frequency INTEGER DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- יצירת טבלת קטגוריות
+CREATE TABLE categories (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL UNIQUE,
+    description TEXT,
+    color VARCHAR(7) DEFAULT '#007bff',
+    created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- יצירת טבלת הופעות מילים
+CREATE TABLE word_occurrences (
+    id SERIAL PRIMARY KEY,
+    word_id INTEGER REFERENCES words(id) ON DELETE CASCADE,
+    sentence_id INTEGER REFERENCES sentences(id) ON DELETE CASCADE,
+    position_in_sentence INTEGER NOT NULL,
+    context_before TEXT,
+    context_after TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- יצירת טבלת קטגוריות מילים
+CREATE TABLE word_categories (
+    word_id INTEGER REFERENCES words(id) ON DELETE CASCADE,
+    category_id INTEGER REFERENCES categories(id) ON DELETE CASCADE,
+    confidence_score DECIMAL(3,2) DEFAULT 1.0,
+    assigned_by VARCHAR(100) DEFAULT 'system',
+    assigned_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (word_id, category_id)
+);
+
+-- יצירת אינדקסים לביצועים טובים יותר
+CREATE INDEX idx_sentences_document ON sentences(document_id);
+CREATE INDEX idx_word_occurrences_word ON word_occurrences(word_id);
+CREATE INDEX idx_word_occurrences_sentence ON word_occurrences(sentence_id);
+CREATE INDEX idx_words_frequency ON words(frequency DESC);
+CREATE INDEX idx_words_word ON words(word);
+              </pre>
+            </div>
+
+            <h2>חלק ג' - פיתוח השרת (Backend)</h2>
+
+            <h3>5. הגדרת סביבת הפיתוח</h3>
+            <div class="info-box">
+              <h4><i class="fas fa-download"></i> התקנת הכלים הנדרשים</h4>
+              
+              <p><strong>1. התקנת Python וחבילות:</strong></p>
+              <pre style="background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+# יצירת סביבה וירטואלית
+python -m venv text_analysis_env
+
+# הפעלת הסביבה הוירטואלית
+# ב-Windows:
+text_analysis_env\Scripts\activate
+# ב-Mac/Linux:
+source text_analysis_env/bin/activate
+
+# התקנת חבילות
+pip install flask
+pip install sqlalchemy
+pip install psycopg2-binary
+pip install nltk
+pip install flask-cors
+pip install python-docx
+pip install PyPDF2
+              </pre>
+
+              <p><strong>2. התקנת PostgreSQL:</strong></p>
+              <ul>
+                <li>הורד מ- <a href="https://www.postgresql.org/download/" target="_blank">postgresql.org</a></li>
+                <li>התקן והגדר סיסמה למשתמש postgres</li>
+                <li>צור בסיס נתונים חדש בשם text_analysis_system</li>
+              </ul>
+            </div>
+
+            <h3>6. בניית שרת Flask בסיסי</h3>
+            <div class="warning-box">
+              <h4><i class="fas fa-file-code"></i> קובץ app.py</h4>
+              <pre style="background: #f8f9fa; padding: 1rem; border-radius: 8px; overflow-x: auto; font-size: 0.85rem;">
+from flask import Flask, request, jsonify
+from flask_cors import CORS
+import os
+import psycopg2
+from datetime import datetime
+import nltk
+import re
+
+# יצירת אפליקציית Flask
+app = Flask(__name__)
+CORS(app)  # מאפשר בקשות מהפרונטאנד
+
+# הגדרות בסיס הנתונים
+DATABASE_CONFIG = {
+    'host': 'localhost',
+    'database': 'text_analysis_system',
+    'user': 'postgres',
+    'password': 'your_password_here'
+}
+
+def get_db_connection():
+    """יצירת חיבור לבסיס הנתונים"""
+    try:
+        conn = psycopg2.connect(**DATABASE_CONFIG)
+        return conn
+    except Exception as e:
+        print(f"שגיאה בחיבור לבסיס הנתונים: {e}")
+        return None
+
+@app.route('/')
+def home():
+    """נתיב בסיסי לבדיקה"""
+    return jsonify({"message": "שרת ניתוח טקסטים פועל!", "status": "success"})
+
+@app.route('/api/upload', methods=['POST'])
+def upload_file():
+    """העלאת קובץ טקסט חדש"""
+    try:
+        # בדיקה שהקובץ קיים
+        if 'file' not in request.files:
+            return jsonify({"error": "לא נמצא קובץ בבקשה"}), 400
+        
+        file = request.files['file']
+        if file.filename == '':
+            return jsonify({"error": "לא נבחר קובץ"}), 400
+        
+        # שמירת הקובץ
+        filename = file.filename
+        file_path = os.path.join('uploads', filename)
+        file.save(file_path)
+        
+        # שמירה בבסיס הנתונים
+        conn = get_db_connection()
+        if conn:
+            cursor = conn.cursor()
+            cursor.execute("""
+                INSERT INTO documents (title, file_path, file_size, status)
+                VALUES (%s, %s, %s, %s) RETURNING id
+            """, (filename, file_path, os.path.getsize(file_path), 'uploaded'))
+            
+            document_id = cursor.fetchone()[0]
+            conn.commit()
+            cursor.close()
+            conn.close()
+            
+            return jsonify({
+                "message": "הקובץ הועלה בהצלחה",
+                "document_id": document_id,
+                "filename": filename
+            })
+        else:
+            return jsonify({"error": "שגיאה בחיבור לבסיס הנתונים"}), 500
+            
+    except Exception as e:
+        return jsonify({"error": f"שגיאה: {str(e)}"}), 500
+
+@app.route('/api/analyze/<int:document_id>', methods=['POST'])
+def analyze_document(document_id):
+    """ניתוח מסמך לפי ID"""
+    try:
+        conn = get_db_connection()
+        if not conn:
+            return jsonify({"error": "שגיאה בחיבור לבסיס הנתונים"}), 500
+        
+        # קבלת פרטי המסמך
+        cursor = conn.cursor()
+        cursor.execute("SELECT file_path FROM documents WHERE id = %s", (document_id,))
+        result = cursor.fetchone()
+        
+        if not result:
+            return jsonify({"error": "מסמך לא נמצא"}), 404
+        
+        file_path = result[0]
+        
+        # קריאת תוכן הקובץ
+        with open(file_path, 'r', encoding='utf-8') as file:
+            content = file.read()
+        
+        # פירוק לפסקאות ומשפטים
+        paragraphs = content.split('\n\n')
+        sentence_count = 0
+        
+        for paragraph_num, paragraph in enumerate(paragraphs, 1):
+            sentences = re.split(r'[.!?]+', paragraph)
+            
+            for sentence in sentences:
+                sentence = sentence.strip()
+                if sentence:
+                    sentence_count += 1
+                    
+                    # שמירת המשפט בבסיס הנתונים
+                    cursor.execute("""
+                        INSERT INTO sentences (document_id, content, position, paragraph_number)
+                        VALUES (%s, %s, %s, %s) RETURNING id
+                    """, (document_id, sentence, sentence_count, paragraph_num))
+                    
+                    sentence_id = cursor.fetchone()[0]
+                    
+                    # פירוק המשפט למילים
+                    words = re.findall(r'\b\w+\b', sentence.lower())
+                    
+                    for position, word in enumerate(words):
+                        # בדיקה אם המילה כבר קיימת
+                        cursor.execute("SELECT id FROM words WHERE word = %s", (word,))
+                        word_result = cursor.fetchone()
+                        
+                        if word_result:
+                            word_id = word_result[0]
+                            # עדכון תדירות
+                            cursor.execute(
+                                "UPDATE words SET frequency = frequency + 1 WHERE id = %s",
+                                (word_id,)
+                            )
+                        else:
+                            # יצירת מילה חדשה
+                            cursor.execute("""
+                                INSERT INTO words (word, frequency)
+                                VALUES (%s, 1) RETURNING id
+                            """, (word,))
+                            word_id = cursor.fetchone()[0]
+                        
+                        # שמירת הופעת המילה
+                        context_before = ' '.join(words[max(0, position-2):position])
+                        context_after = ' '.join(words[position+1:min(len(words), position+3)])
+                        
+                        cursor.execute("""
+                            INSERT INTO word_occurrences 
+                            (word_id, sentence_id, position_in_sentence, context_before, context_after)
+                            VALUES (%s, %s, %s, %s, %s)
+                        """, (word_id, sentence_id, position, context_before, context_after))
+        
+        # עדכון סטטוס המסמך
+        cursor.execute(
+            "UPDATE documents SET status = 'analyzed' WHERE id = %s",
+            (document_id,)
+        )
+        
+        conn.commit()
+        cursor.close()
+        conn.close()
+        
+        return jsonify({
+            "message": "המסמך נותח בהצלחה",
+            "sentences_processed": sentence_count
+        })
+        
+    except Exception as e:
+        return jsonify({"error": f"שגיאה בניתוח: {str(e)}"}), 500
+
+if __name__ == '__main__':
+    # יצירת תיקיית uploads אם לא קיימת
+    os.makedirs('uploads', exist_ok=True)
+    app.run(debug=True, port=5000)
+              </pre>
+            </div>
+
+            <h2>חלק ד' - פיתוח הממשק (Frontend)</h2>
+
+            <h3>7. הגדרת פרויקט Angular</h3>
+            <div class="info-box">
+              <h4><i class="fas fa-rocket"></i> יצירת פרויקט Angular</h4>
+              
+              <pre style="background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+# התקנת Angular CLI
+npm install -g @angular/cli
+
+# יצירת פרויקט חדש
+ng new text-analysis-frontend
+
+# מעבר לתיקיית הפרויקט
+cd text-analysis-frontend
+
+# התקנת חבילות נוספות
+npm install bootstrap
+npm install @angular/material
+npm install chart.js
+
+# הרצת הפרויקט
+ng serve
+              </pre>
+            </div>
+
+            <h3>8. יצירת רכיבים עיקריים</h3>
+            <div class="warning-box">
+              <h4><i class="fas fa-puzzle-piece"></i> רכיב העלאת קבצים</h4>
+              
+              <p><strong>קובץ: file-upload.component.html</strong></p>
+              <pre style="background: #f8f9fa; padding: 1rem; border-radius: 8px; font-size: 0.85rem;">
+&lt;div class="upload-container"&gt;
+  &lt;h2&gt;העלאת קובץ טקסט&lt;/h2&gt;
+  
+  &lt;div class="upload-area" (click)="fileInput.click()"&gt;
+    &lt;i class="fas fa-cloud-upload-alt"&gt;&lt;/i&gt;
+    &lt;p&gt;לחץ כאן או גרור קובץ להעלאה&lt;/p&gt;
+    &lt;input #fileInput type="file" hidden (change)="onFileSelected($event)"&gt;
+  &lt;/div&gt;
+  
+  &lt;div *ngIf="selectedFile" class="file-info"&gt;
+    &lt;p&gt;קובץ נבחר: {{ selectedFile.name }}&lt;/p&gt;
+    &lt;button (click)="uploadFile()" class="btn btn-primary"&gt;
+      העלאה וניתוח
+    &lt;/button&gt;
+  &lt;/div&gt;
+  
+  &lt;div *ngIf="isLoading" class="loading"&gt;
+    &lt;p&gt;מעלה ומנתח קובץ...&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+              </pre>
+
+              <p><strong>קובץ: file-upload.component.ts</strong></p>
+              <pre style="background: #f8f9fa; padding: 1rem; border-radius: 8px; font-size: 0.85rem;">
+import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+@Component({
+  selector: 'app-file-upload',
+  templateUrl: './file-upload.component.html',
+  styleUrls: ['./file-upload.component.css']
+})
+export class FileUploadComponent {
+  selectedFile: File | null = null;
+  isLoading = false;
+  
+  constructor(private http: HttpClient) {}
+  
+  onFileSelected(event: any) {
+    this.selectedFile = event.target.files[0];
+  }
+  
+  uploadFile() {
+    if (!this.selectedFile) return;
+    
+    this.isLoading = true;
+    const formData = new FormData();
+    formData.append('file', this.selectedFile);
+    
+    this.http.post('http://localhost:5000/api/upload', formData)
+      .subscribe({
+        next: (response: any) => {
+          console.log('קובץ הועלה בהצלחה', response);
+          this.analyzeDocument(response.document_id);
+        },
+        error: (error) => {
+          console.error('שגיאה בהעלאה', error);
+          this.isLoading = false;
+        }
+      });
+  }
+  
+  analyzeDocument(documentId: number) {
+    this.http.post(`http://localhost:5000/api/analyze/${documentId}`, {})
+      .subscribe({
+        next: (response) => {
+          console.log('ניתוח הושלם', response);
+          this.isLoading = false;
+          // כאן תוכל להפנות לדף התוצאות
+        },
+        error: (error) => {
+          console.error('שגיאה בניתוח', error);
+          this.isLoading = false;
+        }
+      });
+  }
+}
+              </pre>
+            </div>
+
+            <h2>חלק ה' - פיצ'רים מתקדמים</h2>
+
+            <h3>9. חיפוש וסינון מילים</h3>
+            <div class="info-box">
+              <h4><i class="fas fa-search"></i> מימוש חיפוש מתקדם</h4>
+              <p>נוסיף יכולת חיפוש מילים עם הצגת הקשר:</p>
+              
+              <pre style="background: #f8f9fa; padding: 1rem; border-radius: 8px; font-size: 0.85rem;">
+@app.route('/api/search', methods=['POST'])
+def search_words():
+    data = request.get_json()
+    search_term = data.get('word', '').lower()
+    
+    if not search_term:
+        return jsonify({"error": "נא להזין מילה לחיפוש"}), 400
+    
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    # חיפוש המילה ותוצאותיה
+    cursor.execute("""
+        SELECT w.word, w.frequency, 
+               wo.context_before, wo.context_after,
+               s.content as sentence
+        FROM words w
+        JOIN word_occurrences wo ON w.id = wo.word_id
+        JOIN sentences s ON wo.sentence_id = s.id
+        WHERE w.word LIKE %s
+        ORDER BY w.frequency DESC
+        LIMIT 50
+    """, (f'%{search_term}%',))
+    
+    results = cursor.fetchall()
+    cursor.close()
+    conn.close()
+    
+    return jsonify({
+        "results": [
+            {
+                "word": result[0],
+                "frequency": result[1],
+                "context_before": result[2],
+                "context_after": result[3],
+                "sentence": result[4]
+            }
+            for result in results
+        ]
+    })
+              </pre>
+            </div>
+
+            <h3>10. ניהול קטגוריות</h3>
+            <div class="warning-box">
+              <h4><i class="fas fa-tags"></i> יצירת מערכת קטגוריות</h4>
+              <p>מאפשרת למשתמשים ליצור קבוצות מילים ולארגן אותן:</p>
+              
+              <pre style="background: #f8f9fa; padding: 1rem; border-radius: 8px; font-size: 0.85rem;">
+@app.route('/api/categories', methods=['GET'])
+def get_categories():
+    """קבלת כל הקטגוריות"""
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    cursor.execute("SELECT id, name, description, color FROM categories")
+    categories = cursor.fetchall()
+    
+    cursor.close()
+    conn.close()
+    
+    return jsonify([
+        {
+            "id": cat[0],
+            "name": cat[1], 
+            "description": cat[2],
+            "color": cat[3]
+        }
+        for cat in categories
+    ])
+
+@app.route('/api/categories', methods=['POST'])
+def create_category():
+    """יצירת קטגוריה חדשה"""
+    data = request.get_json()
+    name = data.get('name')
+    description = data.get('description', '')
+    color = data.get('color', '#007bff')
+    
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    cursor.execute("""
+        INSERT INTO categories (name, description, color)
+        VALUES (%s, %s, %s) RETURNING id
+    """, (name, description, color))
+    
+    category_id = cursor.fetchone()[0]
+    conn.commit()
+    cursor.close()
+    conn.close()
+    
+    return jsonify({
+        "message": "קטגוריה נוצרה בהצלחה",
+        "category_id": category_id
+    })
+              </pre>
+            </div>
+
+            <h2>חלק ו' - סיום ופריסה</h2>
+
+            <h3>11. בדיקות ואופטימיזציה</h3>
+            <div class="info-box">
+              <h4><i class="fas fa-vials"></i> בדיקות המערכת</h4>
+              <ul>
+                <li><strong>בדיקות יחידה:</strong> לכל פונקציה בשרת</li>
+                <li><strong>בדיקות אינטגרציה:</strong> חיבור בין הרכיבים</li>
+                <li><strong>בדיקות ביצועים:</strong> זמני תגובה עם קבצים גדולים</li>
+                <li><strong>בדיקות משתמש:</strong> UX ו-UI</li>
+              </ul>
+            </div>
+
+            <h3>12. פריסה לפרודקשיון</h3>
+            <div class="warning-box">
+              <h4><i class="fas fa-cloud"></i> אופציות פריסה</h4>
+              <ul>
+                <li><strong>Heroku:</strong> קל ומהיר לתחילת דרך</li>
+                <li><strong>DigitalOcean:</strong> גמיש ובמחיר סביר</li>
+                <li><strong>AWS:</strong> מתאים לפרויקטים גדולים</li>
+                <li><strong>Netlify + Railway:</strong> פרונטאנד ובקאנד נפרדים</li>
+              </ul>
+            </div>
+
+            <div class="info-box">
+              <h3><i class="fas fa-graduation-cap"></i> סיכום המדריך</h3>
+              <p>
+                עברנו יחד על כל השלבים הנדרשים לבניית מערכת ניתוח טקסטים מלאה:
+                מתכנון בסיס הנתונים, דרך פיתוח השרת והממשק, ועד לפריסה בפרודקשיון.
+              </p>
+              
+              <p>
+                <strong>הצעדים הבאים שלך:</strong>
+              </p>
+              <ul>
+                <li>התחל מהקמת סביבת הפיתוח</li>
+                <li>בנה את בסיס הנתונים לפי הדוגמה</li>
+                <li>פתח תחילה רכיב בסיסי ובדוק שהוא עובד</li>
+                <li>הוסף פיצ'רים בהדרגה</li>
+                <li>בדוק ובצע אופטימיזציה</li>
+              </ul>
+              
+              <p>
+                זכור - זה פרויקט גדול ומורכב. קח את הזמן שלך, עבוד בשלבים,
+                ואל תהסס לחזור למדריך הזה כשאתה צריך.
+              </p>
+            </div>
+
+            <div class="workshop-actions">
+              <a href="./presentation.html" class="action-btn primary">
+                <i class="fas fa-play-circle"></i>
+                צפה במצגת
+              </a>
+              <a href="./project-spec.html" class="action-btn secondary">
+                <i class="fas fa-file-alt"></i>
+                דרישות הפרויקט
+              </a>
+              <a href="./my-project.html" class="action-btn secondary">
+                <i class="fas fa-project-diagram"></i>
+                הפרויקט שלי
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container text-center">
+        <p>&copy; 2025 Almog Shtaigmann. All rights reserved.</p>
+        <div class="social-links">
+          <a href="https://linkedin.com/in/almogshtaigmann" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/almogshkt" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:almog.work77@gmail.com">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../../../assets/js/main.js"></script>
+  </body>
+</html>
