@@ -502,8 +502,6 @@
     rgba(255, 255, 255, 0.1),
     transparent
   );
-  transform: rotate(45deg);
-  animation: shimmer 3s infinite;
 }
 
 .special-card h3 {
@@ -574,8 +572,6 @@
     rgba(255, 255, 255, 0.1),
     transparent
   );
-  transform: rotate(45deg);
-  animation: shimmer 3s infinite;
 }
 
 @keyframes shimmer {
@@ -751,8 +747,8 @@
   }
 
   .premium-content-overlay {
-    min-height: 1800px;
     margin: 0.5rem 0;
+    min-height: 1300px;
   }
 
   .premium-payment-card {
@@ -762,9 +758,10 @@
   }
 
   .premium-blur {
-    min-height: 1800px;
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
+    padding: 1.5rem 0.5rem;
+    min-height: 500px;
   }
 
   .placeholder-title {
@@ -789,23 +786,19 @@
 /* Premium Content Blur Overlay */
 .premium-content-overlay {
   position: relative;
-  min-height: 2500px;
   width: 100%;
-  height: fit-content;
   background: #f8fafc;
   border-radius: 12px;
   margin: 2rem 0;
-  overflow: auto;
+  overflow: hidden;
+  min-height: 1800px;
 }
 
 .premium-background-content {
   padding: 2rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  position: relative;
   z-index: 1;
+  opacity: 0.3;
 }
 
 /* Code Preview Styles */
@@ -818,14 +811,22 @@
 }
 
 .code-header {
-  background: #252c2a !important;
-  height: 2020px;
+  background: #10b981 !important;
   padding: 0.75rem 1rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   border-bottom: 1px solid #2d3748;
   color: white;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.code-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .code-file {
@@ -843,14 +844,13 @@
 }
 
 .code-header p {
-  margin: 0.75rem 0 0 0;
+  margin: 0;
   font-size: 0.85rem;
   line-height: 1.4;
   color: rgba(255, 255, 255, 0.9);
   font-family: "Rubik", sans-serif;
-  max-height: 120px;
-  overflow: hidden;
   text-align: right;
+  width: 100%;
 }
 
 .table-fields {
@@ -906,15 +906,17 @@
   -webkit-backdrop-filter: blur(12px);
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.85) 0%,
-    rgba(248, 250, 252, 0.9) 50%,
-    rgba(241, 245, 249, 0.85) 100%
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(248, 250, 252, 0.98) 50%,
+    rgba(241, 245, 249, 0.95) 100%
   );
   z-index: 10;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  min-height: 300px;
+  padding: 3rem 1rem;
+  overflow-y: auto;
+  min-height: 800px;
 }
 
 .premium-payment-card {
@@ -945,7 +947,6 @@
     rgba(255, 255, 255, 0.1) 50%,
     transparent 60%
   );
-  animation: shimmer-payment 3s infinite;
 }
 
 @keyframes shimmer-payment {
@@ -1135,11 +1136,8 @@
   }
 
   .premium-content-overlay {
-    min-height: 1500px;
     margin: 1rem 0;
-  }
-  .footer {
-    background-color: #10b981;
+    min-height: 1400px;
   }
 
   .premium-blur {
@@ -1147,11 +1145,12 @@
     -webkit-backdrop-filter: blur(8px);
     background: linear-gradient(
       135deg,
-      rgba(255, 255, 255, 0.9) 0%,
-      rgba(248, 250, 252, 0.95) 50%,
-      rgba(241, 245, 249, 0.9) 100%
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(248, 250, 252, 0.98) 50%,
+      rgba(241, 245, 249, 0.95) 100%
     );
-    min-height: 2000px;
+    padding: 2rem 0.5rem;
+    min-height: 600px;
   }
 
   .code-block {
