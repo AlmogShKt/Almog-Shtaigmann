@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="הבנת הפרויקט ודרישות המערכת - מדריך מפורט לפיתוח מערכת ניתוח טקסטים"
+    />
+    <meta
+      property="og:image"
+      content="https://almogshkt.github.io/Almog-Shtaigmann/assets/images/meta-data-baner/database-design.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <title>הבנת הפרויקט ודרישות המערכת | Almog Shtaigmann</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../../assets/css/main.css" />
+    <link rel="stylesheet" href="../../../assets/css/responsive.css" />
+    <link rel="stylesheet" href="../../../assets/css/rtl.css" />
+    <link rel="stylesheet" href="../../../assets/css/button-animation.css" />
+    <link rel="stylesheet" href="../workshop-styles.css" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Rubik:wght@400;500;700&display=swap&subset=hebrew"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-34DFKV9RWM"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-34DFKV9RWM");
+    </script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container header-container">
+        <h1 class="site-title">הבנת הפרויקט ודרישות המערכת</h1>
+
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span class="visually-hidden">Toggle navigation</span>
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="nav-main collapsed" id="main-nav">
+          <a
+            href="javascript:void(0)"
+            onclick="location.href='../../../index.html'"
+            >Home</a
+          >
+          <a
+            href="javascript:void(0)"
+            onclick="location.href='../../work-experience/index.html'"
+            >Work Experience</a
+          >
+          <a
+            href="javascript:void(0)"
+            onclick="location.href='../../projects/index.html'"
+            >Personal Projects</a
+          >
+          <a
+            href="javascript:void(0)"
+            onclick="location.href='../../c-lab/index.html'"
+            >C-Lab Course</a
+          >
+          <a href="javascript:void(0)" onclick="location.href='../index.html'"
+            >Database Workshop</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Back Button -->
+      <section class="section">
+        <div class="container">
+          <a
+            href="javascript:void(0)"
+            onclick="location.href='../index.html'"
+            class="btn btn-secondary"
+          >
+            <i class="fas fa-arrow-left"></i> חזרה לסדנת בסיסי נתונים
+          </a>
+        </div>
+      </section>
+
+      <!-- Article Content -->
+      <article class="section">
+        <div class="container">
+          <header class="text-center animate-on-scroll">
+            <h1>הבנת הפרויקט ודרישות המערכת</h1>
+            <p class="lead">מדריך מפורט לפיתוח מערכת ניתוח טקסטים</p>
+            <div class="article-meta">
+              <span><i class="fas fa-calendar"></i> עודכן: אוגוסט 2025</span>
+              <span><i class="fas fa-clock"></i> קריאה: 15 דקות</span>
+            </div>
+          </header>
+
+          <div class="article-content animate-on-scroll">
+            <h2>תיאור כללי</h2>
+            <p>
+              המערכת שאתם הולכים לבנות מאפשרת להעלות קבצי טקסט ולבצע עליהם ניתוח
+              מתקדם. המערכת פורקת את הטקסט לאלמנטים בסיסיים (מילים, משפטים,
+              פסקאות), שומרת אותם בבסיס נתונים מוגדר, ומאפשרת לבצע חיפושים,
+              סינונים, וניתוחים על הנתונים.
+            </p>
+
+            <div class="info-box">
+              <h3><i class="fas fa-search"></i> יכולות המערכת</h3>
+              <ul>
+                <li>
+                  <strong>ניתוח טקסט:</strong> פירוק טקסט למילים, משפטים, פסקאות
+                  עם זיהוי מיקום
+                </li>
+                <li>
+                  <strong>חיפוש מתקדם:</strong> חיפוש מילים עם הצגת הקשר והמיקום
+                  בטקסט
+                </li>
+                <li>
+                  <strong>ניהול קבוצות:</strong> יצירת קבוצות מילים ותיוגן לפי
+                  נושאים
+                </li>
+                <li>
+                  <strong>זיהוי ביטויים:</strong> הגדרה וחיפוש של ביטויים
+                  לשוניים
+                </li>
+                <li>
+                  <strong>יצירת אינדקסים:</strong> הפקת רשימות מותאמות אישית של
+                  מילים
+                </li>
+                <li>
+                  <strong>ניתוח סטטיסטי:</strong> נתונים על תכימות מילים,
+                  התפלגות ועוד
+                </li>
+              </ul>
+            </div>
+
+            <div class="warning-box">
+              <h3><i class="fas fa-exclamation-triangle"></i> חשוב להבין</h3>
+              <p>
+                המטרה היא <strong>לא</strong> לשמור את כל הטקסט כגוש אחד בבסיס
+                הנתונים. להפך, המטרה המרכזית היא
+                <strong>לפרק את הטקסט לחלקים קטנים ומוגדרים</strong>, כמו
+                משפטים, מילים וביטויים, כך שנוכל לבצע עליהם ניתוחים חכמים.
+              </p>
+              <p>
+                ברגע שכל רכיב בטקסט נשמר בנפרד עם מידע עליו, אפשר לבנות מערכת
+                גמישה וחזקה שנותנת למשתמש כלים לחיפוש, סינון, וניתוח טקסט בצורה
+                עמוקה.
+              </p>
+            </div>
+
+            <h2>דרישות מקדימות</h2>
+            <p>
+              לפני שמתחילים, חשוב להבין את המבנה הכללי של פרויקט כזה. מדובר
+              בפרויקט שכולל שני צדדים עיקריים:
+            </p>
+
+            <h3>ארכיטקטורת המערכת</h3>
+            <div class="grid grid-1 grid-md-3">
+              <div class="warning-box">
+                <h4><i class="fas fa-server"></i> צד השרת</h4>
+                <p>
+                  כאן תכתבו את הקוד שאחראי על התחברות לבסיס הנתונים, שליפת
+                  המידע, שמירה של נתונים, חישובים שונים ועוד. הכל נעשה דרך API,
+                  כלומר כתובות אינטרנט (HTTP) שמחזירות מידע בפורמט JSON.
+                </p>
+              </div>
+
+              <div class="info-box">
+                <h4><i class="fas fa-desktop"></i> צד הלקוח</h4>
+                <p>
+                  זה החלק שבו המשתמש רואה את הממשק. לדוגמה – טופס להעלאת קובץ,
+                  תצוגת תוצאות של חיפוש, כפתורים להגדרה של קבוצות מילים ועוד.
+                </p>
+              </div>
+
+              <div class="warning-box">
+                <h4><i class="fas fa-database"></i> בסיס הנתונים</h4>
+                <p>
+                  כאן נשמרים כל הנתונים – הטקסטים, המילים, הקשרים ביניהן,
+                  ביטויים, קבוצות ועוד. זה הלב של המערכת שלכם.
+                </p>
+              </div>
+            </div>
+
+            <div class="info-box">
+              <h3><i class="fas fa-lightbulb"></i> ידע נדרש</h3>
+              <p>
+                המערכת דורשת הבנה בסיסית בפיתוח Web, כלומר איך עובדת בקשה לשרת,
+                מה זה API, איך מחברים בין צד לקוח לשרת, איך שומרים נתונים בבסיס
+                נתונים, ואיך בונים ממשק משתמש אינטראקטיבי.
+              </p>
+            </div>
+
+            <h2>הדרישות הפונקציונליות במפורט</h2>
+
+            <h3>1. העלאת קבצים וניתוח טקסט</h3>
+            <div class="info-box">
+              <h4>מה המערכת צריכה לעשות:</h4>
+              <ul>
+                <li>לאפשר להעלות קבצי טקסט (.txt)</li>
+                <li>לפרק את הטקסט למילים, משפטים ופסקאות</li>
+                <li>לשמור כל אלמנט בנפרד עם המיקום שלו</li>
+                <li>
+                  לבצע ניקוי בסיסי של הטקסט (הסרת רווחים מיותרים, סימני פיסוק)
+                </li>
+              </ul>
+              <p>
+                <strong>דוגמה:</strong> קובץ עם המשפט "שלום עולם!" יתפרק למילים:
+                "שלום" (מיקום 1) ו"עולם" (מיקום 2).
+              </p>
+            </div>
+
+            <h3>2. הצגת מילים בהקשר</h3>
+            <div class="info-box">
+              <h4>מה המערכת צריכה לעשות:</h4>
+              <ul>
+                <li>כאשר בוחרים מילה, להציג את ההקשר שבו היא מופיעה</li>
+                <li>להראות את המשפט המלא או מספר מילים לפני ואחרי</li>
+                <li>אם המילה מופיעה מספר פעמים, להציג את כל ההקשרים</li>
+              </ul>
+              <p>
+                <strong>דוגמה:</strong> עבור המילה "חשוב" - להציג: "זה נושא חשוב
+                מאוד", "חשוב לזכור את הנקודה הזאת".
+              </p>
+            </div>
+
+            <h3>3. מערכת מיקומים ואינדקס</h3>
+            <div class="info-box">
+              <h4>מה המערכת צריכה לעשות:</h4>
+              <ul>
+                <li>לכל מילה לשמור מיקום מדויק (שורה, עמוד, פסקה, משפט)</li>
+                <li>ליצור אינדקס שמציג את כל המילים עם המיקומים שלהן</li>
+                <li>לאפשר חיפוש לפי מיקום ספציפי</li>
+              </ul>
+              <p>
+                <strong>דוגמה:</strong> "מחשב" נמצאת בעמוד 1, פסקה 2, משפט 4,
+                מילה מספר 7.
+              </p>
+            </div>
+
+            <h3>4. ניהול קבוצות מילים</h3>
+            <div class="info-box">
+              <h4>מה המערכת צריכה לעשות:</h4>
+              <ul>
+                <li>לאפשר למשתמש ליצור קבוצות מילים (למשל "רגשות", "פעלים")</li>
+                <li>לתייג מילים לפי קבוצות</li>
+                <li>לאפשר חיפוש ותצוגה לפי קבוצה מסוימת</li>
+                <li>ליצור אינדקס נפרד לכל קבוצה</li>
+              </ul>
+              <p>
+                <strong>דוגמה:</strong> קבוצה "רגשות" תכלול: שמח, עצוב, כועס.
+                כשבוחרים את הקבוצה, רואים רק את המילים האלו ואת המיקומים שלהן.
+              </p>
+            </div>
+
+            <h3>5. זיהוי ביטויים</h3>
+            <div class="info-box">
+              <h4>מה המערכת צריכה לעשות:</h4>
+              <ul>
+                <li>לאפשר למשתמש להגדיר ביטויים (צמדים או יותר של מילים)</li>
+                <li>לזהות את הביטויים האלו בטקסט</li>
+                <li>להציג איפה כל ביטוי מופיע</li>
+                <li>לשמור ביטויים כישויות נפרדות</li>
+              </ul>
+              <p>
+                <strong>דוגמה:</strong> הביטוי "בסיס נתונים" יזוהה כיחידה אחת
+                ולא כשתי מילים נפרדות.
+              </p>
+            </div>
+
+            <h3>6. ניתוח וסטטיסטיקות</h3>
+            <div class="info-box">
+              <h4>מה המערכת צריכה לעשות:</h4>
+              <ul>
+                <li>לספור כמה מילים ייחודיות יש בטקסט</li>
+                <li>להציג את המילים הנפוצות ביותר</li>
+                <li>לחשב סטטיסטיקות על קבוצות מילים</li>
+                <li>להציג נתונים על הביטויים שזוהו</li>
+              </ul>
+              <p>
+                <strong>דוגמה:</strong> "הטקסט מכיל 450 מילים, 280 ייחודיות, 15
+                ביטויים, המילה הנפוצה ביותר היא 'את' (25 פעמים)".
+              </p>
+            </div>
+
+            <h2>דרישות טכניות נוספות</h2>
+
+            <h3>שכבת המידע והנגשת API</h3>
+            <div class="warning-box">
+              <h4><i class="fas fa-code"></i> חשוב לזכור בפיתוח</h4>
+              <ul>
+                <li>
+                  <strong>ארכיטקטורה נכונה:</strong> הפרדה ברורה בין שכבת המידע
+                  (Flask/Python) לשכבת התצוגה (Angular)
+                </li>
+                <li>
+                  <strong>API מתוכנן:</strong> כל פעולה בממשק המשתמש עוברת דרך
+                  API מוגדר ומתועד
+                </li>
+                <li>
+                  <strong>בסיס נתונים מתוכנן:</strong> עיצוב טבלאות ויחסים
+                  שתומכים בכל הדרישות
+                </li>
+                <li>
+                  <strong>ביצועים:</strong> שימוש באינדקסים ובשאילתות מותאמות
+                  לחיפושים מהירים
+                </li>
+                <li>
+                  <strong>ממשק ידידותי:</strong> עיצוב אינטואיטיבי שמאפשר ניווט
+                  קל בין הפונקציות
+                </li>
+              </ul>
+            </div>
+
+            <h3>תהליך העבודה המומלץ</h3>
+            <div class="info-box">
+              <h4><i class="fas fa-tasks"></i> שלבי הפיתוח</h4>
+              <ol>
+                <li>
+                  <strong>תכנון בסיס הנתונים:</strong> הגדרת טבלאות, שדות ויחסים
+                </li>
+                <li>
+                  <strong>פיתוח שכבת API:</strong> יצירת נקודות גישה לכל פעולה
+                </li>
+                <li>
+                  <strong>פיתוח עיבוד הטקסט:</strong> הטמעת לוגיקת הפירוק
+                  והניתוח
+                </li>
+                <li><strong>פיתוח ממשק המשתמש:</strong> יצירת הדפים והטפסים</li>
+                <li>
+                  <strong>אינטגרציה ובדיקות:</strong> חיבור בין כל הרכיבים
+                </li>
+                <li>
+                  <strong>מידה ואופטימיזציה:</strong> שיפור ביצועים וחוויית
+                  משתמש
+                </li>
+              </ol>
+            </div>
+
+            <div class="warning-box">
+              <h3><i class="fas fa-exclamation-triangle"></i> חשוב לזכור</h3>
+              <p>
+                הדרישות האלו הן הבסיס לפיתוח של מערכת שלמה שמבינה טקסטים ומאפשרת
+                לבצע עליהם ניתוחים מתקדמים. כל דרישה צריכה להיות מתוכננת בבסיס
+                הנתונים ומוטמעת הן בצד השרת והן בצד הלקוח.
+              </p>
+              <p>
+                השלב הראשון והחשוב ביותר הוא תכנון בסיס הנתונים. בלי תכנון נכון
+                של הטבלאות והיחסים ביניהן, לא תוכלו לממש את הפונקציונליות הנדרשת
+                בצורה יעילה.
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container text-center">
+        <p>&copy; 2025 Almog Shtaigmann. All rights reserved.</p>
+        <div class="social-links">
+          <a href="https://linkedin.com/in/almogshtaigmann" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/almogshkt" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:almog.work77@gmail.com">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../../../assets/js/main.js"></script>
+  </body>
+</html>
