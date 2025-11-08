@@ -149,4 +149,128 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // WhatsApp Floating Button Setup
+  function createWhatsAppButton() {
+    // Check if WhatsApp button already exists
+    if (document.querySelector(".whatsapp-fab")) return;
+
+    const whatsappBtn = document.createElement("a");
+    whatsappBtn.className = "whatsapp-fab";
+    whatsappBtn.href =
+      "https://wa.me/972586669888?text=היי%20אני%20אשמח%20לעזרה";
+    whatsappBtn.target = "_blank";
+    whatsappBtn.rel = "noopener";
+    whatsappBtn.setAttribute("aria-label", "Contact via WhatsApp");
+
+    // Create icon
+    const icon = document.createElement("i");
+    icon.className = "fab fa-whatsapp";
+
+    // Create tooltip
+    const tooltip = document.createElement("span");
+    tooltip.className = "tooltip";
+    tooltip.textContent = "צריכים עזרה? שאלו אותנו!";
+
+    whatsappBtn.appendChild(icon);
+    whatsappBtn.appendChild(tooltip);
+
+    document.body.appendChild(whatsappBtn);
+  }
+
+  // Popup Ad Management
+  function initPopupAd() {
+    const hasShownPopup = sessionStorage.getItem("popupShown");
+
+    // Only show popup once per session
+    if (hasShownPopup) return;
+
+    // Wait 3 seconds before showing popup
+    setTimeout(() => {
+      showPopupAd();
+      sessionStorage.setItem("popupShown", "true");
+    }, 3000);
+  }
+
+  function createPopupAd() {
+    const popupHTML = `
+      <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-content">
+          <button class="popup-close" id="popupClose" aria-label="Close popup">×</button>
+          
+          <div class="popup-header">
+            <h2 class="popup-title">צריכים עזרה?</h2>
+            <p class="popup-subtitle">בואו נדבר!</p>
+          </div>
+          
+          <div class="popup-description">
+            <p>צריכים שיעור פרטי?</p>
+            <p>צריכים עזרה במציאת עבודה?</p>
+            <p>או סתם להתייעץ?</p>
+            <p><strong>עזרתי כבר למאות סטודנטים!</strong></p>
+            <br>
+            <p>שלחו הודעה ונדבר :)</p>
+          </div>
+          
+          <div class="popup-actions">
+            <a href="https://wa.me/972586669888?text=שלום%2C%20אני%20מעוניין%20לשמוע%20עליך%20ועל%20איך%20אתה%20יכול%20לעזור%20לי" 
+               class="popup-btn primary" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i>
+              שלח הודעה 
+            </a>
+            <button class="popup-btn secondary" id="popupLater">
+              אולי מאוחר יותר
+            </button>
+          </div>
+        </div>
+      </div>
+    `;
+
+    document.body.insertAdjacentHTML("beforeend", popupHTML);
+
+    // Add event listeners
+    const overlay = document.getElementById("popupOverlay");
+    const closeBtn = document.getElementById("popupClose");
+    const laterBtn = document.getElementById("popupLater");
+
+    function closePopup() {
+      overlay.classList.remove("show");
+      setTimeout(() => {
+        overlay.remove();
+      }, 300);
+    }
+
+    closeBtn.addEventListener("click", closePopup);
+    laterBtn.addEventListener("click", closePopup);
+
+    // Close on overlay click
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) {
+        closePopup();
+      }
+    });
+
+    // Close on escape key
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && overlay.classList.contains("show")) {
+        closePopup();
+      }
+    });
+  }
+
+  function showPopupAd() {
+    createPopupAd();
+
+    // Small delay to ensure DOM is ready
+    setTimeout(() => {
+      const overlay = document.getElementById("popupOverlay");
+      if (overlay) {
+        overlay.classList.add("show");
+      }
+    }, 100);
+  }
+
+  // Initialize all features
+  createWhatsAppButton();
+  initPopupAd();
 });

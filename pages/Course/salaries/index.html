@@ -90,14 +90,14 @@
           border-right: 4px solid;
           padding-right: 10px;
         }
-        
+
         /* Fix for Safari chart responsiveness */
         .chart-section {
           margin: 40px 0;
           width: 100%;
           overflow-x: auto;
         }
-        
+
         .chart-container {
           position: relative;
           width: 100%;
@@ -106,32 +106,77 @@
           margin: 20px auto;
           padding: 0 20px;
         }
-        
+
         .chart-container canvas {
           width: 100% !important;
           height: 100% !important;
           max-width: 100%;
           display: block;
         }
-        
+
         /* Safari specific fixes */
         @media screen and (-webkit-min-device-pixel-ratio: 0) {
           .chart-container {
             min-width: 800px;
             width: 100%;
           }
-          
+
           .chart-section {
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
           }
         }
-        
+
         /* Mobile responsiveness */
         @media (max-width: 768px) {
           .chart-container {
             min-width: 600px;
             padding: 0 10px;
+          }
+        }
+
+        /* Custom WhatsApp tooltip for salary page */
+        .salary-page-whatsapp .salary-tooltip.show-tooltip {
+          opacity: 1 !important;
+          visibility: visible !important;
+          transform: translateY(-50%) scale(1);
+        }
+
+        .salary-page-whatsapp .salary-tooltip {
+          transition: all 0.3s ease;
+          transform: translateY(-50%) scale(0.8);
+        }
+
+        /* Mobile tooltip adjustments */
+        @media (max-width: 768px) {
+          .salary-page-whatsapp .salary-tooltip {
+            right: 60px;
+            font-size: 13px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            background: #333;
+            color: white;
+            white-space: nowrap;
+          }
+
+          .salary-page-whatsapp .salary-tooltip.show-tooltip {
+            animation: tooltipPulse 0.5s ease-out;
+          }
+        }
+
+        @keyframes tooltipPulse {
+          0% {
+            transform: translateY(-50%) scale(0.8);
+            opacity: 0;
+          }
+          50% {
+            transform: translateY(-50%) scale(1.05);
+            opacity: 1;
+          }
+          100% {
+            transform: translateY(-50%) scale(1);
+            opacity: 1;
           }
         }
       </style>
@@ -150,13 +195,33 @@
             >.
           </h5>
           <p class="text-center">מינימום, ממוצע ומקסימום שכר (₪/שעה)</p>
-          <h4 id="total-average" class="text-center" style="color: #2575fc; font-weight: bold; margin: 30px 0; padding: 15px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #2575fc;">טוען נתונים...</h4>
+          <h4
+            id="total-average"
+            class="text-center"
+            style="
+              color: #2575fc;
+              font-weight: bold;
+              margin: 30px 0;
+              padding: 15px;
+              background-color: #f8f9fa;
+              border-radius: 8px;
+              border-left: 4px solid #2575fc;
+            "
+          >
+            טוען נתונים...
+          </h4>
           <h5 class="title-comment">
             המשמעות של חברות עם עמודה אחת בלבד היא שיש נתון בודד עבור אותה חברה
           </h5>
           <div class="chart-section">
             <h3 class="text-center">חברות אמריקאיות</h3>
-            <h4 id="american-average" class="text-center" style="color: #666; margin-bottom: 20px;">טוען נתונים...</h4>
+            <h4
+              id="american-average"
+              class="text-center"
+              style="color: #666; margin-bottom: 20px"
+            >
+              טוען נתונים...
+            </h4>
             <div class="chart-container">
               <canvas id="americanChart"></canvas>
             </div>
@@ -164,7 +229,13 @@
 
           <div class="chart-section">
             <h3 class="text-center">חברות ישראליות</h3>
-            <h4 id="israeli-average" class="text-center" style="color: #666; margin-bottom: 20px;">טוען נתונים...</h4>
+            <h4
+              id="israeli-average"
+              class="text-center"
+              style="color: #666; margin-bottom: 20px"
+            >
+              טוען נתונים...
+            </h4>
             <div class="chart-container">
               <canvas id="israeliChart"></canvas>
             </div>
@@ -172,7 +243,13 @@
 
           <div class="chart-section">
             <h3 class="text-center">חברות אחרות</h3>
-            <h4 id="other-average" class="text-center" style="color: #666; margin-bottom: 20px;">טוען נתונים...</h4>
+            <h4
+              id="other-average"
+              class="text-center"
+              style="color: #666; margin-bottom: 20px"
+            >
+              טוען נתונים...
+            </h4>
             <div class="chart-container">
               <canvas id="otherChart"></canvas>
             </div>
@@ -181,51 +258,61 @@
       </section>
 
       <!-- Data Table Section -->
-      <section class="section" style="padding-top: 40px;">
+      <section class="section" style="padding-top: 40px">
         <div class="container">
-          <h2 class="text-center" style="margin-bottom: 30px;">נתונים מפורטים מהטופס</h2>
-          
+          <h2 class="text-center" style="margin-bottom: 30px">
+            נתונים מפורטים מהטופס
+          </h2>
+
           <!-- Data Source Info -->
-          <div class="data-source-info" style="text-align: center; margin-bottom: 20px;">
-            <div style="
-              display: inline-flex; 
-              align-items: center; 
-              background: #e8f5e8; 
-              padding: 8px 15px; 
-              border-radius: 25px; 
-              border: 2px solid #4CAF50;
-            ">
-              <span style="margin-left: 8px; color: #4CAF50;">✓</span>
-              <span style="font-weight: 500; color: #2e7d32;">
+          <div
+            class="data-source-info"
+            style="text-align: center; margin-bottom: 20px"
+          >
+            <div
+              style="
+                display: inline-flex;
+                align-items: center;
+                background: #e8f5e8;
+                padding: 8px 15px;
+                border-radius: 25px;
+                border: 2px solid #4caf50;
+              "
+            >
+              <span style="margin-left: 8px; color: #4caf50">✓</span>
+              <span style="font-weight: 500; color: #2e7d32">
                 מציג נתונים חיים מגוגל שיטס (טופס)
               </span>
             </div>
           </div>
-          
+
           <!-- Search Box -->
-          <div class="search-container" style="text-align: center; margin-bottom: 20px;">
-            <input 
-              type="text" 
-              id="company-search" 
-              placeholder="חפש לפי שם חברה..." 
+          <div
+            class="search-container"
+            style="text-align: center; margin-bottom: 20px"
+          >
+            <input
+              type="text"
+              id="company-search"
+              placeholder="חפש לפי שם חברה..."
               style="
-                padding: 10px 15px; 
-                border: 2px solid #ddd; 
-                border-radius: 25px; 
-                width: 300px; 
+                padding: 10px 15px;
+                border: 2px solid #ddd;
+                border-radius: 25px;
+                width: 300px;
                 font-size: 16px;
                 text-align: right;
                 direction: rtl;
               "
             />
-            <button 
-              id="clear-search" 
+            <button
+              id="clear-search"
               style="
-                margin-right: 10px; 
-                padding: 10px 15px; 
-                background: #f0f0f0; 
-                border: none; 
-                border-radius: 20px; 
+                margin-right: 10px;
+                padding: 10px 15px;
+                background: #f0f0f0;
+                border: none;
+                border-radius: 20px;
                 cursor: pointer;
               "
             >
@@ -234,91 +321,197 @@
           </div>
 
           <!-- Results Counter -->
-          <div id="results-counter" class="text-center" style="margin-bottom: 15px; color: #666;">
+          <div
+            id="results-counter"
+            class="text-center"
+            style="margin-bottom: 15px; color: #666"
+          >
             טוען נתונים...
           </div>
 
           <!-- Data Table -->
-          <div class="table-container" style="overflow-x: auto; margin-top: 20px;">
-            <table id="salary-table" style="
-              width: 100%; 
-              border-collapse: collapse; 
-              margin: 0 auto; 
-              background: white; 
-              border-radius: 8px; 
-              overflow: hidden; 
-              box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            ">
+          <div
+            class="table-container"
+            style="overflow-x: auto; margin-top: 20px"
+          >
+            <table
+              id="salary-table"
+              style="
+                width: 100%;
+                border-collapse: collapse;
+                margin: 0 auto;
+                background: white;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+              "
+            >
               <thead>
-                <tr style="background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%); color: white;">
-                  <th 
-                    id="sort-company" 
-                    style="padding: 15px; text-align: right; font-weight: bold; cursor: pointer; user-select: none; position: relative; min-width: 120px;"
+                <tr
+                  style="
+                    background: linear-gradient(
+                      90deg,
+                      #6a11cb 0%,
+                      #2575fc 100%
+                    );
+                    color: white;
+                  "
+                >
+                  <th
+                    id="sort-company"
+                    style="
+                      padding: 15px;
+                      text-align: right;
+                      font-weight: bold;
+                      cursor: pointer;
+                      user-select: none;
+                      position: relative;
+                      min-width: 120px;
+                    "
                     onclick="toggleSort('company')"
                     title="לחץ למיון לפי שם החברה"
                   >
                     שם החברה
-                    <span id="sort-company-icon" style="margin-right: 8px; opacity: 0.7;">↕️</span>
+                    <span
+                      id="sort-company-icon"
+                      style="margin-right: 8px; opacity: 0.7"
+                      >↕️</span
+                    >
                   </th>
-                  <th 
-                    id="sort-jobTitle" 
-                    style="padding: 15px; text-align: center; font-weight: bold; cursor: pointer; user-select: none; position: relative; min-width: 100px;"
+                  <th
+                    id="sort-jobTitle"
+                    style="
+                      padding: 15px;
+                      text-align: center;
+                      font-weight: bold;
+                      cursor: pointer;
+                      user-select: none;
+                      position: relative;
+                      min-width: 100px;
+                    "
                     onclick="toggleSort('jobTitle')"
                     title="לחץ למיון לפי תפקיד"
                   >
                     תפקיד
-                    <span id="sort-jobTitle-icon" style="margin-right: 8px; opacity: 0.7;">↕️</span>
+                    <span
+                      id="sort-jobTitle-icon"
+                      style="margin-right: 8px; opacity: 0.7"
+                      >↕️</span
+                    >
                   </th>
-                  <th 
-                    id="sort-salary" 
-                    style="padding: 15px; text-align: center; font-weight: bold; cursor: pointer; user-select: none; position: relative; min-width: 100px;"
+                  <th
+                    id="sort-salary"
+                    style="
+                      padding: 15px;
+                      text-align: center;
+                      font-weight: bold;
+                      cursor: pointer;
+                      user-select: none;
+                      position: relative;
+                      min-width: 100px;
+                    "
                     onclick="toggleSort('salary')"
                     title="לחץ למיון לפי שכר"
                   >
                     שכר לשעה (₪)
-                    <span id="sort-salary-icon" style="margin-right: 8px; opacity: 0.7;">↕️</span>
+                    <span
+                      id="sort-salary-icon"
+                      style="margin-right: 8px; opacity: 0.7"
+                      >↕️</span
+                    >
                   </th>
-                  <th 
-                    id="sort-semester" 
-                    style="padding: 15px; text-align: center; font-weight: bold; cursor: pointer; user-select: none; position: relative; min-width: 80px;"
+                  <th
+                    id="sort-semester"
+                    style="
+                      padding: 15px;
+                      text-align: center;
+                      font-weight: bold;
+                      cursor: pointer;
+                      user-select: none;
+                      position: relative;
+                      min-width: 80px;
+                    "
                     onclick="toggleSort('semester')"
                     title="לחץ למיון לפי סמסטר"
                   >
                     סמסטר
-                    <span id="sort-semester-icon" style="margin-right: 8px; opacity: 0.7;">↕️</span>
+                    <span
+                      id="sort-semester-icon"
+                      style="margin-right: 8px; opacity: 0.7"
+                      >↕️</span
+                    >
                   </th>
-                  <th 
-                    id="sort-experience" 
-                    style="padding: 15px; text-align: center; font-weight: bold; cursor: pointer; user-select: none; position: relative; min-width: 80px;"
+                  <th
+                    id="sort-experience"
+                    style="
+                      padding: 15px;
+                      text-align: center;
+                      font-weight: bold;
+                      cursor: pointer;
+                      user-select: none;
+                      position: relative;
+                      min-width: 80px;
+                    "
                     onclick="toggleSort('previousExperience')"
                     title="לחץ למיון לפי ניסיון קודם"
                   >
                     ניסיון קודם
-                    <span id="sort-experience-icon" style="margin-right: 8px; opacity: 0.7;">↕️</span>
+                    <span
+                      id="sort-experience-icon"
+                      style="margin-right: 8px; opacity: 0.7"
+                      >↕️</span
+                    >
                   </th>
-                  <th 
-                    id="sort-pension" 
-                    style="padding: 15px; text-align: center; font-weight: bold; cursor: pointer; user-select: none; position: relative; min-width: 80px;"
+                  <th
+                    id="sort-pension"
+                    style="
+                      padding: 15px;
+                      text-align: center;
+                      font-weight: bold;
+                      cursor: pointer;
+                      user-select: none;
+                      position: relative;
+                      min-width: 80px;
+                    "
                     onclick="toggleSort('pensionFund')"
                     title="לחץ למיון לפי קרן השתלמות"
                   >
                     קרן השתלמות
-                    <span id="sort-pension-icon" style="margin-right: 8px; opacity: 0.7;">↕️</span>
+                    <span
+                      id="sort-pension-icon"
+                      style="margin-right: 8px; opacity: 0.7"
+                      >↕️</span
+                    >
                   </th>
-                  <th 
-                    id="sort-category" 
-                    style="padding: 15px; text-align: center; font-weight: bold; cursor: pointer; user-select: none; position: relative; min-width: 150px;"
+                  <th
+                    id="sort-category"
+                    style="
+                      padding: 15px;
+                      text-align: center;
+                      font-weight: bold;
+                      cursor: pointer;
+                      user-select: none;
+                      position: relative;
+                      min-width: 150px;
+                    "
                     onclick="toggleSort('category')"
                     title="לחץ למיון לפי קטגוריה"
                   >
                     קטגוריה
-                    <span id="sort-category-icon" style="margin-right: 8px; opacity: 0.7;">↕️</span>
+                    <span
+                      id="sort-category-icon"
+                      style="margin-right: 8px; opacity: 0.7"
+                      >↕️</span
+                    >
                   </th>
                 </tr>
               </thead>
               <tbody id="salary-table-body">
                 <tr>
-                  <td colspan="7" style="text-align: center; padding: 20px; color: #666;">
+                  <td
+                    colspan="7"
+                    style="text-align: center; padding: 20px; color: #666"
+                  >
                     טוען נתונים...
                   </td>
                 </tr>
@@ -385,6 +578,49 @@
 
     <!-- Chart Script -->
     <script>
+      // Custom WhatsApp button for this page - override the default one
+      document.addEventListener("DOMContentLoaded", function () {
+        // Remove the default WhatsApp button if it exists
+        setTimeout(() => {
+          const defaultWhatsApp = document.querySelector(".whatsapp-fab");
+          if (defaultWhatsApp) {
+            defaultWhatsApp.remove();
+          }
+
+          // Create custom WhatsApp button for this page
+          const whatsappBtn = document.createElement("a");
+          whatsappBtn.className = "whatsapp-fab salary-page-whatsapp";
+          whatsappBtn.href = "https://chat.whatsapp.com/HjchGqZ7Wo79txPJJBLclb";
+          whatsappBtn.target = "_blank";
+          whatsappBtn.rel = "noopener";
+          whatsappBtn.setAttribute("aria-label", "Join WhatsApp Group");
+
+          // Create icon
+          const icon = document.createElement("i");
+          icon.className = "fab fa-whatsapp";
+
+          // Create tooltip
+          const tooltip = document.createElement("span");
+          tooltip.className = "tooltip salary-tooltip";
+          tooltip.textContent = "מעל 900 סטודנטים כבר בקבוצה! הצטרפו עכשיו";
+
+          whatsappBtn.appendChild(icon);
+          whatsappBtn.appendChild(tooltip);
+
+          document.body.appendChild(whatsappBtn);
+
+          // Show tooltip automatically for first 5 seconds
+          setTimeout(() => {
+            tooltip.classList.add("show-tooltip");
+          }, 500);
+
+          // Hide tooltip after 5 seconds
+          setTimeout(() => {
+            tooltip.classList.remove("show-tooltip");
+          }, 5500);
+        }, 100);
+      });
+
       function createChart(chartId, labels, minData, avgData, maxData) {
         const filteredLabels = [];
         const filteredMin = [];
@@ -476,7 +712,7 @@
       }
 
       // Initialize charts when page loads
-      document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener("DOMContentLoaded", function () {
         initializeSalaryCharts();
       });
 
