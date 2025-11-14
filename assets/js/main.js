@@ -163,6 +163,17 @@ document.addEventListener("DOMContentLoaded", () => {
     whatsappBtn.rel = "noopener";
     whatsappBtn.setAttribute("aria-label", "Contact via WhatsApp");
 
+    // Add Google Analytics event tracking
+    whatsappBtn.addEventListener("click", function () {
+      if (typeof gtag !== "undefined") {
+        gtag("event", "click", {
+          event_category: "WhatsApp",
+          event_label: "Floating Button - Personal Contact",
+          page_path: window.location.pathname,
+        });
+      }
+    });
+
     // Create icon
     const icon = document.createElement("i");
     icon.className = "fab fa-whatsapp";
@@ -214,7 +225,9 @@ document.addEventListener("DOMContentLoaded", () => {
           
           <div class="popup-actions">
             <a href="https://wa.me/972586669888?text=שלום%2C%20אני%20מעוניין%20לשמוע%20עליך%20ועל%20איך%20אתה%20יכול%20לעזור%20לי" 
-               class="popup-btn primary" target="_blank" rel="noopener">
+               class="popup-btn primary" 
+               id="popupWhatsAppBtn"
+               target="_blank" rel="noopener">
               <i class="fab fa-whatsapp"></i>
               שלח הודעה 
             </a>
@@ -232,12 +245,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const overlay = document.getElementById("popupOverlay");
     const closeBtn = document.getElementById("popupClose");
     const laterBtn = document.getElementById("popupLater");
+    const whatsappPopupBtn = document.getElementById("popupWhatsAppBtn");
 
     function closePopup() {
       overlay.classList.remove("show");
       setTimeout(() => {
         overlay.remove();
       }, 300);
+    }
+
+    // Track WhatsApp popup button click
+    if (whatsappPopupBtn) {
+      whatsappPopupBtn.addEventListener("click", function () {
+        if (typeof gtag !== "undefined") {
+          gtag("event", "click", {
+            event_category: "WhatsApp",
+            event_label: "Popup Ad - Contact Request",
+            page_path: window.location.pathname,
+          });
+        }
+      });
     }
 
     closeBtn.addEventListener("click", closePopup);
