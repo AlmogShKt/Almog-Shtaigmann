@@ -16,7 +16,28 @@
     <link
       rel="icon"
       type="image/svg+xml"
-      href="https://upload.wikimedia.org/wikipedia/commons/3/3e/Eo_circle_blue_white_graduation_cap.svg"
+      href="https:/          // Create custom WhatsApp button for this page
+          const whatsappBtn = document.createElement('a');
+          whatsappBtn.className = 'whatsapp-fab salary-page-whatsapp';
+          whatsappBtn.href = 'https://chat.whatsapp.com/HjchGqZ7Wo79txPJJBLclb';
+          whatsappBtn.target = '_blank';
+          whatsappBtn.rel = 'noopener';
+          whatsappBtn.setAttribute('aria-label', 'Join WhatsApp Group');
+
+          // Add Google Analytics event tracking for WhatsApp group
+          whatsappBtn.addEventListener('click', function() {
+            if (typeof gtag !== 'undefined') {
+              gtag('event', 'click', {
+                'event_category': 'WhatsApp',
+                'event_label': 'Salary Page - WhatsApp Group Join',
+                'page_path': window.location.pathname
+              });
+            }
+          });
+
+          // Create icon
+          const icon = document.createElement('i');
+          icon.className = 'fab fa-whatsapp';imedia.org/wikipedia/commons/3/3e/Eo_circle_blue_white_graduation_cap.svg"
     />
     <title>ניתוח שכר לפי חברה | Almog Shtaigmann</title>
 
