@@ -84,7 +84,9 @@
             onclick="location.href='../../c-lab/index.html'"
             >C-Lab Course</a
           >
-          <a href="javascript:void(0)" onclick="location.href='../index.html'"
+          <a
+            href="javascript:void(0)"
+            onclick="trackBackToWorkshop('My Project')"
             >Database Workshop</a
           >
         </nav>
@@ -97,7 +99,7 @@
         <div class="container">
           <a
             href="javascript:void(0)"
-            onclick="location.href='../index.html'"
+            onclick="trackBackToWorkshop('My Project')"
             class="btn btn-secondary"
           >
             <i class="fas fa-arrow-left"></i> חזרה לסדנת בסיסי נתונים
@@ -105,34 +107,160 @@
         </div>
       </section>
 
-      <!-- Placeholder Content -->
+      <!-- Project Content -->
       <section class="section">
         <div class="container">
-          <div class="placeholder-container">
-            <div class="placeholder-content animate-on-scroll">
-              <div class="placeholder-icon">
-                <i class="fas fa-hourglass-half"></i>
-              </div>
-              <h1 class="placeholder-title">הפרויקט שלי</h1>
-              <p class="placeholder-message">
-                <span class="loading-dots">
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-                </span>
-                ברגע שנקבל ציון הפרויקט שלי יהיה זמין לצפייה
-              </p>
-
-              <div class="coming-soon-badge">בקרוב...</div>
-            </div>
-            <a
-              href="https://wa.me/972586669888?text=שלום%2C%20אשמח%20לקבוע%20שיעור%20פרטי"
-              class="premium-btn premium-btn-primary"
-              target="_blank"
-              rel="noopener"
+          <!-- Project Header with Grade -->
+          <div
+            class="text-center animate-on-scroll"
+            style="margin-bottom: 3rem"
+          >
+            <div
+              style="
+                display: inline-block;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                padding: 2rem 3rem;
+                border-radius: 20px;
+                box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+                margin-bottom: 2rem;
+              "
             >
-              <i class="fab fa-whatsapp"></i> צריכים שיעור פרטי או עזרה?
-            </a>
+              <h2 style="color: white; font-size: 2.5rem; margin: 0 0 1rem 0">
+                <i class="fas fa-trophy" style="color: #ffd700"></i>
+                הפרויקט שלי
+              </h2>
+              <div
+                style="
+                  background: rgba(255, 255, 255, 0.2);
+                  padding: 1rem 2rem;
+                  border-radius: 10px;
+                  margin-bottom: 1rem;
+                "
+              >
+                <p style="color: white; font-size: 1.2rem; margin: 0">
+                  הציון הסופי שלנו:
+                </p>
+                <p
+                  style="
+                    color: #ffd700;
+                    font-size: 4rem;
+                    font-weight: bold;
+                    margin: 0;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+                  "
+                >
+                  95
+                </p>
+              </div>
+            </div>
+
+            <!-- Access Button -->
+            <div style="margin: 2rem 0">
+              <a
+                href="https://wa.me/972586669888?text=שלום%2C%20אני%20מעוניין%20לקבל%20גישה%20לפרויקט%20בסיסי%20נתונים%20(ציון%2095)"
+                class="premium-btn premium-btn-primary"
+                target="_blank"
+                rel="noopener"
+                style="font-size: 1.2rem; padding: 1.2rem 2.5rem"
+                onclick="if(typeof gtag !== 'undefined') { gtag('event', 'click', {'event_category': 'WhatsApp', 'event_label': 'My Project - Access Request', 'value': 95}); }"
+              >
+                <i class="fab fa-whatsapp"></i> לחץ כאן לקבלת גישה
+              </a>
+            </div>
+          </div>
+
+          <!-- Project Images Gallery -->
+          <div class="workshop-content animate-on-scroll">
+            <h2 style="text-align: center; margin-bottom: 2rem">
+              <i class="fas fa-images"></i> תמונות מהפרויקט
+            </h2>
+
+            <!-- Database Design -->
+            <div class="info-box" style="margin-bottom: 3rem">
+              <h3><i class="fas fa-database"></i> תכנון בסיס הנתונים</h3>
+              <p>ER Diagram מלא של מבנה בסיס הנתונים</p>
+              <div style="text-align: center; margin: 1.5rem 0">
+                <img
+                  src="./imgs/Design.png"
+                  alt="Database Design - ER Diagram"
+                  style="
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: 10px;
+                    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+                  "
+                />
+              </div>
+            </div>
+
+            <!-- UX Screenshots -->
+            <div class="workshop-grid grid-2" style="margin-bottom: 2rem">
+              <div class="info-box">
+                <h4><i class="fas fa-desktop"></i> ממשק משתמש - מסך ראשי</h4>
+                <div style="text-align: center; margin: 1rem 0">
+                  <img
+                    src="./imgs/UX1.png"
+                    alt="User Interface - Main Screen"
+                    style="
+                      max-width: 100%;
+                      height: auto;
+                      border-radius: 8px;
+                      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                    "
+                  />
+                </div>
+              </div>
+
+              <div class="info-box">
+                <h4><i class="fas fa-search"></i> ממשק משתמש - חיפוש</h4>
+                <div style="text-align: center; margin: 1rem 0">
+                  <img
+                    src="./imgs/UX2.png"
+                    alt="User Interface - Search"
+                    style="
+                      max-width: 100%;
+                      height: auto;
+                      border-radius: 8px;
+                      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                    "
+                  />
+                </div>
+              </div>
+
+              <div class="info-box" style="grid-column: 1 / -1">
+                <h4>
+                  <i class="fas fa-chart-bar"></i> ממשק משתמש - ניתוח נתונים
+                </h4>
+                <div style="text-align: center; margin: 1rem 0">
+                  <img
+                    src="./imgs/UX3.png"
+                    alt="User Interface - Analytics"
+                    style="
+                      max-width: 100%;
+                      height: auto;
+                      border-radius: 8px;
+                      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                    "
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="warning-box" style="text-align: center">
+              <h3><i class="fas fa-rocket"></i> רוצים פרויקט כמו שלנו?</h3>
+              <p>קבלו גישה מלאה לקוד, למבנה בסיס הנתונים, ולכל התיעוד</p>
+              <a
+                href="https://wa.me/972586669888?text=שלום%2C%20אני%20מעוניין%20לקבל%20גישה%20לפרויקט%20בסיסי%20נתונים%20(ציון%2095)"
+                class="premium-btn premium-btn-primary"
+                target="_blank"
+                rel="noopener"
+                style="margin-top: 1rem"
+                onclick="if(typeof gtag !== 'undefined') { gtag('event', 'click', {'event_category': 'WhatsApp', 'event_label': 'My Project - Bottom CTA', 'value': 95}); }"
+              >
+                <i class="fab fa-whatsapp"></i> צור קשר עכשיו
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -149,7 +277,7 @@
           <a href="https://github.com/almogshkt" target="_blank">
             <i class="fab fa-github"></i>
           </a>
-          <a href="mailto:almog.work77@gmail.com">
+          <a href="mailto:a.shtaigmann@gmail.com">
             <i class="fas fa-envelope"></i>
           </a>
         </div>
@@ -158,5 +286,9 @@
 
     <!-- JavaScript -->
     <script src="../../../assets/js/main.js"></script>
+    <script>
+      // Track page view
+      trackWorkshopPageView("My Project - Grade 95");
+    </script>
   </body>
 </html>

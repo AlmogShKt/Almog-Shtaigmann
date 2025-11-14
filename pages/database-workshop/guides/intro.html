@@ -84,7 +84,7 @@
             onclick="location.href='../../c-lab/index.html'"
             >C-Lab Course</a
           >
-          <a href="javascript:void(0)" onclick="location.href='../index.html'"
+          <a href="javascript:void(0)" onclick="trackBackToWorkshop('Workshop Overview')"
             >Database Workshop</a
           >
         </nav>
@@ -97,7 +97,7 @@
         <div class="container">
           <a
             href="javascript:void(0)"
-            onclick="location.href='../index.html'"
+            onclick="trackBackToWorkshop('Workshop Overview')"
             class="btn btn-secondary"
           >
             <i class="fas fa-arrow-left"></i> חזרה לסדנת בסיסי נתונים
@@ -205,7 +205,7 @@
           <a href="https://github.com/almogshkt" target="_blank">
             <i class="fab fa-github"></i>
           </a>
-          <a href="mailto:almog.work77@gmail.com">
+          <a href="mailto:a.shtaigmann@gmail.com">
             <i class="fas fa-envelope"></i>
           </a>
         </div>
@@ -214,5 +214,9 @@
 
     <!-- JavaScript -->
     <script src="../../../assets/js/main.js"></script>
+    <script>
+      // Track page view
+      trackWorkshopPageView('Workshop Overview - Intro');
+    </script>
   </body>
 </html>

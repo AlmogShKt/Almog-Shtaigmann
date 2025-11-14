@@ -301,3 +301,80 @@ document.addEventListener("DOMContentLoaded", () => {
   createWhatsAppButton();
   initPopupAd();
 });
+
+// ============================================
+// Workshop Page Analytics Tracking
+// ============================================
+
+/**
+ * Track workshop guide page navigation
+ * @param {string} guideName - Name of the guide being accessed
+ * @param {string} targetUrl - URL to navigate to
+ */
+window.trackWorkshopNavigation = function (guideName, targetUrl) {
+  // Track the card click
+  if (typeof gtag !== "undefined") {
+    gtag("event", "click", {
+      event_category: "Workshop Navigation",
+      event_label: guideName,
+      page_path: window.location.pathname,
+      destination_url: targetUrl,
+    });
+  }
+
+  // Navigate after a brief delay to ensure tracking is sent
+  setTimeout(function () {
+    location.href = targetUrl;
+  }, 100);
+};
+
+/**
+ * Track "Back to Workshop" button clicks from guide pages
+ * @param {string} currentPage - Current guide page name
+ */
+window.trackBackToWorkshop = function (currentPage) {
+  if (typeof gtag !== "undefined") {
+    gtag("event", "click", {
+      event_category: "Workshop Navigation",
+      event_label: "Back to Workshop Index",
+      page_path: window.location.pathname,
+      source_page: currentPage,
+    });
+  }
+
+  // Navigate after a brief delay
+  setTimeout(function () {
+    location.href = "../index.html";
+  }, 100);
+};
+
+/**
+ * Track interactions within workshop guide pages
+ * @param {string} action - The action being performed (e.g., "Download", "View Code", "Copy Code")
+ * @param {string} element - The element being interacted with
+ */
+window.trackWorkshopInteraction = function (action, element) {
+  if (typeof gtag !== "undefined") {
+    gtag("event", action.toLowerCase().replace(/\s+/g, "_"), {
+      event_category: "Workshop Interaction",
+      event_label: element,
+      page_path: window.location.pathname,
+    });
+  }
+};
+
+/**
+ * Track page view on workshop guide pages
+ * Call this from each guide page to track views
+ * @param {string} guideName - Name of the guide
+ */
+window.trackWorkshopPageView = function (guideName) {
+  if (typeof gtag !== "undefined") {
+    gtag("event", "page_view", {
+      page_title: guideName,
+      page_path: window.location.pathname,
+      page_location: window.location.href,
+      content_group: "Database Workshop",
+    });
+  }
+};

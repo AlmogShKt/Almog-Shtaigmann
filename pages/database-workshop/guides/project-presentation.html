@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="מדריך להצגת הפרויקט - סדנת בסיסי נתונים"
+    />
+    <meta
+      property="og:image"
+      content="https://almogshkt.github.io/Almog-Shtaigmann/assets/images/meta-data-baner/database-workshop.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <title>הצגת הפרויקט | Almog Shtaigmann</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../../assets/css/main.css" />
+    <link rel="stylesheet" href="../../../assets/css/responsive.css" />
+    <link rel="stylesheet" href="../../../assets/css/rtl.css" />
+    <link rel="stylesheet" href="../../../assets/css/button-animation.css" />
+    <link rel="stylesheet" href="../workshop-styles.css" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Rubik:wght@400;500;700&display=swap&subset=hebrew"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-34DFKV9RWM"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-34DFKV9RWM");
+    </script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container header-container">
+        <h1 class="site-title">הצגת הפרויקט</h1>
+
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span class="visually-hidden">Toggle navigation</span>
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="nav-main collapsed" id="main-nav">
+          <a
+            href="javascript:void(0)"
+            onclick="location.href='../../../index.html'"
+            >Home</a
+          >
+          <a
+            href="javascript:void(0)"
+            onclick="location.href='../../work-experience/index.html'"
+            >Work Experience</a
+          >
+          <a
+            href="javascript:void(0)"
+            onclick="location.href='../../projects/index.html'"
+            >Personal Projects</a
+          >
+          <a
+            href="javascript:void(0)"
+            onclick="location.href='../../c-lab/index.html'"
+            >C-Lab Course</a
+          >
+          <a href="javascript:void(0)" onclick="trackBackToWorkshop('Project Presentation Guide')"
+            >Database Workshop</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Back Button -->
+      <section class="section">
+        <div class="container">
+          <a
+            href="javascript:void(0)"
+            onclick="trackBackToWorkshop('Project Presentation Guide')"
+            class="btn btn-secondary"
+          >
+            <i class="fas fa-arrow-left"></i> חזרה לסדנת בסיסי נתונים
+          </a>
+        </div>
+      </section>
+
+      <!-- Article Content -->
+      <article class="section">
+        <div class="container">
+          <header class="text-center animate-on-scroll">
+            <h1>הצגת הפרויקט - השלב האחרון</h1>
+            <p class="lead">כל מה שצריך לדעת כדי להצליח בהצגה מול הילה</p>
+            <div class="article-meta">
+              <span><i class="fas fa-calendar"></i> עודכן: נובמבר 2025</span>
+            </div>
+          </header>
+
+          <div class="article-content animate-on-scroll">
+            <!-- Overview -->
+            <div class="workshop-info">
+              <h3><i class="fas fa-info-circle"></i> סקירה כללית</h3>
+              <p>השלב האחרון בסדנה הוא ההצגה של הפרויקט.</p>
+            </div>
+
+            <!-- Scheduling -->
+            <h2><i class="fas fa-calendar-check"></i> תיאום ההצגה</h2>
+            <div class="info-box">
+              <h4>תיאום עם הילה</h4>
+              <p><strong>צעדים לתיאום:</strong></p>
+              <ol>
+                <li>צרו קשר עם הילה להודיע שאתם מוכנים להציג</li>
+                <li>קבעו פגישה בהתאם לזמינות שלכם ושלה</li>
+                <li>הילה תשלח לכם את פרטי הזום במייל</li>
+              </ol>
+            </div>
+
+            <div class="warning-box">
+              <h4><i class="fas fa-exclamation-triangle"></i> חשוב!</h4>
+              <ul>
+                <li>וודאו שהפרויקט שלכם עובד לפני שאתם קובעים הצגה</li>
+                <li>
+                  תעברו על כל הדרישות בחוברת הקורס ותוודאו שאכן מימשתם הכל -
+                  <a
+                    href="#requirements-checklist"
+                    style="
+                      color: #667eea;
+                      font-weight: bold;
+                      text-decoration: underline;
+                    "
+                    >לחצו כאן לרשימת הדרישות המלאה</a
+                  >
+                </li>
+                <li>התכוננו מראש - אל תשאירו דברים לרגע האחרון</li>
+                <li>
+                  דוגמה למצגת בהצגה -
+                  <a
+                    href="my-project.html"
+                    style="
+                      color: #667eea;
+                      font-weight: bold;
+                      text-decoration: underline;
+                    "
+                    >לחצו כאן לצפייה בדוגמה</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Requirements Checklist -->
+            <h2 id="requirements-checklist">
+              <i class="fas fa-tasks"></i> רשימת דרישות המערכת - Checklist
+            </h2>
+
+            <div
+              class="info-box"
+              style="
+                background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+              "
+            >
+              <h4>
+                <i class="fas fa-info-circle"></i> לפני ההצגה - וודאו שמימשתם את
+                כל הדרישות הבאות:
+              </h4>
+              <p style="font-weight: 500; color: #2d3748">
+                סמנו ✓ ליד כל דרישה שמימשתם במערכת שלכם
+              </p>
+            </div>
+
+            <div class="workshop-grid grid-2">
+              <!-- Requirement 1 -->
+              <div class="info-box">
+                <h4>
+                  <input type="checkbox" style="margin-left: 10px" />
+                  1. הצגת הקשר המילה בטקסט
+                </h4>
+                <p><strong>דרישה:</strong></p>
+                <ul>
+                  <li>כאשר בוחרים מילה מהרשימה - הצגת ההקשר שלה בתוך הטקסט</li>
+                  <li>ההקשר כולל שורות לפני ואחרי המילה</li>
+                  <li>הצגה בחלון עם אפשרות גלילה קדימה ואחורה</li>
+                  <li>או קישור לטקסט המלא אם ההקשר מוגבל</li>
+                  <li>אם המילה מופיעה כמה פעמים - הצגת כל ההקשרים</li>
+                  <li>אפשרות לעבור בין הופעות שונות או לגלול ביניהן</li>
+                </ul>
+              </div>
+
+              <!-- Requirement 2 -->
+              <div class="info-box">
+                <h4>
+                  <input type="checkbox" style="margin-left: 10px" />
+                  2. הצגת כל המילים כאינדקס
+                </h4>
+                <p><strong>דרישה:</strong></p>
+                <ul>
+                  <li>לכל מילה - הצגת המיקום שלה</li>
+                  <li>
+                    <strong>לפחות שני סוגים שונים של הגדרת מיקום:</strong>
+                  </li>
+                  <li style="margin-right: 20px">✓ שורות ועמודים</li>
+                  <li style="margin-right: 20px">✓ משפטים ופסקאות</li>
+                  <li>
+                    אם בטקסט יש מבנה (פרקים/בתים/מודולים) - מיקום לפי המבנה
+                  </li>
+                  <li>
+                    דוגמאות: שורה בבית (שירה), פרק/פסקה/משפט (פרוזה),
+                    מחלקות/פונקציות (קוד)
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Requirement 3 -->
+              <div class="info-box">
+                <h4>
+                  <input type="checkbox" style="margin-left: 10px" />
+                  3. איתור מילה לפי מקור
+                </h4>
+                <p><strong>דרישה:</strong></p>
+                <ul>
+                  <li>אפשרות לאתר מילה לפי המקור שלה</li>
+                  <li>למשל: "מצא את המילה שהופיעה בשורה 20 בעמוד 12"</li>
+                  <li>חיפוש לפי המיקום המדויק</li>
+                  <li>תמיכה בשני סוגי המיקום שהגדרתם</li>
+                </ul>
+              </div>
+
+              <!-- Requirement 4 -->
+              <div class="info-box">
+                <h4>
+                  <input type="checkbox" style="margin-left: 10px" />
+                  4. הגדרת קבוצות מילים
+                </h4>
+                <p><strong>דרישה:</strong></p>
+                <ul>
+                  <li>
+                    אפשרות למשתמש להגדיר קבוצות של מילים בעלות משמעות מיוחדת
+                  </li>
+                  <li>הצגת המופעים של הקבוצה בטקסט</li>
+                  <li>יכולות להיות קבוצות שונות עם שמות שונים</li>
+                  <li><strong>שיוך מילים לקבוצה בשתי דרכים:</strong></li>
+                  <li style="margin-right: 20px">✓ הזנה מפורשת (טייפ ידני)</li>
+                  <li style="margin-right: 20px">
+                    ✓ סימון מילים מתוך בסיס הנתונים
+                  </li>
+                  <li>דוגמאות: שמות של חיות, פעלים, שמות עצם וכו'</li>
+                  <li>אפשרות להגדיר קבוצה חדשה ולהוסיף מילים בכל עת</li>
+                </ul>
+              </div>
+
+              <!-- Requirement 5 -->
+              <div class="info-box">
+                <h4>
+                  <input type="checkbox" style="margin-left: 10px" />
+                  5. אחסון מילים בסטטוסים שונים
+                </h4>
+                <p><strong>דרישה:</strong></p>
+                <ul>
+                  <li>אפשרות לאחסן מילים בסטטוסים שונים (הגדרת משתמש)</li>
+                  <li>הצבעה של המילים בתוך הטקסט</li>
+                  <li>למשל: מילים מסומנות, מילים למחיקה, מילים חשובות וכו'</li>
+                </ul>
+              </div>
+
+              <!-- Requirement 6 -->
+              <div class="info-box">
+                <h4>
+                  <input type="checkbox" style="margin-left: 10px" />
+                  6. ביטויים לשוניים
+                </h4>
+                <p><strong>דרישה:</strong></p>
+                <ul>
+                  <li>"ביטוי לשוני" = רצף סדור של מילים</li>
+                  <li><strong>שתי אפשרויות:</strong></li>
+                  <li style="margin-right: 20px">
+                    ✓ משתמש מגדיר ביטוי וחיפוש אם הוא נמצא בטקסט
+                  </li>
+                  <li style="margin-right: 20px">
+                    ✓ משתמש מסמן ביטוי בטקסט ומבקש הופעות נוספות
+                  </li>
+                  <li>הצגת כל המופעים של הביטוי</li>
+                </ul>
+              </div>
+
+              <!-- Requirement 7 -->
+              <div class="info-box">
+                <h4>
+                  <input type="checkbox" style="margin-left: 10px" />
+                  7. אינדקס לקבוצת מילים
+                </h4>
+                <p><strong>דרישה:</strong></p>
+                <ul>
+                  <li>
+                    עבור קבוצת מילים שהוגדרה - אפשרות להציג אינדקס רק לאותה
+                    קבוצה
+                  </li>
+                  <li>תת-קבוצה מתוך רשימת המילים הכללית</li>
+                  <li>אפשרות ליצור אינדקס כדו"ח להדפסה</li>
+                  <li>או כקובץ במערכת עם שם מתאים</li>
+                  <li>למשל: "אינדקס של שמות מקומות", "אינדקס של פעלים" וכו'</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 2rem">
+              <h4><i class="fas fa-lightbulb"></i> טיפ חשוב לפני ההצגה</h4>
+              <p>
+                עברו על כל הדרישות ווודאו שכל אחת מהן מיושמת במערכת שלכם. הכינו
+                דוגמאות ספציפיות להדגמת כל דרישה בזמן ההצגה החיה.
+              </p>
+              <p style="margin-top: 1rem">
+                <strong>המלצה:</strong> צרו טבלת Excel או מסמך עם רשימת הדרישות
+                ולכל דרישה:
+              </p>
+              <ul>
+                <li>✓ האם מומשה במערכת</li>
+                <li>✓ באיזה מסך/פונקציה נמצאת</li>
+                <li>✓ איך להדגים אותה בהצגה</li>
+              </ul>
+            </div>
+
+            <!-- Presentation Content -->
+            <h2><i class="fas fa-presentation"></i> תוכן המצגת</h2>
+
+            <div class="workshop-grid grid-2">
+              <div class="info-box">
+                <h4>1. התכנון הכללי</h4>
+                <ul>
+                  <li>מבנה המערכת הכולל</li>
+                  <li>ארכיטקטורה של הפרויקט</li>
+                  <li>החלטות עיצוב מרכזיות</li>
+                  <li>טכנולוגיות שנבחרו</li>
+                </ul>
+              </div>
+
+              <div class="info-box">
+                <h4>2. תכנון הסכמה</h4>
+                <ul>
+                  <li>הצגת כל סכמה בנפרד</li>
+                  <li>הסבר על כל טבלה ותפקידה</li>
+                  <li>קשרים בין הטבלאות</li>
+                  <li>מפתחות ראשיים וזרים</li>
+                </ul>
+              </div>
+
+              <div class="info-box">
+                <h4>3. UI/UX</h4>
+                <ul>
+                  <li>עיצוב ממשק המשתמש</li>
+                  <li>חוויית המשתמש</li>
+                  <li>נגישות ושימושיות</li>
+                  <li>זרימת העבודה במערכת</li>
+                </ul>
+              </div>
+
+              <div class="info-box">
+                <h4>4. הדגמה חיה (Live Demo)</h4>
+                <ul>
+                  <li>הרצת הפרויקט בזמן אמת</li>
+                  <li>הצגת פונקציונליות מרכזית</li>
+                  <li>דוגמאות לשימוש במערכת</li>
+                  <li><strong>וודאו שהכל עובד!</strong></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Questions Section -->
+            <h2><i class="fas fa-question-circle"></i> מה הילה תשאל?</h2>
+
+            <div class="info-box">
+              <h4>סוגי שאלות צפויות:</h4>
+              <ul>
+                <li>
+                  <strong>שאלות על התכנון:</strong> למה בחרתם בפתרון הזה? האם
+                  שקלתם חלופות אחרות?
+                </li>
+                <li>
+                  <strong>שאלות טכניות:</strong> כיצד מימשתם פונקציונליות
+                  מסוימת? איך התמודדתם עם בעיות?
+                </li>
+                <li>
+                  <strong>שאלות על יעילות:</strong> האם הפתרון יעיל? איך טיפלתם
+                  בביצועים?
+                </li>
+                <li>
+                  <strong>שאלות על אבטחה:</strong> איך מגנים על הנתונים? האם יש
+                  validations?
+                </li>
+                <li>
+                  <strong>שאלות על קוד:</strong> איך ארגנתם את הקוד? האם שמרתם
+                  על Best Practices?
+                </li>
+              </ul>
+            </div>
+
+            <div class="workshop-info">
+              <h3><i class="fas fa-lightbulb"></i> טיפ חשוב</h3>
+              <p>
+                הילה תעמיק בתכנון שלכם ותרצה לראות שחשבתם על הכל ותכננתם הכל
+                בצורה יעילה ונכונה. היו מוכנים להסביר את ההחלטות שלכם ולהצדיק
+                אותן!
+              </p>
+            </div>
+
+            <!-- Submission -->
+            <h2><i class="fas fa-upload"></i> הגשת הפרויקט</h2>
+
+            <div class="info-box">
+              <h4>בסוף ההצגה</h4>
+              <p>הילה תבקש שתעבירו לה את הפרויקט במייל. יש שתי אפשרויות:</p>
+
+              <div class="workshop-grid grid-2">
+                <div
+                  style="
+                    background: #f0f4f8;
+                    padding: 1.5rem;
+                    border-radius: 10px;
+                  "
+                >
+                  <h4><i class="fab fa-github"></i> דרך GitHub</h4>
+                  <ul>
+                    <li>שלחו לינק לrepo</li>
+                    <li>וודאו שהrepo public</li>
+                    <li>כלול README עם הוראות הרצה</li>
+                  </ul>
+                </div>
+
+                <div
+                  style="
+                    background: #f0f4f8;
+                    padding: 1.5rem;
+                    border-radius: 10px;
+                  "
+                >
+                  <h4><i class="fas fa-file-archive"></i> קובץ ZIP</h4>
+                  <ul>
+                    <li>ארזו את כל הפרויקט</li>
+                    <li>כלול את כל הקבצים הנדרשים</li>
+                    <li>הוסיפו README עם הסברים</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tips for Success -->
+            <h2><i class="fas fa-trophy"></i> טיפים להצלחה</h2>
+
+            <div class="workshop-grid grid-2">
+              <div class="info-box">
+                <h4><i class="fas fa-check-circle"></i> לפני ההצגה</h4>
+                <ul>
+                  <li>תרגלו את ההצגה מספר פעמים</li>
+                  <li>בדקו שהפרויקט עובד ב-100%</li>
+                  <li>הכינו גיבוי למקרה חירום</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div
+              class="warning-box"
+              style="text-align: center; margin-top: 3rem"
+            >
+              <h3>
+                <i class="fas fa-hands-helping"></i> צריכים עזרה בהכנה להצגה?
+              </h3>
+              <p>
+                אנחנו כאן לעזור! נוכל לעבור איתכם על המצגת, לתרגל שאלות ותשובות,
+                ולוודא שאתם ממש מוכנים להצליח.
+              </p>
+              <a
+                href="https://wa.me/972586669888?text=שלום%2C%20אני%20צריך%20עזרה%20בהכנה%20להצגת%20הפרויקט%20בסדנת%20בסיסי%20נתונים"
+                class="premium-btn premium-btn-primary"
+                target="_blank"
+                rel="noopener"
+                style="margin-top: 1rem"
+                onclick="if(typeof gtag !== 'undefined') { gtag('event', 'click', {'event_category': 'WhatsApp', 'event_label': 'Presentation Guide - Help Request'}); }"
+              >
+                <i class="fab fa-whatsapp"></i>צרו קשר
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-content">
+      <div
+        class="container text-center"
+        style="background-color: #1a1a1a; padding: 2rem 1rem; color: #494646"
+      >
+        <p class="footer-content" style="color: #2d2d2d;"></p>
+          &copy; 2025 Almog Shtaigmann. All rights reserved.
+        </p>
+        <div class="social-links">
+          <a href="https://linkedin.com/in/almogshtaigmann" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/almogshkt" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:a.shtaigmann@gmail.com">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../../../assets/js/main.js"></script>
+    <script>
+      // Track page view
+      trackWorkshopPageView('Project Presentation Guide');
+      
+      // Track checklist interactions
+      document.addEventListener('DOMContentLoaded', function() {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(function(checkbox, index) {
+          checkbox.addEventListener('change', function() {
+            const requirementNumber = index + 1;
+            const action = this.checked ? 'checked' : 'unchecked';
+            
+            if (typeof gtag !== 'undefined') {
+              gtag('event', 'checklist_interaction', {
+                'event_category': 'Workshop Interaction',
+                'event_label': 'Requirement ' + requirementNumber + ' - ' + action,
+                'page_path': window.location.pathname,
+                'requirement_number': requirementNumber,
+                'is_checked': this.checked
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

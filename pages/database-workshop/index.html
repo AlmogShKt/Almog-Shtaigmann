@@ -110,7 +110,7 @@
             <!-- Workshop Overview -->
             <a
               href="javascript:void(0)"
-              onclick="location.href='./guides/intro.html'"
+              onclick="trackWorkshopNavigation('Workshop Overview', './guides/intro.html')"
               class="card"
             >
               <h3 class="card-title">הסבר כללי על הסדנה</h3>
@@ -125,7 +125,7 @@
             <!-- Project Requirements -->
             <a
               href="javascript:void(0)"
-              onclick="location.href='./guides/project-spec.html'"
+              onclick="trackWorkshopNavigation('Project Requirements', './guides/project-spec.html')"
               class="card"
             >
               <h3 class="card-title">הבנת הפרויקט ודרישות המערכת</h3>
@@ -140,7 +140,7 @@
             <!-- My Project -->
             <a
               href="javascript:void(0)"
-              onclick="location.href='./guides/my-project.html'"
+              onclick="trackWorkshopNavigation('My Project', './guides/my-project.html')"
               class="card"
             >
               <h3 class="card-title">הפרויקט שלי</h3>
@@ -154,19 +154,37 @@
 
             <a
               href="javascript:void(0)"
-              onclick="location.href='./guides/presentation.html'"
+              onclick="trackWorkshopNavigation('Presentation Example', './guides/presentation.html')"
               class="card"
             >
-              <h3 class="card-title">מצגת לדוגמה </h3>
+              <h3 class="card-title">מצגת לדוגמה</h3>
               <div class="card-action">
                 <span class="btn">צפה במצגת</span>
+              </div>
+            </a>
+
+            <!-- Project Presentation Guide -->
+            <a
+              href="javascript:void(0)"
+              onclick="trackWorkshopNavigation('Project Presentation Guide', './guides/project-presentation.html')"
+              class="card"
+            >
+              <h3 class="card-title">
+                <i class="fas fa-presentation"></i>
+                הצגת הפרויקט
+              </h3>
+              <p class="card-content">
+                כל מה שצריך לדעת על השלב האחרון - ההצגה מול הילה
+              </p>
+              <div class="card-action">
+                <span class="btn">קרא המדריך</span>
               </div>
             </a>
 
             <!-- Full Comprehensive Guide -->
             <a
               href="javascript:void(0)"
-              onclick="location.href='./guides/my-project.html'"
+              onclick="trackWorkshopNavigation('Full Premium Guide', './guides/my-project.html')"
               class="card special-card"
             >
               <h3 class="card-title">
@@ -200,7 +218,7 @@
           <a href="https://github.com/almogshkt" target="_blank">
             <i class="fab fa-github"></i>
           </a>
-          <a href="mailto:almog.work77@gmail.com">
+          <a href="mailto:a.shtaigmann@gmail.com">
             <i class="fas fa-envelope"></i>
           </a>
         </div>
@@ -209,5 +227,24 @@
 
     <!-- JavaScript -->
     <script src="../../assets/js/main.js"></script>
+    <script>
+      // Workshop navigation tracking
+      function trackWorkshopNavigation(guideName, targetUrl) {
+        // Track the card click
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'click', {
+            'event_category': 'Workshop Navigation',
+            'event_label': guideName,
+            'page_path': window.location.pathname,
+            'destination_url': targetUrl
+          });
+        }
+        
+        // Navigate after a brief delay to ensure tracking is sent
+        setTimeout(function() {
+          location.href = targetUrl;
+        }, 100);
+      }
+    </script>
   </body>
 </html>
