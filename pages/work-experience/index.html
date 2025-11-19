@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Almog Shtaigmann's Work Experience in software development."
+      content="Almog Shtaigmann's professional work experience - Microsoft, Shutterfly, Intel"
     />
-     <meta
+    <meta
       property="og:image"
       content="https://almogshkt.github.io/Almog-Shtaigmann/assets/images/meta-data-baner/Slide1.png"
     />
@@ -18,6 +18,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
     <link rel="stylesheet" href="../../assets/css/responsive.css" />
+    <link rel="stylesheet" href="./experience-styles.css" />
 
     <!-- Fonts -->
     <link
@@ -61,10 +62,27 @@
         </button>
 
         <nav class="nav-main collapsed" id="main-nav">
-          <a href="javascript:void(0)" onclick="location.href='../../index.html'">Home</a>
-          <a href="javascript:void(0)" onclick="location.href='../../pages/work-experience/index.html'" class="active">Work Experience</a>
-          <a href="javascript:void(0)" onclick="location.href='../../pages/projects/index.html'">Personal Projects</a>
-          <a href="javascript:void(0)" onclick="location.href='../../pages/c-lab/index.html'">C-Lab Course</a>
+          <a
+            href="javascript:void(0)"
+            onclick="location.href='../../index.html'"
+            >Home</a
+          >
+          <a
+            href="javascript:void(0)"
+            onclick="location.href='../../pages/work-experience/index.html'"
+            class="active"
+            >Work Experience</a
+          >
+          <a
+            href="javascript:void(0)"
+            onclick="location.href='../../pages/projects/index.html'"
+            >Personal Projects</a
+          >
+          <a
+            href="javascript:void(0)"
+            onclick="location.href='../../pages/c-lab/index.html'"
+            >C-Lab Course</a
+          >
         </nav>
       </div>
     </header>
@@ -73,7 +91,11 @@
       <!-- Navigation Button -->
       <section class="section">
         <div class="container">
-          <a href="javascript:void(0)" onclick="location.href='../../index.html'" class="btn mb-lg">
+          <a
+            href="javascript:void(0)"
+            onclick="location.href='../../index.html'"
+            class="btn mb-lg"
+          >
             <i class="fas fa-arrow-left"></i> Back to Home
           </a>
         </div>
@@ -82,114 +104,292 @@
       <!-- Main Content -->
       <section class="section">
         <div class="container">
-          <h2>Professional Experience</h2>
+          <h2
+            style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem"
+          >
+            <i class="fas fa-briefcase"></i> Professional Experience
+          </h2>
 
-          <div class="card">
-            <div class="experience">
+          <!-- Microsoft -->
+          <div class="experience-card">
+            <div class="experience-header">
               <img
                 src="../../assets/images/microsoft_logo.png"
                 alt="Microsoft Logo"
                 class="company-logo"
               />
-              <p><strong>Role:</strong> Software Engineer Intern</p>
-              <p><strong>Duration:</strong> December 2024 - Present</p>
-              <p><strong>Responsibilities:</strong></p>
+              <div class="experience-title-section">
+                <h3 class="experience-role">
+                  Software Engineer Intern (Frontend + SWE)
+                </h3>
+                <p class="experience-company">Microsoft Fabric</p>
+                <span class="experience-duration">
+                  <i class="fas fa-calendar-alt"></i> 2024 – Present | 80%
+                  Position
+                </span>
+              </div>
+            </div>
+
+            <p style="font-style: italic; color: #666; margin-bottom: 1.5rem">
+              Microsoft Fabric is a large-scale distributed analytics platform
+              used by <strong>millions of users</strong> handling massive data
+              workloads across Lakehouse, Warehouse, OneLake Catalog, and more.
+            </p>
+
+            <div class="experience-section">
+              <h4 class="section-title">
+                <i class="fas fa-code"></i> Core Contributions
+              </h4>
               <ul class="experience-list">
-                <li>PowerBi - Fabric - OneLake Catalog</li>
                 <li>
-                  Developing features using Angular (18+, TS) that serve
-                  hundreds of thousands to millions of active users.
+                  Built scalable <strong>frontend features</strong> using
+                  <strong>Angular (v19+)</strong>, TypeScript, Angular Signals,
+                  and RxJS. Delivered performant, maintainable experiences for
+                  millions of active users across critical Fabric subsystems
+                  including schema management, metadata visualization, and
+                  sub-artifact flows.
                 </li>
                 <li>
-                  Utilizing Signals, Computed properties, and Effects to
-                  optimize state management and reactivity.
+                  Engineered and optimized complex UI components, rewriting
+                  parts of legacy architecture to improve maintainability,
+                  readability, and system health while ensuring UI elements meet
+                  <strong>accessibility standards (A11y)</strong>.
                 </li>
                 <li>
-                  Implementing scalable architecture and applying design pattern
-                  best practices to ensure maintainability and performance.
+                  Designed resilient distributed data-fetching flows,
+                  implementing robust client-side mechanisms such as:
+                  <ul style="margin-top: 0.5rem; margin-left: 1.5rem">
+                    <li>Multi-stage pagination</li>
+                    <li>
+                      Throttling mitigation and adaptive request strategies
+                    </li>
+                    <li>Retry logic with exponential backoff</li>
+                    <li>Intelligent caching to reduce redundant API calls</li>
+                    <li>
+                      State-driven workflow actions using centralized store
+                      patterns
+                    </li>
+                  </ul>
                 </li>
                 <li>
-                  Collaborating with cross-functional teams to drive innovation
-                  and optimize user experience.
+                  These improvements
+                  <strong>reduced fetch errors, improved reliability</strong>,
+                  and created a smoother interaction model for large-scale
+                  metadata and schema operations.
                 </li>
               </ul>
             </div>
+
+            <div class="experience-section">
+              <h4 class="section-title">
+                <i class="fas fa-database"></i> API & Data Layer Work
+              </h4>
+              <ul class="experience-list">
+                <li>
+                  Integrated deeply with internal Fabric APIs, synchronizing UI
+                  state with backend systems powering Lakehouse, Warehouse, and
+                  OneLake Catalog.
+                </li>
+                <li>
+                  Collaborated with backend teams to diagnose issues, understand
+                  API shape, request flows, permissions, and schema propagation.
+                </li>
+                <li>
+                  Used <strong>SQL, KQL, Fabric Notebooks, Pipelines</strong>,
+                  and Lakehouse tables to perform large-scale data validation,
+                  debug operational defects, analyze bottlenecks, and support
+                  investigation flows across distributed components.
+                </li>
+              </ul>
+            </div>
+
+            <div class="experience-section">
+              <h4 class="section-title">
+                <i class="fas fa-check-circle"></i> Quality, Testing &
+                Reliability
+              </h4>
+              <ul class="experience-list">
+                <li>
+                  Own <strong>E2E automation using Playwright</strong> across
+                  multiple Fabric experiences.
+                </li>
+                <li>
+                  Designed reliability scenarios, accessibility tests, and
+                  regression coverage to reduce operational noise and minimize
+                  customer-facing issues.
+                </li>
+                <li>
+                  Participated in code reviews, architectural discussions, and
+                  technical design reviews focusing on clarity, maintainability,
+                  and reliability.
+                </li>
+              </ul>
+            </div>
+
+            <div class="experience-section">
+              <h4 class="section-title">
+                <i class="fas fa-robot"></i> AI Engineering & Productivity
+              </h4>
+              <ul class="experience-list">
+                <li>
+                  Leveraged <strong>AI engineering tools</strong> (Copilot,
+                  Cline, Roo, Cursor-style agents) to accelerate development,
+                  reduce boilerplate, automate repetitive tasks, and improve
+                  iteration speed.
+                </li>
+                <li>
+                  Proposed new internal workflows for optimizing development
+                  velocity, improving team-wide coding consistency, and reducing
+                  friction in iteration cycles.
+                </li>
+              </ul>
+            </div>
+
+            <div class="highlight-box">
+              <strong><i class="fas fa-trophy"></i> Recognition:</strong>
+              Acknowledged by Microsoft Fabric leadership for technical
+              maturity, initiative, ownership, and cross-team collaboration.
+              Demonstrated consistency by delivering high-impact work while
+              balancing internship, university studies, and military reserve
+              duty.
+            </div>
+
+            <div class="tech-stack">
+              <span class="tech-badge">Angular 19+</span>
+              <span class="tech-badge">TypeScript</span>
+              <span class="tech-badge">RxJS</span>
+              <span class="tech-badge">Signals</span>
+              <span class="tech-badge">Playwright</span>
+              <span class="tech-badge">SQL</span>
+              <span class="tech-badge">KQL</span>
+              <span class="tech-badge">Azure</span>
+              <span class="tech-badge">A11y</span>
+            </div>
           </div>
 
-          <div class="card">
-            <div class="experience">
+          <!-- Shutterfly -->
+          <div class="experience-card">
+            <div class="experience-header">
               <img
                 src="../../assets/images/shutterfly_logo.png"
                 alt="Shutterfly Inc. Logo"
                 class="company-logo"
               />
-              <p>
-                <strong>Role:</strong> Application Software Engineer - Native
-                Android
-              </p>
-              <p><strong>Duration:</strong> October 2023 - Present</p>
-              <p><strong>Responsibilities:</strong></p>
-              <ul class="experience-list"></ul>
+              <div class="experience-title-section">
+                <h3 class="experience-role">
+                  Software Engineering Intern (Android)
+                </h3>
+                <p class="experience-company">Shutterfly Inc.</p>
+                <span class="experience-duration">
+                  <i class="fas fa-calendar-alt"></i> 2023 – 2024 | Student
+                  Position + Full Time (Transition)
+                </span>
+              </div>
+            </div>
+
+            <p style="font-style: italic; color: #666; margin-bottom: 1.5rem">
+              Shutterfly is a large-scale, customer-facing mobile platform used
+              by <strong>millions</strong>.
+            </p>
+
+            <div class="experience-section">
+              <h4 class="section-title">
+                <i class="fas fa-mobile-alt"></i> Core Contributions
+              </h4>
+              <ul class="experience-list">
                 <li>
-                  Applied engineering principles to solve complex problems.
+                  Developed core Android product features using
+                  <strong>Kotlin</strong>, Jetpack components, and
+                  <strong>MVVM/MVI architectures</strong>.
                 </li>
                 <li>
-                  Proficient in Kotlin and Java for efficient Android
-                  development.
+                  Improved UI responsiveness and background processing using
+                  <strong>Kotlin Coroutines</strong>, reducing latency and
+                  boosting user experience in image-heavy flows.
                 </li>
                 <li>
-                  Skilled in modern UI frameworks like Jetpack Compose and
-                  Material Design 3.
+                  Implemented <strong>offline-first behavior</strong> and
+                  persistent local storage using <strong>Room DB</strong>,
+                  ensuring consistent application behavior during network
+                  inconsistencies.
                 </li>
                 <li>
-                  Experienced in MVVM and Clean Architecture to build scalable
-                  apps.
-                </li>
-                <li>
-                  Familiar with Agile (Jira) software development methodologies.
-                </li>
-                <li>
-                  Dedicated to delivering high-quality solutions and motivated
-                  to contribute to collaborative teams.
+                  Collaborated with backend engineers and product teams to
+                  refine user flows, error handling, and performance tuning.
                 </li>
               </ul>
             </div>
+
+            <div class="tech-stack">
+              <span class="tech-badge">Kotlin</span>
+              <span class="tech-badge">Android</span>
+              <span class="tech-badge">Jetpack Compose</span>
+              <span class="tech-badge">MVVM</span>
+              <span class="tech-badge">Coroutines</span>
+              <span class="tech-badge">Room DB</span>
+              <span class="tech-badge">Material Design 3</span>
+            </div>
           </div>
 
-          <div class="card">
-            <div class="experience">
+          <!-- Intel -->
+          <div class="experience-card">
+            <div class="experience-header">
               <img
                 src="../../assets/images/Intel_logo.png"
                 alt="Intel Corporation Logo"
                 class="company-logo"
               />
-              <p><strong>Role:</strong> DevOps and Software Student</p>
-              <p><strong>Duration:</strong> March 2022 - October 2023</p>
-              <p><strong>Responsibilities:</strong></p>
+              <div class="experience-title-section">
+                <h3 class="experience-role">
+                  Software Engineering Student (DevOps + SWE)
+                </h3>
+                <p class="experience-company">
+                  Intel Corporation - HCP Windows
+                </p>
+                <span class="experience-duration">
+                  <i class="fas fa-calendar-alt"></i> 2022 – 2023 | Student
+                  Position
+                </span>
+              </div>
+            </div>
+
+            <p style="font-style: italic; color: #666; margin-bottom: 1.5rem">
+              Intel HCP Windows team builds internal automation and CI/CD
+              frameworks used across multiple engineering units.
+            </p>
+
+            <div class="experience-section">
+              <h4 class="section-title">
+                <i class="fas fa-cogs"></i> Core Contributions
+              </h4>
               <ul class="experience-list">
                 <li>
-                  Proficient in Python for backend and RESTful API design,
-                  optimizing workflow efficiency within Intel's Windows DevOps
-                  group.
+                  Developed <strong>Python-based microservices</strong> using
+                  Flask, improving internal system response times and enabling
+                  better orchestration across distributed automation pipelines.
                 </li>
                 <li>
-                  Developed a feedback collection system with a Python-Flask
-                  backend and React, increasing response rates by over 50% for
-                  our group's services.
+                  Built and maintained <strong>CI/CD flows</strong> using
+                  <strong>GitHub Actions</strong> and
+                  <strong>Azure Runbooks</strong>, automating deployments,
+                  monitoring, and operational tasks.
                 </li>
                 <li>
-                  Implemented CI/CD pipelines using GitHub Actions and Azure
-                  Runbooks.
-                </li>
-                <li>
-                  Experience using PowerShell to develop automation for tasks
-                  and processes in Microsoft Windows Server.
-                </li>
-                <li>
-                  Experience creating and modifying SQL queries to retrieve,
-                  manipulate, and analyze data from databases.
+                  Collaborated with cross-functional teams to improve
+                  reliability and ensure internal development processes met
+                  required performance and stability thresholds.
                 </li>
               </ul>
+            </div>
+
+            <div class="tech-stack">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">Flask</span>
+              <span class="tech-badge">GitHub Actions</span>
+              <span class="tech-badge">Azure</span>
+              <span class="tech-badge">PowerShell</span>
+              <span class="tech-badge">SQL</span>
+              <span class="tech-badge">DevOps</span>
             </div>
           </div>
         </div>

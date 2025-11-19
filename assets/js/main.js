@@ -225,13 +225,13 @@ document.addEventListener("DOMContentLoaded", () => {
           
           <div class="popup-actions">
             <a href="https://wa.me/972586669888?text=שלום%2C%20אני%20מעוניין%20לשמוע%20עליך%20ועל%20איך%20אתה%20יכול%20לעזור%20לי" 
-               class="popup-btn primary" 
+               class="popup-btn popup-btn-primary" 
                id="popupWhatsAppBtn"
                target="_blank" rel="noopener">
               <i class="fab fa-whatsapp"></i>
               שלח הודעה 
             </a>
-            <button class="popup-btn secondary" id="popupLater">
+            <button class="popup-btn popup-btn-secondary" id="popupLater">
               אולי מאוחר יותר
             </button>
           </div>

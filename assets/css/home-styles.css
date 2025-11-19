@@ -1,0 +1,430 @@
+/**
+ * Home Page Styles
+ * Modern, professional design for the main landing page
+ */
+
+/* ============================================
+   Hero/Profile Section
+   ============================================ */
+.profile-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 4rem 0;
+  margin-top: -2rem;
+}
+
+.profile-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.profile-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
+}
+
+.profile-info h2 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.profile-info p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  opacity: 0.95;
+}
+
+/* ============================================
+   Skills Section
+   ============================================ */
+.skills-section {
+  background: white;
+  padding: 3rem 0;
+}
+
+.skills-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-tag {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.skill-tag:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* ============================================
+   Navigation Cards
+   ============================================ */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  border-left: 4px solid var(--primary-color);
+  text-decoration: none;
+  color: inherit;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-title i {
+  font-size: 1.3rem;
+}
+
+.card-content {
+  flex: 1;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.card-action {
+  margin-top: auto;
+}
+
+.card-action .btn {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--primary-dark) 100%
+  );
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.card-action .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 64, 128, 0.3);
+  text-decoration: none;
+}
+
+/* Special card styling (Course card with animated border) */
+.my-course-card {
+  position: relative;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border-left: none !important;
+  color: white;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Override for special course card animation */
+.my-course-card::before {
+  content: "";
+  position: absolute;
+  top: -130px;
+  left: -75px;
+  width: 500px;
+  height: 500px;
+  background: conic-gradient(from 0deg, #6f00ff, #00dbde, #00ff94, #6f00ff);
+  z-index: -1;
+  border-radius: 22px;
+  animation: spin 4s linear infinite;
+}
+
+.my-course-card::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border-radius: 16px;
+  z-index: 0;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.my-course-card .card-title {
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.my-course-card .card-content {
+  color: rgba(255, 255, 255, 0.95);
+  position: relative;
+  z-index: 2;
+}
+
+.my-course-card .card-action {
+  position: relative;
+  z-index: 2;
+}
+
+.my-course-card .card-action .btn {
+  background: white;
+  color: #f5576c;
+}
+
+.my-course-card .card-action .btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 12px rgba(245, 87, 108, 0.4);
+}
+
+/* ============================================
+   Education Section
+   ============================================ */
+.education-section {
+  background: #f8f9fa;
+  padding: 3rem 0;
+}
+
+.education-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.education-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid var(--primary-color);
+}
+
+.education-item h3 {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.education-meta {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.education-item p {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+
+.education-item p strong {
+  color: var(--primary-color);
+}
+
+/* ============================================
+   Social Section
+   ============================================ */
+.social-section {
+  background: white;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.social-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.social-section p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.social-links li a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-links li a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+  text-decoration: none;
+}
+
+.social-links li a i {
+  font-size: 1.2rem;
+}
+
+/* ============================================
+   Animation Classes
+   ============================================ */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   Mobile Responsiveness
+   ============================================ */
+@media (max-width: 768px) {
+  .profile-section {
+    padding: 2rem 0;
+  }
+
+  .profile-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .profile-info h2 {
+    font-size: 2rem;
+  }
+
+  .profile-info p {
+    font-size: 1rem;
+  }
+
+  .skills-section h2,
+  .education-section h2,
+  .social-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .skill-tag {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .education-item {
+    padding: 1.5rem;
+  }
+
+  .education-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .social-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .social-links li a {
+    width: 100%;
+    max-width: 250px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-section {
+    padding: 1.5rem 0;
+  }
+
+  .profile-info h2 {
+    font-size: 1.6rem;
+  }
+
+  .skills-section h2,
+  .education-section h2,
+  .social-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+}
