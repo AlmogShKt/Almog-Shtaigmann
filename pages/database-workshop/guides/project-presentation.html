@@ -493,7 +493,7 @@
                 target="_blank"
                 rel="noopener"
                 style="margin-top: 1rem"
-                onclick="if(typeof gtag !== 'undefined') { gtag('event', 'click', {'event_category': 'WhatsApp', 'event_label': 'Presentation Guide - Help Request'}); }"
+                onclick="if(typeof trackEventWithUTM !== 'undefined') { trackEventWithUTM('click', 'WhatsApp', 'Presentation Guide - Help Request', {page_path: window.location.pathname}); }"
               >
                 <i class="fab fa-whatsapp"></i>צרו קשר
               </a>
@@ -540,14 +540,14 @@
             const requirementNumber = index + 1;
             const action = this.checked ? 'checked' : 'unchecked';
             
-            if (typeof gtag !== 'undefined') {
-              gtag('event', 'checklist_interaction', {
-                'event_category': 'Workshop Interaction',
-                'event_label': 'Requirement ' + requirementNumber + ' - ' + action,
-                'page_path': window.location.pathname,
-                'requirement_number': requirementNumber,
-                'is_checked': this.checked
-              });
+            if (typeof trackEventWithUTM !== 'undefined') {
+              trackEventWithUTM('checklist_interaction', 'Workshop Interaction', 
+                'Requirement ' + requirementNumber + ' - ' + action, {
+                  page_path: window.location.pathname,
+                  requirement_number: requirementNumber,
+                  is_checked: this.checked
+                }
+              );
             }
           });
         });
