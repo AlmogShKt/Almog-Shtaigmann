@@ -2,6 +2,81 @@
  * Main JavaScript for Almog Shtaigmann's Portfolio
  */
 
+/**
+ * UTM Parameter Tracking
+ * Captures and stores UTM parameters for Google Analytics
+ */
+function initUTMTracking() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const utmParams = {
+    source: urlParams.get('source') || urlParams.get('utm_source'),
+    medium: urlParams.get('medium') || urlParams.get('utm_medium'),
+    campaign: urlParams.get('campaign') || urlParams.get('utm_campaign'),
+    term: urlParams.get('term') || urlParams.get('utm_term'),
+    content: urlParams.get('content') || urlParams.get('utm_content'),
+  };
+
+  // Store UTM parameters in sessionStorage for tracking across pages
+  const hasUTMParams = Object.values(utmParams).some(value => value !== null);
+  
+  if (hasUTMParams) {
+    sessionStorage.setItem('utm_params', JSON.stringify(utmParams));
+    
+    // Send to Google Analytics
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'utm_capture', {
+        event_category: 'UTM Tracking',
+        event_label: `Source: ${utmParams.source || 'direct'}`,
+        utm_source: utmParams.source,
+        utm_medium: utmParams.medium,
+        utm_campaign: utmParams.campaign,
+        utm_term: utmParams.term,
+        utm_content: utmParams.content,
+      });
+
+      // Log for debugging (remove in production if needed)
+      console.log('UTM Parameters captured:', utmParams);
+    }
+  }
+
+  return utmParams;
+}
+
+/**
+ * Get stored UTM parameters
+ */
+function getUTMParams() {
+  try {
+    const stored = sessionStorage.getItem('utm_params');
+    return stored ? JSON.parse(stored) : null;
+  } catch (e) {
+    return null;
+  }
+}
+
+/**
+ * Track event with UTM parameters
+ */
+function trackEventWithUTM(eventName, eventCategory, eventLabel, additionalParams = {}) {
+  if (typeof gtag !== 'undefined') {
+    const utmParams = getUTMParams();
+    
+    gtag('event', eventName, {
+      event_category: eventCategory,
+      event_label: eventLabel,
+      ...(utmParams && {
+        utm_source: utmParams.source,
+        utm_medium: utmParams.medium,
+        utm_campaign: utmParams.campaign,
+      }),
+      ...additionalParams,
+    });
+  }
+}
+
+// Initialize UTM tracking on page load
+const currentUTMParams = initUTMTracking();
+
 document.addEventListener("DOMContentLoaded", () => {
   // Mobile menu toggle
   const menuToggle = document.querySelector(".menu-toggle");
@@ -163,15 +238,14 @@ document.addEventListener("DOMContentLoaded", () => {
     whatsappBtn.rel = "noopener";
     whatsappBtn.setAttribute("aria-label", "Contact via WhatsApp");
 
-    // Add Google Analytics event tracking
+    // Add Google Analytics event tracking with UTM parameters
     whatsappBtn.addEventListener("click", function () {
-      if (typeof gtag !== "undefined") {
-        gtag("event", "click", {
-          event_category: "WhatsApp",
-          event_label: "Floating Button - Personal Contact",
-          page_path: window.location.pathname,
-        });
-      }
+      trackEventWithUTM(
+        "click",
+        "WhatsApp",
+        "Floating Button - Personal Contact",
+        { page_path: window.location.pathname }
+      );
     });
 
     // Create icon
@@ -254,16 +328,15 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 300);
     }
 
-    // Track WhatsApp popup button click
+    // Track WhatsApp popup button click with UTM parameters
     if (whatsappPopupBtn) {
       whatsappPopupBtn.addEventListener("click", function () {
-        if (typeof gtag !== "undefined") {
-          gtag("event", "click", {
-            event_category: "WhatsApp",
-            event_label: "Popup Ad - Contact Request",
-            page_path: window.location.pathname,
-          });
-        }
+        trackEventWithUTM(
+          "click",
+          "WhatsApp",
+          "Popup Ad - Contact Request",
+          { page_path: window.location.pathname }
+        );
       });
     }
 
@@ -312,15 +385,16 @@ document.addEventListener("DOMContentLoaded", () => {
  * @param {string} targetUrl - URL to navigate to
  */
 window.trackWorkshopNavigation = function (guideName, targetUrl) {
-  // Track the card click
-  if (typeof gtag !== "undefined") {
-    gtag("event", "click", {
-      event_category: "Workshop Navigation",
-      event_label: guideName,
+  // Track the card click with UTM parameters
+  trackEventWithUTM(
+    "click",
+    "Workshop Navigation",
+    guideName,
+    {
       page_path: window.location.pathname,
       destination_url: targetUrl,
-    });
-  }
+    }
+  );
 
   // Navigate after a brief delay to ensure tracking is sent
   setTimeout(function () {
@@ -333,14 +407,15 @@ window.trackWorkshopNavigation = function (guideName, targetUrl) {
  * @param {string} currentPage - Current guide page name
  */
 window.trackBackToWorkshop = function (currentPage) {
-  if (typeof gtag !== "undefined") {
-    gtag("event", "click", {
-      event_category: "Workshop Navigation",
-      event_label: "Back to Workshop Index",
+  trackEventWithUTM(
+    "click",
+    "Workshop Navigation",
+    "Back to Workshop Index",
+    {
       page_path: window.location.pathname,
       source_page: currentPage,
-    });
-  }
+    }
+  );
 
   // Navigate after a brief delay
   setTimeout(function () {
@@ -354,13 +429,12 @@ window.trackBackToWorkshop = function (currentPage) {
  * @param {string} element - The element being interacted with
  */
 window.trackWorkshopInteraction = function (action, element) {
-  if (typeof gtag !== "undefined") {
-    gtag("event", action.toLowerCase().replace(/\s+/g, "_"), {
-      event_category: "Workshop Interaction",
-      event_label: element,
-      page_path: window.location.pathname,
-    });
-  }
+  trackEventWithUTM(
+    action.toLowerCase().replace(/\s+/g, "_"),
+    "Workshop Interaction",
+    element,
+    { page_path: window.location.pathname }
+  );
 };
 
 /**
@@ -369,12 +443,19 @@ window.trackWorkshopInteraction = function (action, element) {
  * @param {string} guideName - Name of the guide
  */
 window.trackWorkshopPageView = function (guideName) {
+  const utmParams = getUTMParams();
+  
   if (typeof gtag !== "undefined") {
     gtag("event", "page_view", {
       page_title: guideName,
       page_path: window.location.pathname,
       page_location: window.location.href,
       content_group: "Database Workshop",
+      ...(utmParams && {
+        utm_source: utmParams.source,
+        utm_medium: utmParams.medium,
+        utm_campaign: utmParams.campaign,
+      }),
     });
   }
 };
