@@ -12,6 +12,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css" />
     <link rel="stylesheet" href="../../assets/css/responsive.css" />
+    <link rel="stylesheet" href="./projects-styles.css" />
 
     <!-- Fonts -->
     <link
@@ -96,67 +97,295 @@
       <!-- Main Content -->
       <section class="section">
         <div class="container">
-          <div class="card">
-            <h2>Projects Showcase</h2>
+          <h2
+            style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem"
+          >
+            <i class="fas fa-rocket"></i> Featured Projects
+          </h2>
 
-            <div class="project">
-              <h3>Dog Feeder</h3>
-              <p>
-                <strong>Description:</strong> This project is an ESP32-based
-                automatic dog feeder system that uses the Blynk platform for
-                monitoring and controlling. It allows the user to schedule meal
-                times, reset the feeding tank, and feed the dog automatically.
-                The system also has a web dashboard and LEDs that indicate the
-                status of the feeding tank, and a servo motor that controls the
-                feeding mechanism.
+          <!-- Project 1: Full-Stack Text Analysis Platform -->
+          <div class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">
+                <i class="fas fa-brain"></i> Full-Stack Text Analysis Platform
+              </h3>
+              <p class="project-subtitle">
+                Advanced NLP-powered web application for linguistic analysis and
+                text exploration
               </p>
-              <p><strong>Technologies Used:</strong> IOT, ESP32, C, C++</p>
-              <p><strong>GitHub Statistics:</strong></p>
-              <ul id="dog-feeder-stats"></ul>
-              <button
-                class="view-on-github"
-                onclick="location.href='https://github.com/DogFeederDevelopers/Dog-Feeder'"
-              >
-                View on GitHub
-              </button>
             </div>
 
-            <div class="project">
-              <h3>Hands Detection</h3>
-              <p>
-                <strong>Description:</strong> This project uses computer vision
-                techniques to detect and recognize hand gestures for various
-                applications.
-              </p>
-              <p>
-                <strong>Technologies Used:</strong> OpenCV, Python,
-                MediaPipe-Google
-              </p>
-              <ul id="hands-detection-stats"></ul>
-              <button
-                class="view-on-github"
-                onclick="location.href='https://github.com/AlmogShKt/HandDetection'"
-              >
-                View on GitHub
-              </button>
+            <div class="features-grid">
+              <div class="feature-item">
+                <h4>
+                  <i class="fas fa-laptop-code"></i> Modern Frontend (Angular 20
+                  + Signals)
+                </h4>
+                <p>
+                  Built using Angular 20.1 standalone components, Angular
+                  Signals for reactive state management, RxJS, LESS styling, SPA
+                  routing, and an observable-based HTTP client.
+                </p>
+              </div>
+
+              <div class="feature-item">
+                <h4>
+                  <i class="fas fa-server"></i> Backend in Flask + PostgreSQL
+                </h4>
+                <p>
+                  Python Flask 2.3 backend using SQLAlchemy ORM, PostgreSQL 15,
+                  RESTful API design, and NLP processing via NLTK + spaCy
+                  (tokenization, POS, lemma, morphological features).
+                </p>
+              </div>
+
+              <div class="feature-item">
+                <h4>
+                  <i class="fas fa-search"></i> Advanced NLP & Search Engine
+                </h4>
+                <p>
+                  Supports lemma search, POS filters, morphological queries,
+                  multi-level text navigation (text → paragraph → sentence →
+                  token), phrase detection, phrase statistics, and semantic word
+                  grouping.
+                </p>
+              </div>
+
+              <div class="feature-item">
+                <h4>
+                  <i class="fas fa-database"></i> Sophisticated Relational Data
+                  Model
+                </h4>
+                <p>
+                  Deeply normalized schema including tables for texts, text
+                  units, tokens, token positions, phrases, phrase components,
+                  phrase occurrences, tags, and token-tag relationships.
+                </p>
+              </div>
+
+              <div class="feature-item">
+                <h4>
+                  <i class="fab fa-docker"></i> Docker-Based DevOps Architecture
+                </h4>
+                <p>
+                  End-to-end containerization using Docker + Docker Compose
+                  (frontend, backend, database), hot-reload for local
+                  development, persistent PostgreSQL volumes, and
+                  service-oriented networking setup.
+                </p>
+              </div>
+
+              <div class="feature-item">
+                <h4>
+                  <i class="fas fa-chart-line"></i> Analytics, Dashboards &
+                  Statistics
+                </h4>
+                <p>
+                  Provides a complete statistical dashboard, phrase occurrence
+                  analysis, distribution charts, and cross-text comparisons —
+                  enabling linguistic insights and dataset exploration.
+                </p>
+              </div>
             </div>
 
-            <div class="project">
-              <h3>IMS Weather API</h3>
-              <p>
-                <strong>Description:</strong> Pull weather data using IMS API
-                from your terminal
-              </p>
-              <p><strong>Technologies Used:</strong> Python, RestFul API</p>
-
-              <ul id="hands-detection-stats"></ul>
-              <button
-                class="view-on-github"
-                onclick="location.href='https://github.com/AlmogShKt/IMSWeatherApi'"
-              >
-                View on GitHub
-              </button>
+            <div class="tech-stack">
+              <span class="tech-badge">Angular 20</span>
+              <span class="tech-badge">Signals</span>
+              <span class="tech-badge">TypeScript</span>
+              <span class="tech-badge">RxJS</span>
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">Flask</span>
+              <span class="tech-badge">PostgreSQL 15</span>
+              <span class="tech-badge">SQLAlchemy</span>
+              <span class="tech-badge">NLTK</span>
+              <span class="tech-badge">spaCy</span>
+              <span class="tech-badge">Docker</span>
+              <span class="tech-badge">Docker Compose</span>
+              <span class="tech-badge">REST API</span>
+              <span class="tech-badge">NLP</span>
             </div>
+
+            <div class="project-actions">
+              <a
+                href="https://github.com/almogshkt"
+                class="project-btn"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fab fa-github"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2: Automated GitHub Access System -->
+          <div class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">
+                <i class="fas fa-cloud"></i> Automated GitHub Access System
+              </h3>
+              <p class="project-subtitle">
+                Serverless Azure Function for automated repository access
+                management
+              </p>
+            </div>
+
+            <div class="features-grid">
+              <div class="feature-item">
+                <h4>
+                  <i class="fab fa-microsoft"></i> TypeScript + Azure Functions
+                  v4 Backend
+                </h4>
+                <p>
+                  Built using the modern Azure Functions v4 programming model in
+                  TypeScript, providing strict type safety, modular
+                  architecture, and clean cloud-native design.
+                </p>
+              </div>
+
+              <div class="feature-item">
+                <h4>
+                  <i class="fab fa-github"></i> GitHub API Integration (Octokit)
+                </h4>
+                <p>
+                  Uses GitHub's REST API via Octokit to manage collaborators
+                  (invite, permission settings, preventing duplicates) with full
+                  support for multiple access levels.
+                </p>
+              </div>
+
+              <div class="feature-item">
+                <h4>
+                  <i class="fas fa-table"></i> Azure Table Storage for State
+                  Tracking
+                </h4>
+                <p>
+                  Stores invitation metadata (status, email, permissions,
+                  timestamps) in Azure Table Storage, enabling idempotent
+                  operations and audit trails.
+                </p>
+              </div>
+
+              <div class="feature-item">
+                <h4>
+                  <i class="fas fa-window-maximize"></i> HTML UI for Access
+                  Requests
+                </h4>
+                <p>
+                  Includes a simple, modern HTML frontend that allows users to
+                  submit access requests, which the backend automatically
+                  processes.
+                </p>
+              </div>
+
+              <div class="feature-item">
+                <h4>
+                  <i class="fas fa-lock"></i> Secure, Configurable Deployment
+                </h4>
+                <p>
+                  Deployed to Azure Function Apps with environment variables for
+                  GitHub tokens, storage connection strings, and repository
+                  metadata — tokens are stored securely via Key Vault/App
+                  Settings.
+                </p>
+              </div>
+
+              <div class="feature-item">
+                <h4>
+                  <i class="fab fa-docker"></i> Fully Container-Ready & Easy to
+                  Run
+                </h4>
+                <p>
+                  Supports local development with Azure Functions Core Tools,
+                  Node.js, and environment-based configuration for smooth
+                  deployment to cloud environments.
+                </p>
+              </div>
+            </div>
+
+            <div class="tech-stack">
+              <span class="tech-badge">TypeScript</span>
+              <span class="tech-badge">Azure Functions v4</span>
+              <span class="tech-badge">Azure Table Storage</span>
+              <span class="tech-badge">GitHub API</span>
+              <span class="tech-badge">Octokit</span>
+              <span class="tech-badge">Node.js</span>
+              <span class="tech-badge">Serverless</span>
+              <span class="tech-badge">Azure Key Vault</span>
+              <span class="tech-badge">REST API</span>
+              <span class="tech-badge">Docker</span>
+            </div>
+
+            <div class="project-actions">
+              <a
+                href="https://github.com/almogshkt"
+                class="project-btn"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fab fa-github"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+
+          <!-- Legacy Projects Section -->
+          <h2
+            style="text-align: center; margin: 4rem 0 2rem 0; font-size: 2rem"
+          >
+            <i class="fas fa-archive"></i> Other Projects
+          </h2>
+
+          <div class="legacy-project">
+            <h3><i class="fas fa-dog"></i> Dog Feeder</h3>
+            <p>
+              <strong>Description:</strong> This project is an ESP32-based
+              automatic dog feeder system that uses the Blynk platform for
+              monitoring and controlling. It allows the user to schedule meal
+              times, reset the feeding tank, and feed the dog automatically. The
+              system also has a web dashboard and LEDs that indicate the status
+              of the feeding tank, and a servo motor that controls the feeding
+              mechanism.
+            </p>
+            <p><strong>Technologies Used:</strong> IOT, ESP32, C, C++</p>
+            <button
+              class="view-on-github"
+              onclick="location.href='https://github.com/DogFeederDevelopers/Dog-Feeder'"
+            >
+              <i class="fab fa-github"></i> View on GitHub
+            </button>
+          </div>
+
+          <div class="legacy-project">
+            <h3><i class="fas fa-hand-paper"></i> Hands Detection</h3>
+            <p>
+              <strong>Description:</strong> This project uses computer vision
+              techniques to detect and recognize hand gestures for various
+              applications.
+            </p>
+            <p>
+              <strong>Technologies Used:</strong> OpenCV, Python,
+              MediaPipe-Google
+            </p>
+            <button
+              class="view-on-github"
+              onclick="location.href='https://github.com/AlmogShKt/HandDetection'"
+            >
+              <i class="fab fa-github"></i> View on GitHub
+            </button>
+          </div>
+
+          <div class="legacy-project">
+            <h3><i class="fas fa-cloud-sun"></i> IMS Weather API</h3>
+            <p>
+              <strong>Description:</strong> Pull weather data using IMS API from
+              your terminal
+            </p>
+            <p><strong>Technologies Used:</strong> Python, RESTful API</p>
+            <button
+              class="view-on-github"
+              onclick="location.href='https://github.com/AlmogShKt/IMSWeatherApi'"
+            >
+              <i class="fab fa-github"></i> View on GitHub
+            </button>
           </div>
         </div>
       </section>

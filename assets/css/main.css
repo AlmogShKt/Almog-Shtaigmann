@@ -201,88 +201,6 @@ header {
 }
 
 /* Cards */
-.my-course-card {
-  position: relative;
-  border-radius: 20px;
-  padding: 2rem;
-  background: #fff;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  z-index: 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.my-course-card::before {
-  content: "";
-  position: absolute;
-  top: -130px;
-  left: -75px;
-  right: -2px;
-  bottom: -2px;
-  width: 500px;
-  height: 500px;
-  background: conic-gradient(from 0deg, #6f00ff, #00dbde, #00ff94, #6f00ff);
-  z-index: -1;
-  border-radius: 22px;
-  animation: spin 4s linear infinite;
-}
-
-.my-course-card::after {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  right: 4px;
-  bottom: 4px;
-  background: #fff;
-  border-radius: 16px;
-  z-index: 1;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(1turn);
-  }
-}
-
-.my-course-card .card-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 1rem;
-  position: relative;
-  z-index: 2;
-}
-
-.my-course-card .card-content {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 1rem;
-  position: relative;
-  z-index: 2;
-}
-
-.my-course-card .card-action {
-  position: relative;
-  z-index: 2;
-}
-
-.my-course-card .btn {
-  background: linear-gradient(to right, #6f00ff, #00dbde);
-  color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  text-transform: uppercase;
-  font-weight: bold;
-  transition: background 0.3s ease;
-  cursor: pointer;
-  display: inline-block;
-}
-
-.my-course-card .btn:hover {
-  background: linear-gradient(to right, #00dbde, #6f00ff);
-}
-
 .card {
   background-color: #fff;
   border-radius: var(--border-radius-lg);
@@ -387,90 +305,28 @@ footer {
   list-style: none;
 }
 
-.company-logo {
-  margin-right: 15px;
-  width: 120px;
-  height: auto;
-}
+/* Note: Additional .social-links item styles are in home-styles.css for homepage */
+/* Note: .profile-section, .profile-photo, .profile-content moved to home-styles.css */
+/* Note: .skills-list and .skill-tag styles moved to home-styles.css for homepage */
 
-.social-links li a {
-  color: var(--primary-color);
-  font-size: 1.25rem;
-  opacity: 0.8;
-  transition: opacity var(--transition-normal);
-}
+/* Note: .skill-tag styles moved to home-styles.css for homepage */
 
-.social-links li a:hover {
-  opacity: 1;
-}
-
-/* Profile Section */
-.profile-section {
-  display: flex;
-  gap: var(--spacing-xl);
-  align-items: center;
-  padding: var(--spacing-xl) 0;
-}
-
-.profile-photo {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid var(--light-text);
-  box-shadow: var(--shadow-md);
-}
-
-.profile-content {
-  flex: 1;
-}
-
-/* Skills Section */
-.skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-md);
-  list-style: none;
-  margin: var(--spacing-md) 0;
-}
-
-.skill-tag {
-  background-color: var(--primary-light);
-  color: var(--light-text);
-  padding: var(--spacing-xs) var(--spacing-md);
-  border-radius: var(--border-radius-md);
-  font-size: 0.9rem;
-}
-
-/* Education Section */
-.education-item {
-  margin-bottom: var(--spacing-lg);
-}
-
-.education-item h3 {
-  margin-bottom: var(--spacing-xs);
-}
-
-.education-meta {
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: var(--spacing-sm);
-}
+/* Note: Education styles moved to home-styles.css for homepage */
 
 /* Contact FAB */
 .contact-fab {
   position: fixed;
-  bottom: var(--spacing-xl);
-  right: var(--spacing-xl);
-  width: 80px;
-  height: 80px;
-  border-radius: 20%;
+  bottom: 20px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
   background-color: var(--light-text);
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: var(--shadow-lg);
-  z-index: 100;
+  z-index: 998;
   transition: transform var(--transition-normal);
 }
 
@@ -489,9 +345,288 @@ footer {
 }
 
 .contact-fab a img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
+
+/* ============================================
+   WhatsApp Floating Action Button (FAB)
+   ============================================ */
+.whatsapp-fab {
+  position: fixed;
+  bottom: 95px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  z-index: 999;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.whatsapp-fab:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-fab i {
+  font-size: 32px;
+  color: white;
+}
+
+.whatsapp-fab .tooltip {
+  position: absolute;
+  right: 75px;
+  background-color: #128c7e;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  white-space: nowrap;
+  font-size: 14px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-fab .tooltip::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent #128c7e;
+}
+
+.whatsapp-fab:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.8),
+      0 0 0 10px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  }
+}
+
+/* RTL Support for WhatsApp Button */
+[dir="rtl"] .whatsapp-fab {
+  right: auto;
+  left: 30px;
+}
+
+[dir="rtl"] .whatsapp-fab .tooltip {
+  right: auto;
+  left: 75px;
+}
+
+[dir="rtl"] .whatsapp-fab .tooltip::after {
+  left: auto;
+  right: 100%;
+  border-color: transparent #128c7e transparent transparent;
+}
+
+/* ============================================
+   Popup Ad Overlay
+   ============================================ */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.popup-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-content {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  position: relative;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+  text-align: center;
+  direction: rtl;
+}
+
+.popup-overlay.show .popup-content {
+  transform: scale(1);
+}
+
+.popup-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  color: #999;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+  padding: 0;
+  line-height: 1;
+}
+
+.popup-close:hover {
+  color: #333;
+}
+
+.popup-content h2 {
+  color: #128c7e;
+  margin-bottom: 16px;
+  font-size: 28px;
+}
+
+.popup-content p {
+  color: #333;
+  margin-bottom: 24px;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.popup-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.popup-btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.popup-btn-primary {
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  color: white;
+}
+
+.popup-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+}
+
+.popup-btn-secondary {
+  background: #f0f0f0;
+  color: #666;
+}
+
+.popup-btn-secondary:hover {
+  background: #e0e0e0;
+}
+
+/* RTL Support for Popup */
+[dir="rtl"] .popup-close {
+  right: auto;
+  left: 12px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .contact-fab {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 20px;
+  }
+
+  .contact-fab a img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .whatsapp-fab {
+    width: 50px;
+    height: 50px;
+    bottom: 80px;
+    right: 20px;
+  }
+
+  .whatsapp-fab i {
+    font-size: 26px;
+  }
+
+  .whatsapp-fab .tooltip {
+    right: 65px;
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  [dir="rtl"] .whatsapp-fab {
+    left: 20px;
+  }
+
+  [dir="rtl"] .whatsapp-fab .tooltip {
+    left: 65px;
+  }
+
+  .popup-content {
+    padding: 24px;
+    max-width: 90%;
+  }
+
+  .popup-content h2 {
+    font-size: 24px;
+  }
+
+  .popup-content p {
+    font-size: 14px;
+  }
+
+  .popup-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+/* ============================================
+   End of WhatsApp & Popup Styles
+   ============================================ */
 
 /* RTL Support */
 [dir="rtl"] {
