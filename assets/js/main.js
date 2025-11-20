@@ -9,33 +9,41 @@
 function initUTMTracking() {
   const urlParams = new URLSearchParams(window.location.search);
   const utmParams = {
-    source: urlParams.get('source') || urlParams.get('utm_source'),
-    medium: urlParams.get('medium') || urlParams.get('utm_medium'),
-    campaign: urlParams.get('campaign') || urlParams.get('utm_campaign'),
-    term: urlParams.get('term') || urlParams.get('utm_term'),
-    content: urlParams.get('content') || urlParams.get('utm_content'),
+    source: urlParams.get("source") || urlParams.get("utm_source"),
+    medium: urlParams.get("medium") || urlParams.get("utm_medium"),
+    campaign: urlParams.get("campaign") || urlParams.get("utm_campaign"),
+    term: urlParams.get("term") || urlParams.get("utm_term"),
+    content: urlParams.get("content") || urlParams.get("utm_content"),
   };
 
   // Store UTM parameters in sessionStorage for tracking across pages
-  const hasUTMParams = Object.values(utmParams).some(value => value !== null);
-  
-  if (hasUTMParams) {
-    sessionStorage.setItem('utm_params', JSON.stringify(utmParams));
-    
-    // Send to Google Analytics
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'utm_capture', {
-        event_category: 'UTM Tracking',
-        event_label: `Source: ${utmParams.source || 'direct'}`,
-        utm_source: utmParams.source,
-        utm_medium: utmParams.medium,
-        utm_campaign: utmParams.campaign,
-        utm_term: utmParams.term,
-        utm_content: utmParams.content,
-      });
+  const hasUTMParams = Object.values(utmParams).some((value) => value !== null);
 
-      // Log for debugging (remove in production if needed)
-      console.log('UTM Parameters captured:', utmParams);
+  if (hasUTMParams) {
+    sessionStorage.setItem("utm_params", JSON.stringify(utmParams));
+
+    // Send to Google Analytics
+    if (typeof gtag !== "undefined") {
+      // Send custom event for tracking (appears in Events section)
+      gtag("event", "utm_capture", {
+        event_category: "UTM Tracking",
+        event_label: `Source: ${utmParams.source || "direct"}`,
+        // Custom parameters (useful for reports and explorations)
+        campaign_source: utmParams.source,
+        campaign_medium: utmParams.medium,
+        campaign_name: utmParams.campaign,
+        campaign_term: utmParams.term,
+        campaign_content: utmParams.content,
+      });
+    }
+  } else {
+    // Check if we have stored UTMs from previous page
+    const storedParams = sessionStorage.getItem("utm_params");
+    if (storedParams) {
+      console.log(
+        "📌 Using stored UTM parameters from earlier in session:",
+        JSON.parse(storedParams)
+      );
     }
   }
 
@@ -47,7 +55,7 @@ function initUTMTracking() {
  */
 function getUTMParams() {
   try {
-    const stored = sessionStorage.getItem('utm_params');
+    const stored = sessionStorage.getItem("utm_params");
     return stored ? JSON.parse(stored) : null;
   } catch (e) {
     return null;
@@ -57,17 +65,23 @@ function getUTMParams() {
 /**
  * Track event with UTM parameters
  */
-function trackEventWithUTM(eventName, eventCategory, eventLabel, additionalParams = {}) {
-  if (typeof gtag !== 'undefined') {
+function trackEventWithUTM(
+  eventName,
+  eventCategory,
+  eventLabel,
+  additionalParams = {}
+) {
+  if (typeof gtag !== "undefined") {
     const utmParams = getUTMParams();
-    
-    gtag('event', eventName, {
+
+    gtag("event", eventName, {
       event_category: eventCategory,
       event_label: eventLabel,
+      // Add UTM context as custom parameters (if available)
       ...(utmParams && {
-        utm_source: utmParams.source,
-        utm_medium: utmParams.medium,
-        utm_campaign: utmParams.campaign,
+        campaign_source: utmParams.source,
+        campaign_medium: utmParams.medium,
+        campaign_name: utmParams.campaign,
       }),
       ...additionalParams,
     });
@@ -331,12 +345,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Track WhatsApp popup button click with UTM parameters
     if (whatsappPopupBtn) {
       whatsappPopupBtn.addEventListener("click", function () {
-        trackEventWithUTM(
-          "click",
-          "WhatsApp",
-          "Popup Ad - Contact Request",
-          { page_path: window.location.pathname }
-        );
+        trackEventWithUTM("click", "WhatsApp", "Popup Ad - Contact Request", {
+          page_path: window.location.pathname,
+        });
       });
     }
 
@@ -386,15 +397,10 @@ document.addEventListener("DOMContentLoaded", () => {
  */
 window.trackWorkshopNavigation = function (guideName, targetUrl) {
   // Track the card click with UTM parameters
-  trackEventWithUTM(
-    "click",
-    "Workshop Navigation",
-    guideName,
-    {
-      page_path: window.location.pathname,
-      destination_url: targetUrl,
-    }
-  );
+  trackEventWithUTM("click", "Workshop Navigation", guideName, {
+    page_path: window.location.pathname,
+    destination_url: targetUrl,
+  });
 
   // Navigate after a brief delay to ensure tracking is sent
   setTimeout(function () {
@@ -407,15 +413,10 @@ window.trackWorkshopNavigation = function (guideName, targetUrl) {
  * @param {string} currentPage - Current guide page name
  */
 window.trackBackToWorkshop = function (currentPage) {
-  trackEventWithUTM(
-    "click",
-    "Workshop Navigation",
-    "Back to Workshop Index",
-    {
-      page_path: window.location.pathname,
-      source_page: currentPage,
-    }
-  );
+  trackEventWithUTM("click", "Workshop Navigation", "Back to Workshop Index", {
+    page_path: window.location.pathname,
+    source_page: currentPage,
+  });
 
   // Navigate after a brief delay
   setTimeout(function () {
@@ -444,7 +445,7 @@ window.trackWorkshopInteraction = function (action, element) {
  */
 window.trackWorkshopPageView = function (guideName) {
   const utmParams = getUTMParams();
-  
+
   if (typeof gtag !== "undefined") {
     gtag("event", "page_view", {
       page_title: guideName,
