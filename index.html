@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,6 +10,7 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f0f14" />
     <meta
       name="description"
       content="Almog Shtaigmann's personal portfolio website showcasing skills, projects, and professional experience in software development."
@@ -20,12 +21,6 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="stylesheet" href="assets/css/home-styles.css" />
-
-    <!-- Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
 
     <!-- Icons -->
     <link
@@ -55,7 +50,7 @@
     <!-- Header -->
     <header>
       <div class="container header-container">
-        <h1 class="site-title">Hi There 🤙🏼</h1>
+        <h1 class="site-title">Almog Shtaigmann</h1>
 
         <button
           class="menu-toggle"
@@ -67,28 +62,28 @@
         </button>
 
         <nav class="nav-main collapsed" id="main-nav">
-          <a href="javascript:void(0)" onclick="location.href='./index.html'"
+          <a href="javascript:void(0)" onclick="location.href = './index.html'"
             >Home</a
           >
           <a
             href="javascript:void(0)"
-            onclick="location.href='./pages/work-experience/index.html'"
-            >Work Experience</a
+            onclick="location.href = './pages/work-experience/index.html'"
+            >Experience</a
           >
           <a
             href="javascript:void(0)"
-            onclick="location.href='./pages/projects/index.html'"
-            >Personal Projects</a
+            onclick="location.href = './pages/projects/index.html'"
+            >Projects</a
           >
           <a
             href="javascript:void(0)"
-            onclick="location.href='./pages/c-lab/index.html'"
-            >C-Lab Course</a
+            onclick="location.href = './pages/c-lab/index.html'"
+            >C-Lab</a
           >
           <a
             href="javascript:void(0)"
-            onclick="location.href='./pages/database-workshop/index.html'"
-            >Database Workshop</a
+            onclick="location.href = './pages/database-workshop/index.html'"
+            >Database</a
           >
         </nav>
       </div>
@@ -106,11 +101,13 @@
             />
 
             <div class="profile-info">
-              <h2 class="animate-on-scroll">About Me</h2>
+              <h2 class="animate-on-scroll">
+                Building <span>Digital Experiences</span> That Matter
+              </h2>
               <p class="animate-on-scroll">
-                I'm a 3rd year Computer Science student with hands-on experience
-                in frontend, backend development, mobile application
-                development, and DevOps.
+                3rd year Computer Science student with hands-on experience in
+                frontend, backend, mobile development, and DevOps. Currently
+                crafting solutions at Microsoft.
               </p>
             </div>
           </div>
@@ -121,7 +118,7 @@
       <section class="section skills-section">
         <div class="container">
           <h2 class="text-center animate-on-scroll">
-            <i class="fas fa-tools"></i> Technical Skills
+            <i class="fas fa-code"></i> Technical Arsenal
           </h2>
 
           <ul class="skills-list animate-on-scroll">
@@ -135,7 +132,7 @@
               <i class="fas fa-mobile-alt"></i> Android Development
             </li>
             <li class="skill-tag">
-              <i class="fas fa-project-diagram"></i> MVVM & MVI Architecture
+              <i class="fas fa-project-diagram"></i> MVVM & MVI
             </li>
             <li class="skill-tag">
               <i class="fab fa-python"></i> Python & Flask
@@ -147,123 +144,118 @@
               <i class="fab fa-github"></i> GitHub Actions
             </li>
             <li class="skill-tag">
-              <i class="fas fa-code"></i> Web Development
+              <i class="fas fa-globe"></i> Web Development
             </li>
             <li class="skill-tag">
               <i class="fas fa-database"></i> SQL & Databases
             </li>
             <li class="skill-tag">
-              <i class="fas fa-terminal"></i> PowerShell & Automation
+              <i class="fas fa-terminal"></i> PowerShell
             </li>
             <li class="skill-tag">
-              <i class="fas fa-bolt"></i> Angular Signals & RxJS
+              <i class="fas fa-bolt"></i> Angular Signals
             </li>
             <li class="skill-tag">
-              <i class="fas fa-sitemap"></i> Scalable Architecture
+              <i class="fas fa-sitemap"></i> Architecture
             </li>
             <li class="skill-tag">
               <i class="fas fa-puzzle-piece"></i> Design Patterns
             </li>
             <li class="skill-tag">
-              <i class="fas fa-users"></i> Cross-Team Collaboration
+              <i class="fas fa-users"></i> Team Collaboration
             </li>
           </ul>
         </div>
       </section>
 
       <!-- Main Navigation Cards -->
-      <section class="section">
+      <section class="section cards-section">
         <div class="container">
-          <h2
-            style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem"
-          >
-            <i class="fas fa-compass"></i> Explore My Work
-          </h2>
+          <h2><i class="fas fa-compass"></i> Explore My Work</h2>
 
           <div class="card-container">
             <a
               href="javascript:void(0)"
-              onclick="location.href='./pages/work-experience/index.html'"
+              onclick="location.href = './pages/work-experience/index.html'"
               class="card animate-on-scroll"
             >
               <h3 class="card-title">
                 <i class="fas fa-briefcase"></i> Work Experience
               </h3>
               <p class="card-content">
-                Discover my professional journey at Microsoft, Shutterfly, and
-                Intel. Learn about the technologies I work with and the impact
-                I've made.
+                My professional journey at Microsoft, Shutterfly, and Intel.
+                Explore the technologies I work with and the impact I've made.
               </p>
               <div class="card-action">
-                <span class="btn">View Experience</span>
+                <span class="btn"><span>View Experience</span></span>
               </div>
             </a>
 
             <a
               href="javascript:void(0)"
-              onclick="location.href='./pages/projects/index.html'"
+              onclick="location.href = './pages/projects/index.html'"
               class="card animate-on-scroll"
             >
               <h3 class="card-title">
-                <i class="fas fa-code"></i> Personal Projects
+                <i class="fas fa-rocket"></i> Personal Projects
               </h3>
               <p class="card-content">
-                Explore my side projects, open-source contributions, and
-                personal experiments with cutting-edge technologies.
+                Side projects, open-source contributions, and experiments with
+                cutting-edge technologies.
               </p>
               <div class="card-action">
-                <span class="btn">View Projects</span>
+                <span class="btn"><span>View Projects</span></span>
               </div>
             </a>
 
             <a
               href="javascript:void(0)"
-              onclick="location.href='./pages/Course/salaries/index.html'"
+              onclick="location.href = './pages/Course/salaries/index.html'"
               class="card animate-on-scroll my-course-card"
             >
               <h3 class="card-title">
-                <i class="fas fa-graduation-cap"></i> My Course on Univeli
+                <i class="fas fa-graduation-cap"></i> Course on Univeli
               </h3>
               <p class="card-content">
-                Zero To Hero - Everything you need to know to land your first
-                tech job. Real-world insights from industry experience.
+                Zero To Hero - Everything you need to land your first tech job.
+                Real-world insights from industry experience.
               </p>
               <div class="card-action">
-                <span class="btn">Explore Course</span>
+                <span class="btn"><span>Explore Course</span></span>
               </div>
             </a>
 
             <a
               href="javascript:void(0)"
-              onclick="location.href='./pages/c-lab/index.html'"
+              onclick="location.href = './pages/c-lab/index.html'"
               class="card animate-on-scroll"
             >
               <h3 class="card-title">
                 <i class="fas fa-trophy"></i> C Lab Course
               </h3>
               <p class="card-content">
-                My final project in Laboratory C 20465 - Achieved Grade 100 and
-                garnered over 20,000 views!
+                Final project in Laboratory C 20465 - Grade 100 with over 20,000
+                views. Complete guide and resources.
               </p>
               <div class="card-action">
-                <span class="btn">Learn More</span>
+                <span class="btn"><span>Learn More</span></span>
               </div>
             </a>
 
             <a
               href="javascript:void(0)"
-              onclick="location.href='./pages/database-workshop/index.html'"
+              onclick="location.href = './pages/database-workshop/index.html'"
               class="card animate-on-scroll"
             >
               <h3 class="card-title">
                 <i class="fas fa-database"></i> Database Workshop
               </h3>
               <p class="card-content">
-                Complete guides and resources for database design, SQL
-                fundamentals, and building scalable text analysis systems.
+                Complete guides for database design, SQL fundamentals, and
+                building scalable text analysis systems.
               </p>
               <div class="card-action">
-                <span class="btn">Explore Workshop</span>
+                <span class="btn"><span>Explore Workshop</span></span>
               </div>
             </a>
           </div>
@@ -280,13 +272,12 @@
           <div class="education-item animate-on-scroll">
             <h3><i class="fas fa-graduation-cap"></i> The Open University</h3>
             <p class="education-meta">
-              B.Sc. Computer Science, 3rd Year | Expected Graduation: 2026-2027
+              B.Sc. Computer Science, 3rd Year • Expected 2026-2027
             </p>
             <p><strong>GPA:</strong> 86/100</p>
             <p>
-              <strong>Relevant Coursework:</strong> Data Structures (87),
-              Algorithms (87), Introduction to Computer Science (85), C-Linux
-              Programming (98)
+              <strong>Highlights:</strong> Data Structures (87), Algorithms
+              (87), Intro to CS (85), C-Linux Programming (98)
             </p>
           </div>
         </div>
@@ -296,17 +287,17 @@
       <section class="section social-section">
         <div class="container">
           <h2 class="animate-on-scroll">
-            <i class="fas fa-handshake"></i> Connect with Me
+            <i class="fas fa-link"></i> Let's Connect
           </h2>
           <p class="animate-on-scroll">
-            Let's collaborate! Reach out via email or connect on social media
-            platforms.
+            Open to collaborations and new opportunities. Let's build something
+            great together.
           </p>
 
           <ul class="social-links animate-on-scroll">
             <li>
               <a href="mailto:a.shtaigmann@gmail.com">
-                <i class="fas fa-envelope"></i> Email Me
+                <i class="fas fa-envelope"></i> Email
               </a>
             </li>
             <li>
@@ -337,10 +328,7 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-info">
-            <p>
-              &copy; <span id="current-year">2025</span> Almog Shtaigmann. All
-              rights reserved.
-            </p>
+            <p>&copy; <span id="current-year">2025</span> Almog Shtaigmann</p>
           </div>
 
           <div class="footer-links">
@@ -374,8 +362,8 @@
 
         <div class="site-metrics">
           <img
-            src="https://komarev.com/ghpvc/?username=almogshkt&color=blue"
-            alt="Site-Views"
+            src="https://komarev.com/ghpvc/?username=almogshkt&color=8b5cf6"
+            alt="Profile Views"
           />
         </div>
       </div>
@@ -384,7 +372,7 @@
     <!-- Contact Floating Action Button -->
     <div class="contact-fab">
       <a href="mailto:a.shtaigmann@gmail.com" title="Contact Me">
-        <img src="assets/images/chat.png" alt="Contact Me" />
+        <i class="fas fa-paper-plane"></i>
       </a>
     </div>
 

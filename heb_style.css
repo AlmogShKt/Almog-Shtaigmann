@@ -1,42 +1,56 @@
-/* Global Styles */
+/* Global Styles - Dark Theme for Hebrew Pages */
+:root {
+    --bg-dark: #0f0f14;
+    --bg-darker: #0a0a0e;
+    --bg-card: rgba(255, 255, 255, 0.02);
+    --accent-primary: #8b5cf6;
+    --accent-secondary: #06b6d4;
+    --text-light: #f8fafc;
+    --text-muted: #94a3b8;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Rubik', 'DM Sans', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
     direction: rtl;
     /* Right-to-left text direction for Hebrew */
 }
 
 header {
-    background: #004080;
-    color: #ffffff;
+    background: var(--bg-darker);
+    color: var(--text-light);
     padding: 20px 0;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5em;
+    font-family: 'Syne', 'Rubik', sans-serif;
 }
 
 button.home-button {
-    background: #004080;
-    color: #ffffff;
+    background: linear-gradient(135deg, var(--accent-primary) 0%, #ec4899 100%);
+    color: var(--text-light);
     border: none;
-    padding: 10px 20px;
+    padding: 12px 24px;
     margin: 20px;
-    border-radius: 5px;
+    border-radius: 12px;
     font-size: 1em;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
 }
 
 button.home-button:hover {
-    background: #002a60;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
 }
 
 /* Grid Styles */
@@ -49,68 +63,77 @@ button.home-button:hover {
 }
 
 .grid-item {
-    background: #ffffff;
+    background: var(--bg-card);
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
 }
 
 .grid-item h3 {
     margin-top: 0;
-    color: #004080;
+    color: var(--accent-primary);
     font-size: 1.5em;
+    font-family: 'Syne', 'Rubik', sans-serif;
 }
 
 .grid-item p {
-    color: #555;
+    color: var(--text-muted);
     font-size: 1em;
 }
 
 .grid-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 30px rgba(139, 92, 246, 0.2);
+    border-color: var(--accent-primary);
 }
 
 /* Question-Answer Styles */
 section.qa {
-    background: #ffffff;
+    background: var(--bg-card);
     margin: 20px auto;
     padding: 20px;
     max-width: 800px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 section.qa:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
 section h2 {
     margin-top: 0;
     font-size: 1.75em;
-    color: #004080;
+    color: var(--text-light);
     cursor: pointer;
     transition: color 0.3s ease;
+    font-family: 'Syne', 'Rubik', sans-serif;
 }
 
 section h2:hover {
-    color: #002a60;
+    color: var(--accent-primary);
 }
 
 .question {
-    padding: 10px;
-    border: 1px solid #004080;
-    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
     margin-bottom: 10px;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
+    background: var(--bg-card);
 }
 
 .question:hover {
-    background: #d0d0d0;
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--accent-primary);
 }
+
  .construction-indicator {
      display: flex;
      flex-direction: column;
@@ -118,9 +141,9 @@ section h2:hover {
      justify-content: center;
      height: 100vh;
      text-align: center;
-     background-color: #f0f0f0;
-     font-family: Arial, sans-serif;
-     color: #555;
+     background-color: var(--bg-dark);
+     font-family: 'Rubik', Arial, sans-serif;
+     color: var(--text-muted);
  }
 
  .construction-indicator .emoji {
@@ -132,12 +155,12 @@ section h2:hover {
  .construction-indicator h1 {
      font-size: 36px;
      margin: 0;
-     color: #333;
+     color: var(--text-light);
  }
 
  .construction-indicator p {
      font-size: 18px;
-     color: #777;
+     color: var(--text-muted);
      margin: 10px 0 0;
  }
 
@@ -154,14 +177,16 @@ section h2:hover {
     width: 50px;
     height: 50px;
     object-fit: contain;
-    background: #ffffff;
-    border-radius: 30%;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    background: var(--bg-card);
+    border-radius: 50%;
+    box-shadow: 0px 4px 20px rgba(139, 92, 246, 0.3);
     transition: transform 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
  }
 
  .contact-fab a img:hover {
      transform: scale(1.1);
+     box-shadow: 0px 8px 30px rgba(139, 92, 246, 0.4);
  }
  .image-gallery {
      display: flex;
@@ -174,8 +199,8 @@ section h2:hover {
  .image-gallery img {
      max-width: 30%;
      height: auto;
-     border-radius: 8px;
-     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+     border-radius: 12px;
+     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
  }
 
  @keyframes bounce {
@@ -199,10 +224,11 @@ section h2:hover {
 .answer {
     display: none;
     padding: 20px;
-    border-right: 5px solid #004080;
-    background: #f9f9f9;
-    border-radius: 0 10px 10px 10px;
+    border-right: 5px solid var(--accent-primary);
+    background: rgba(139, 92, 246, 0.05);
+    border-radius: 0 12px 12px 12px;
     margin-top: -10px;
+    color: var(--text-muted);
 }
 
 .answer.active {
@@ -215,18 +241,20 @@ section h2:hover {
     padding: 40px;
     /* Increased padding */
     max-width: 800px;
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: var(--bg-card);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     text-align: right;
     direction: rtl;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .guide h2 {
     font-size: 1.75em;
     margin-bottom: 20px;
     /* Added more margin */
-    color: #004080;
+    color: var(--text-light);
+    font-family: 'Syne', 'Rubik', sans-serif;
 }
 
 .guide h3 {
@@ -234,13 +262,13 @@ section h2:hover {
     padding: 50px;
     margin-bottom: 15px;
     /* Added more margin */
-    color: #004080;
+    color: var(--accent-primary);
 }
 
 .guide p {
     font-size: 1.2em;
     padding: 10px;
-    color: #333;
+    color: var(--text-muted);
     margin-bottom: 15px;
     /* Added more margin */
     line-height: 1.6;
@@ -253,43 +281,48 @@ section h2:hover {
 }
 
 .guide ul li {
-    background: #f4f4f4;
+    background: rgba(255, 255, 255, 0.02);
     padding: 15px;
     /* Increased padding */
     margin-bottom: 15px;
     /* Added more margin */
-    border-radius: 5px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
 }
 
 .guide a {
-    color: #004080;
+    color: var(--accent-secondary);
     text-decoration: none;
     font-weight: bold;
 }
 
 .guide a:hover {
-    color: #002a60;
+    color: var(--accent-primary);
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px auto;
-    background: #ffffff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    background: var(--bg-card);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
     direction: rtl;
+    overflow: hidden;
 }
 
 th,
 td {
-    border: 1px solid #000;
-    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px;
     text-align: right;
+    color: var(--text-muted);
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: rgba(139, 92, 246, 0.1);
+    color: var(--text-light);
 }
 
 ul {

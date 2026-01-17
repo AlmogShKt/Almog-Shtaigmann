@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -21,8 +21,10 @@
     <meta property="og:image:height" content="630" />
 
     <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
       rel="stylesheet"
     />
 
@@ -64,20 +66,22 @@
         <nav class="nav-main collapsed" id="main-nav">
           <a
             href="javascript:void(0)"
-            onclick="location.href='../../../index.html'"
+            onclick="location.href = '../../../index.html'"
             >Home</a
           >
           <a
             href="javascript:void(0)"
-            onclick="location.href='../../../pages/work-experience/index.html'"
+            onclick="
+              location.href = '../../../pages/work-experience/index.html'
+            "
             >Work Experience</a
           >
           <a
             href="javascript:void(0)"
-            onclick="location.href='../../../pages/projects/index.html'"
+            onclick="location.href = '../../../pages/projects/index.html'"
             >Personal Projects</a
           >
-          <a href="javascript:void(0)" onclick="location.href='../index.html'"
+          <a href="javascript:void(0)" onclick="location.href = '../index.html'"
             >C-Lab Course</a
           >
         </nav>
@@ -111,7 +115,7 @@
         <div class="container">
           <a
             href="javascript:void(0)"
-            onclick="location.href='../index.html'"
+            onclick="location.href = '../index.html'"
             class="btn mb-lg"
           >
             <i class="fas fa-arrow-left"></i> Back to C-Lab Course
