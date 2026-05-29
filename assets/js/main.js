@@ -460,3 +460,33 @@ window.trackWorkshopPageView = function (guideName) {
     });
   }
 };
+
+// ============================================
+// Accessibility Widget Loader (תפריט נגישות)
+// Loads the site-wide accessibility menu on every page.
+// Path is resolved from this script's own src so it works at any depth.
+// ============================================
+(function loadAccessibilityWidget() {
+  function resolveScriptBase() {
+    const current =
+      document.currentScript ||
+      Array.prototype.slice
+        .call(document.getElementsByTagName("script"))
+        .filter((s) => /\/main\.js(\?|$)/.test(s.src))[0];
+
+    const src = (current && current.src) || "";
+    const marker = "/main.js";
+    const idx = src.indexOf(marker);
+    return idx !== -1 ? src.substring(0, idx + 1) : "assets/js/";
+  }
+
+  if (window.__a11yWidgetLoaded || document.getElementById("a11y-widget-script")) {
+    return;
+  }
+
+  const script = document.createElement("script");
+  script.id = "a11y-widget-script";
+  script.src = resolveScriptBase() + "accessibility.js";
+  script.defer = true;
+  (document.head || document.documentElement).appendChild(script);
+})();
