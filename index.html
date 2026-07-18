@@ -2,36 +2,52 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4f0e7" />
+    <meta
+      name="description"
+      content="Almog Shtaigmann is a Software Engineer I on the Microsoft Fabric OneLake Catalog team, building production software, data-intensive systems, and AI-assisted engineering workflows."
+    />
+    <link
+      rel="canonical"
+      href="https://almogshkt.github.io/Almog-Shtaigmann/"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Almog Shtaigmann | Software Engineer" />
+    <meta
+      property="og:description"
+      content="Software Engineer I at Microsoft Fabric building understandable, reliable product experiences."
+    />
+    <meta
+      property="og:url"
+      content="https://almogshkt.github.io/Almog-Shtaigmann/"
+    />
     <meta
       property="og:image"
       content="https://almogshkt.github.io/Almog-Shtaigmann/assets/images/meta-data-baner/Slide1.png"
     />
-
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0f0f14" />
-    <meta
-      name="description"
-      content="Almog Shtaigmann's personal portfolio website showcasing skills, projects, and professional experience in software development."
-    />
-    <title>Almog Shtaigmann | Software Engineer @ Microsoft</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/responsive.css" />
-    <link rel="stylesheet" href="assets/css/home-styles.css" />
-
-    <!-- Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-
-    <!-- Favicon -->
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
-
-    <!-- Google Analytics -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Almog Shtaigmann | Software Engineer I at Microsoft Fabric</title>
+    <link rel="stylesheet" href="assets/css/site-2026.css?v=20260718-14" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Almog Shtaigmann",
+        "jobTitle": "Software Engineer I",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Microsoft"
+        },
+        "url": "https://almogshkt.github.io/Almog-Shtaigmann/",
+        "sameAs": [
+          "https://github.com/almogshkt",
+          "https://www.linkedin.com/in/almog-shtaigmann"
+        ]
+      }
+    </script>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-34DFKV9RWM"
@@ -44,339 +60,239 @@
       gtag("js", new Date());
       gtag("config", "G-34DFKV9RWM");
     </script>
+      <script src="assets/js/theme-init.js?v=20260717-1"></script>
   </head>
+  <body class="site-2026">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <body>
-    <!-- Header -->
-    <header>
-      <div class="container header-container">
-        <h1 class="site-title">Almog Shtaigmann</h1>
+    <header class="site-header">
+      <div class="site-container site-header__inner">
+        <a class="site-brand" href="./index.html" aria-label="Almog Shtaigmann home">
+          <span class="site-brand__mark" aria-hidden="true">AS</span>
+          <span class="site-brand__text">Almog Shtaigmann</span>
+        </a>
 
         <button
-          class="menu-toggle"
+          class="site-menu-button"
+          type="button"
+          aria-label="Open navigation"
+          aria-controls="site-navigation"
           aria-expanded="false"
-          aria-controls="main-nav"
+          data-site-menu-button
         >
-          <span class="visually-hidden">Toggle navigation</span>
-          <i class="fas fa-bars"></i>
+          <span aria-hidden="true">Menu</span>
         </button>
 
-        <nav class="nav-main collapsed" id="main-nav">
-          <a href="javascript:void(0)" onclick="location.href = './index.html'"
-            >Home</a
-          >
-          <a
-            href="javascript:void(0)"
-            onclick="location.href = './pages/work-experience/index.html'"
-            >Experience</a
-          >
-          <a
-            href="javascript:void(0)"
-            onclick="location.href = './pages/projects/index.html'"
-            >Projects</a
-          >
-          <a
-            href="javascript:void(0)"
-            onclick="location.href = './pages/c-lab/index.html'"
-            >C-Lab</a
-          >
-          <a
-            href="javascript:void(0)"
-            onclick="location.href = './pages/database-workshop/index.html'"
-            >Database</a
-          >
+        <nav
+          class="site-nav"
+          id="site-navigation"
+          aria-label="Primary navigation"
+          data-site-navigation
+        >
+          <a href="./index.html" aria-current="page">Home</a>
+          <a href="./pages/work-experience/index.html">Experience</a>
+          <a href="./pages/projects/index.html">Projects</a>
+          <a href="#teaching">Teaching</a>
+          <a class="site-nav__contact" href="mailto:a.shtaigmann@gmail.com">Contact</a>
         </nav>
       </div>
     </header>
 
-    <main>
-      <!-- Hero/Profile Section -->
-      <section class="section profile-section">
-        <div class="container">
-          <div class="profile-content">
+    <main id="main-content">
+      <section class="site-hero">
+        <div class="site-container site-hero__grid">
+          <div>
+            <p class="eyebrow">Software Engineer I · Microsoft Fabric</p>
+            <h1>Building products people <em>understand</em> and trust.</h1>
+            <p class="site-hero__intro">
+              I’m <strong>Almog Shtaigmann</strong>, a software engineer on the
+              <strong>OneLake Catalog team</strong>. I build production
+              software across product interfaces, APIs, and data-intensive
+              workflows. I work with React, Angular, TypeScript, Python, SQL,
+              and spec-driven AI workflows to help engineering teams move with
+              clarity.
+            </p>
+            <div class="site-actions">
+              <a class="site-button site-button--primary" href="#selected-work">
+                Explore selected work <span aria-hidden="true">→</span>
+              </a>
+              <a class="site-button" href="./pages/work-experience/index.html">
+                View experience
+              </a>
+            </div>
+          </div>
+
+          <aside class="portrait-card" aria-label="About Almog">
             <img
               src="assets/images/my_photo.JPG"
               alt="Almog Shtaigmann"
-              class="profile-photo animate-on-scroll"
+              width="640"
+              height="480"
             />
+            <p>Engineer by practice. <strong>Teacher by instinct.</strong></p>
+          </aside>
+        </div>
+      </section>
 
-            <div class="profile-info">
-              <h2 class="animate-on-scroll">
-                Building <span>Digital Experiences</span> That Matter
-              </h2>
-              <p class="animate-on-scroll">
-                3rd year Computer Science student with hands-on experience in
-                frontend, backend, mobile development, and DevOps. Currently
-                crafting solutions at Microsoft.
+      <section class="proof-band" aria-label="Professional experience and reach">
+        <div class="site-container proof-band__grid">
+          <p class="proof-band__label">Experience across</p>
+          <div class="proof-company">Microsoft</div>
+          <div class="proof-company">Shutterfly</div>
+          <div class="proof-company">Intel</div>
+          <p class="proof-impact">
+            <strong>100,000s</strong>
+            of people served by products I help build
+          </p>
+        </div>
+      </section>
+
+      <section class="site-section site-section--surface" id="selected-work">
+        <div class="site-container">
+          <div class="section-heading">
+            <p class="eyebrow">A focused path through the site</p>
+            <h2>Work, systems, and knowledge made useful.</h2>
+            <p>
+              Explore the professional work, engineering projects, and teaching
+              resources that best represent how I think and build.
+            </p>
+          </div>
+
+          <div class="feature-grid">
+            <a class="feature-card" href="./pages/work-experience/index.html">
+              <span class="feature-card__number">01 / EXPERIENCE</span>
+              <h3>Production engineering at scale</h3>
+              <p>
+                Microsoft Fabric, Shutterfly, and Intel—product systems,
+                distributed data workflows, mobile applications, APIs, and delivery.
               </p>
+              <span class="feature-card__link">View experience →</span>
+            </a>
+
+            <a class="feature-card" href="./pages/projects/index.html">
+              <span class="feature-card__number">02 / PROJECTS</span>
+              <h3>Systems built through curiosity</h3>
+              <p>
+                Selected projects, experiments, architecture decisions, and the
+                practical lessons behind them.
+              </p>
+              <span class="feature-card__link">Explore projects →</span>
+            </a>
+
+            <a class="feature-card" href="#teaching">
+              <span class="feature-card__number">03 / TEACHING</span>
+              <h3>Engineering knowledge shared clearly</h3>
+              <p>
+                Learning paths and resources for C, databases, interviews, and
+                early-career software engineers.
+              </p>
+              <span class="feature-card__link">Browse teaching →</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="site-section">
+        <div class="site-container impact-grid">
+          <div>
+            <div class="section-heading">
+              <p class="eyebrow">Current engineering focus</p>
+              <h2>Product engineering across the stack.</h2>
+            </div>
+            <div class="impact-list">
+              <div class="impact-item">
+                <span>01</span>
+                <div>
+                  <h3>End-to-end product engineering</h3>
+                  <p>React, Angular, TypeScript, Python, APIs, SQL, accessible UI, and reliable state.</p>
+                </div>
+              </div>
+              <div class="impact-item">
+                <span>02</span>
+                <div>
+                  <h3>Data-intensive product workflows</h3>
+                  <p>Pagination, caching, retries, throttling, APIs, and large datasets.</p>
+                </div>
+              </div>
+              <div class="impact-item">
+                <span>03</span>
+                <div>
+                  <h3>Engineering quality</h3>
+                  <p>Playwright automation, accessibility, maintainable architecture, and review.</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      <!-- Skills Section -->
-      <section class="section skills-section">
-        <div class="container">
-          <h2 class="text-center animate-on-scroll">
-            <i class="fas fa-code"></i> Technical Arsenal
-          </h2>
-
-          <ul class="skills-list animate-on-scroll">
-            <li class="skill-tag">
-              <i class="fab fa-android"></i> Kotlin & Java
-            </li>
-            <li class="skill-tag">
-              <i class="fab fa-angular"></i> TypeScript & Angular
-            </li>
-            <li class="skill-tag">
-              <i class="fas fa-mobile-alt"></i> Android Development
-            </li>
-            <li class="skill-tag">
-              <i class="fas fa-project-diagram"></i> MVVM & MVI
-            </li>
-            <li class="skill-tag">
-              <i class="fab fa-python"></i> Python & Flask
-            </li>
-            <li class="skill-tag">
-              <i class="fas fa-cogs"></i> DevOps & CI/CD
-            </li>
-            <li class="skill-tag">
-              <i class="fab fa-github"></i> GitHub Actions
-            </li>
-            <li class="skill-tag">
-              <i class="fas fa-globe"></i> Web Development
-            </li>
-            <li class="skill-tag">
-              <i class="fas fa-database"></i> SQL & Databases
-            </li>
-            <li class="skill-tag">
-              <i class="fas fa-terminal"></i> PowerShell
-            </li>
-            <li class="skill-tag">
-              <i class="fas fa-bolt"></i> Angular Signals
-            </li>
-            <li class="skill-tag">
-              <i class="fas fa-sitemap"></i> Architecture
-            </li>
-            <li class="skill-tag">
-              <i class="fas fa-puzzle-piece"></i> Design Patterns
-            </li>
-            <li class="skill-tag">
-              <i class="fas fa-users"></i> Team Collaboration
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Main Navigation Cards -->
-      <section class="section cards-section">
-        <div class="container">
-          <h2><i class="fas fa-compass"></i> Explore My Work</h2>
-
-          <div class="card-container">
-            <a
-              href="javascript:void(0)"
-              onclick="location.href = './pages/work-experience/index.html'"
-              class="card animate-on-scroll"
-            >
-              <h3 class="card-title">
-                <i class="fas fa-briefcase"></i> Work Experience
-              </h3>
-              <p class="card-content">
-                My professional journey at Microsoft, Shutterfly, and Intel.
-                Explore the technologies I work with and the impact I've made.
-              </p>
-              <div class="card-action">
-                <span class="btn"><span>View Experience</span></span>
-              </div>
-            </a>
-
-            <a
-              href="javascript:void(0)"
-              onclick="location.href = './pages/projects/index.html'"
-              class="card animate-on-scroll"
-            >
-              <h3 class="card-title">
-                <i class="fas fa-rocket"></i> Personal Projects
-              </h3>
-              <p class="card-content">
-                Side projects, open-source contributions, and experiments with
-                cutting-edge technologies.
-              </p>
-              <div class="card-action">
-                <span class="btn"><span>View Projects</span></span>
-              </div>
-            </a>
-
-            <a
-              href="javascript:void(0)"
-              onclick="location.href = './pages/Course/salaries/index.html'"
-              class="card animate-on-scroll my-course-card"
-            >
-              <h3 class="card-title">
-                <i class="fas fa-graduation-cap"></i> Course on Univeli
-              </h3>
-              <p class="card-content">
-                Zero To Hero - Everything you need to land your first tech job.
-                Real-world insights from industry experience.
-              </p>
-              <div class="card-action">
-                <span class="btn"><span>Explore Course</span></span>
-              </div>
-            </a>
-
-            <a
-              href="javascript:void(0)"
-              onclick="location.href = './pages/c-lab/index.html'"
-              class="card animate-on-scroll"
-            >
-              <h3 class="card-title">
-                <i class="fas fa-trophy"></i> C Lab Course
-              </h3>
-              <p class="card-content">
-                Final project in Laboratory C 20465 - Grade 100 with over 20,000
-                views. Complete guide and resources.
-              </p>
-              <div class="card-action">
-                <span class="btn"><span>Learn More</span></span>
-              </div>
-            </a>
-
-            <a
-              href="javascript:void(0)"
-              onclick="location.href = './pages/database-workshop/index.html'"
-              class="card animate-on-scroll"
-            >
-              <h3 class="card-title">
-                <i class="fas fa-database"></i> Database Workshop
-              </h3>
-              <p class="card-content">
-                Complete guides for database design, SQL fundamentals, and
-                building scalable text analysis systems.
-              </p>
-              <div class="card-action">
-                <span class="btn"><span>Explore Workshop</span></span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Education Section -->
-      <section class="section education-section">
-        <div class="container">
-          <h2 class="animate-on-scroll">
-            <i class="fas fa-university"></i> Education
-          </h2>
-
-          <div class="education-item animate-on-scroll">
-            <h3><i class="fas fa-graduation-cap"></i> The Open University</h3>
-            <p class="education-meta">
-              B.Sc. Computer Science, 3rd Year • Expected 2026-2027
-            </p>
-            <p><strong>GPA:</strong> 86/100</p>
+          <aside class="ai-note">
+            <p class="eyebrow">AI-assisted development</p>
+            <h3>Better specifications. Faster feedback. Human ownership.</h3>
             <p>
-              <strong>Highlights:</strong> Data Structures (87), Algorithms
-              (87), Intro to CS (85), C-Linux Programming (98)
+              I design and use agentic, spec-driven workflows for implementation,
+              refactoring, testing, debugging, documentation, and review—while
+              keeping architecture and production quality accountable to engineers.
             </p>
-          </div>
+          </aside>
         </div>
       </section>
 
-      <!-- Social Section -->
-      <section class="section social-section">
-        <div class="container">
-          <h2 class="animate-on-scroll">
-            <i class="fas fa-link"></i> Let's Connect
-          </h2>
-          <p class="animate-on-scroll">
-            Open to collaborations and new opportunities. Let's build something
-            great together.
-          </p>
+      <section class="site-section site-section--surface" id="teaching">
+        <div class="site-container">
+          <div class="section-heading">
+            <p class="eyebrow">Teaching and community</p>
+            <h2>Detailed resources without the maze.</h2>
+            <p>
+              The existing guides remain at their current GitHub Pages URLs,
+              now organized into clearer entry points for English and Hebrew readers.
+            </p>
+          </div>
 
-          <ul class="social-links animate-on-scroll">
-            <li>
-              <a href="mailto:a.shtaigmann@gmail.com">
-                <i class="fas fa-envelope"></i> Email
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/almog-shtaigmann"
-                target="_blank"
-                rel="noopener"
-              >
-                <i class="fab fa-linkedin"></i> LinkedIn
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/almogshkt"
-                target="_blank"
-                rel="noopener"
-              >
-                <i class="fab fa-github"></i> GitHub
-              </a>
-            </li>
-          </ul>
+          <div class="feature-grid">
+            <a class="feature-card" href="./pages/c-lab/index.html">
+              <span class="feature-card__number">C · OPEN UNIVERSITY</span>
+              <h3>C Laboratory learning path</h3>
+              <p>Project guidance, development tools, course resources, and a grade-100 project.</p>
+              <span class="feature-card__link">Explore C Lab →</span>
+            </a>
+            <a class="feature-card" href="./pages/database-workshop/index.html" lang="he" dir="rtl">
+              <span class="feature-card__number">מסדי נתונים · האוניברסיטה הפתוחה</span>
+              <h3>סדנת בסיסי נתונים</h3>
+              <p>מסלול מסודר הכולל SQL, תכנון מסד נתונים, פרויקט, ביצועים ומשאבים שימושיים.</p>
+              <span class="feature-card__link">לכל מדריכי הסדנה ←</span>
+            </a>
+            <a class="feature-card" href="./pages/Course/salaries/index.html" lang="he" dir="rtl">
+              <span class="feature-card__number">קריירה · נתונים</span>
+              <h3>שכר ותכנון קריירה</h3>
+              <p>כלים ותוכן פרקטי להבנת שוק העבודה ולבניית המסלול למשרה הראשונה.</p>
+              <span class="feature-card__link">לכלי השכר ←</span>
+            </a>
+          </div>
         </div>
       </section>
     </main>
 
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-info">
-            <p>&copy; <span id="current-year">2025</span> Almog Shtaigmann</p>
+    <footer class="site-footer" id="contact">
+      <div class="site-container">
+        <div class="site-footer__grid">
+          <div>
+            <p class="eyebrow">Let’s connect</p>
+            <h2>Have an engineering problem worth making clearer?</h2>
+            <p>Open to thoughtful conversations, collaboration, and knowledge sharing.</p>
           </div>
-
-          <div class="footer-links">
-            <ul class="social-links-footer">
-              <li>
-                <a href="mailto:a.shtaigmann@gmail.com" aria-label="Email">
-                  <i class="fas fa-envelope"></i>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/almog-shtaigmann"
-                  target="_blank"
-                  aria-label="LinkedIn"
-                >
-                  <i class="fab fa-linkedin"></i>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/almogshkt"
-                  target="_blank"
-                  aria-label="GitHub"
-                >
-                  <i class="fab fa-github"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
+          <a class="site-button" href="mailto:a.shtaigmann@gmail.com">Email me</a>
         </div>
-
-        <div class="site-metrics">
-          <img
-            src="https://komarev.com/ghpvc/?username=almogshkt&color=8b5cf6"
-            alt="Profile Views"
-          />
-        </div>
+        <nav class="site-footer__links" aria-label="Social links">
+          <a href="mailto:a.shtaigmann@gmail.com">Email</a>
+          <a href="https://www.linkedin.com/in/almog-shtaigmann" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/almogshkt" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+        <p class="site-footer__meta">
+          © <span data-current-year>2026</span> Almog Shtaigmann · Built for GitHub Pages
+        </p>
       </div>
     </footer>
 
-    <!-- Contact Floating Action Button -->
-    <div class="contact-fab">
-      <a href="mailto:a.shtaigmann@gmail.com" title="Contact Me">
-        <i class="fas fa-paper-plane"></i>
-      </a>
-    </div>
-
-    <!-- JavaScript -->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/site-2026.js?v=20260718-4"></script>
+    <script src="assets/js/accessibility.js" defer></script>
   </body>
 </html>

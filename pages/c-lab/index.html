@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="../../assets/css/main.css" />
     <link rel="stylesheet" href="../../assets/css/responsive.css" />
     <link rel="stylesheet" href="../../assets/css/button-animation.css" />
+    <link rel="stylesheet" href="../../assets/css/site-2026.css?v=20260718-14" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -47,8 +48,9 @@
       gtag("js", new Date());
       gtag("config", "G-34DFKV9RWM");
     </script>
+      <script src="../../assets/js/theme-init.js?v=20260717-1"></script>
   </head>
-  <body>
+  <body class="site-2026 legacy-page">
     <!-- Header -->
     <header>
       <div class="container header-container">
@@ -64,52 +66,72 @@
         </button>
 
         <nav class="nav-main collapsed" id="main-nav">
-          <a
-            href="javascript:void(0)"
-            onclick="location.href='../../index.html'"
-            >Home</a
-          >
-          <a
-            href="javascript:void(0)"
-            onclick="location.href='../../pages/work-experience/index.html'"
-            >Work Experience</a
-          >
-          <a
-            href="javascript:void(0)"
-            onclick="location.href='../../pages/projects/index.html'"
-            >Personal Projects</a
-          >
-          <a
-            href="javascript:void(0)"
-            onclick="location.href='../../pages/c-lab/index.html'"
-            class="active"
-            >C-Lab Course</a
-          >
+          <a href="../../index.html">Home</a>
+          <a href="../work-experience/index.html">Work Experience</a>
+          <a href="../projects/index.html">Personal Projects</a>
+          <a href="./index.html" class="active">C-Lab Course</a>
+          <a href="../database-workshop/index.html">Database Workshop</a>
         </nav>
       </div>
     </header>
 
-    <!-- Header Banner -->
-    <div
-      class="header-banner"
-      style="
-        background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
-        color: white;
-        padding: 20px;
-        text-align: center;
-      "
+    <!-- Course Spotlight -->
+    <section
+      class="course-spotlight"
+      data-course-video
+      lang="he"
+      dir="rtl"
+      aria-labelledby="course-spotlight-title"
     >
-      <h2 style="color: #fff">Check Out My New Course on Univeli</h2>
-      <h2 style="color: #fff">Zero To Hero - קורס למציאת משרה ראשונה</h2>
-      <p>Prepare for high-tech interviews with practical tips and guidance.</p>
-      <a
-        href="https://www.univeli.com/link/4BP8Zb?url=https%3A%2F%2Fwww.univeli.com%2Fcourse%2Fprepare-me-for-high-tech"
-        target="_blank"
-        class="btn learn-more-btn"
-      >
-        <i class="fas fa-arrow-right"></i> Learn More
-      </a>
-    </div>
+      <div class="course-spotlight__content">
+        <p class="course-spotlight__kicker">קורס פרקטי למציאת העבודה הראשונה</p>
+        <h2 id="course-spotlight-title">
+          <span class="course-spotlight__name" lang="en" dir="ltr">Zero To Hero</span>
+          מהחיפוש הראשון ועד להצעת העבודה
+        </h2>
+        <p class="course-spotlight__lede">
+          מסלול ממוקד לקו"ח ולינקדאין, פרויקט אישי, חיפוש משרות, ראיונות,
+          LeetCode ואלגוריתמים ושימוש נכון ב-AI.
+        </p>
+        <ul class="course-spotlight__topics" aria-label="נושאים מרכזיים בקורס">
+          <li>קו"ח ולינקדאין</li>
+          <li>פרויקט אישי</li>
+          <li>חיפוש משרות</li>
+          <li>ראיונות</li>
+          <li>LeetCode</li>
+          <li>AI</li>
+        </ul>
+        <a
+          class="course-spotlight__cta"
+          href="https://cs24.co.il/courses/83"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="לפרטי הקורס Zero To Hero - נפתח בחלון חדש"
+        >
+          <span>לפרטי הקורס</span>
+          <span class="course-spotlight__cta-arrow" aria-hidden="true">←</span>
+        </a>
+      </div>
+      <aside class="course-spotlight__proof" aria-label="נתוני הקורס והצלחות לומדים">
+        <div class="course-spotlight__metrics">
+          <div class="course-spotlight__metric">
+            <strong data-course-student-count>240+</strong>
+            <span>לומדים בקורס</span>
+          </div>
+          <div class="course-spotlight__metric">
+            <strong>אלפים</strong>
+            <span>בקהילה הפעילה</span>
+          </div>
+        </div>
+        <div>
+          <p class="course-spotlight__proof-title">רוכשי הקורס כבר השתלבו בתעשייה</p>
+          <p class="course-spotlight__companies">
+            Microsoft, Google, Intel, Amazon, Qualcomm, Wix, CyberArk,
+            Palo Alto Networks ועוד.
+          </p>
+        </div>
+      </aside>
+    </section>
 
     <main>
       <!-- Page Intro -->
@@ -128,8 +150,7 @@
         <div class="container">
           <div class="grid grid-1 grid-md-3 card-container animate-on-scroll">
             <a
-              href="javascript:void(0)"
-              onclick="location.href='./resources/answer-qs.html'"
+              href="./resources/answer-qs.html"
               class="card"
             >
               <h3 class="card-title">Answer and Qs</h3>
@@ -142,8 +163,7 @@
             </a>
 
             <a
-              href="javascript:void(0)"
-              onclick="location.href='./project/index.html'"
+              href="./project/index.html"
               class="card"
             >
               <h3 class="card-title">My Project - 2023B</h3>
@@ -157,8 +177,7 @@
             </a>
 
             <a
-              href="javascript:void(0)"
-              onclick="location.href='./guides/macbook-guide.html'"
+              href="./guides/macbook-guide.html"
               class="card"
             >
               <h3 class="card-title">MacBook Users Guide</h3>
@@ -172,8 +191,7 @@
             </a>
 
             <a
-              href="javascript:void(0)"
-              onclick="location.href='./resources/score-sheet.html'"
+              href="./resources/score-sheet.html"
               class="card"
             >
               <h3 class="card-title">Project Score Sheet</h3>
@@ -186,8 +204,10 @@
             </a>
 
             <a
-              href=https://app--study-sync-852b3401.base44.app/login
+              href="https://app--study-sync-852b3401.base44.app/login"
               class="card"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <h3 class="card-title">Find Partners for Your Final Project</h3>
               <p class="card-content">
@@ -199,8 +219,7 @@
             </a>
 
             <a
-              href="javascript:void(0)"
-              onclick="location.href='./guides/github-copilot-guide.html'"
+              href="./guides/github-copilot-guide.html"
               class="card"
             >
               <h3 class="card-title">GitHub Copilot Guide</h3>
@@ -213,8 +232,7 @@
             </a>
 
             <a
-              href="javascript:void(0)"
-              onclick="location.href='./resources/dani-telegram.html'"
+              href="./resources/dani-telegram.html"
               class="card"
             >
               <h3 class="card-title">Dani Project Recap</h3>
@@ -227,8 +245,7 @@
             </a>
 
              <a
-              href="javascript:void(0)"
-              onclick="location.href='./guides/jetbrains-guide.html'"
+              href="./guides/jetbrains-guide.html"
               class="card"
             >
               <h3 class="card-title">JetBrains Guide</h3>
@@ -241,8 +258,7 @@
             </a>
 
             <a
-              href="javascript:void(0)"
-              onclick="location.href='./resources/projects-tips.html'"
+              href="./resources/projects-tips.html"
               class="card"
             >
               <h3 class="card-title">Essential Project Tips</h3>
@@ -289,7 +305,7 @@
         <div class="footer-content">
           <div class="footer-info">
             <p>
-              &copy; <span id="current-year">2023</span> Almog Shtaigmann. All
+              &copy; <span data-current-year>2026</span> Almog Shtaigmann. All
               rights reserved.
             </p>
             <p>
@@ -348,8 +364,9 @@
     <script src="../../assets/js/main.js"></script>
     <script>
       // Update the current year
-      document.getElementById("current-year").textContent =
-        new Date().getFullYear();
+      const currentYear = document.getElementById("current-year");
+      if (currentYear) currentYear.textContent = new Date().getFullYear();
     </script>
+      <script src="../../assets/js/site-2026.js?v=20260718-4"></script>
   </body>
 </html>

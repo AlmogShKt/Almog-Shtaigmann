@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="../../assets/css/rtl.css" />
     <link rel="stylesheet" href="../../assets/css/button-animation.css" />
     <link rel="stylesheet" href="./workshop-styles.css" />
+    <link rel="stylesheet" href="../../assets/css/site-2026.css?v=20260718-14" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -49,73 +50,98 @@
       gtag("js", new Date());
       gtag("config", "G-34DFKV9RWM");
     </script>
+      <script src="../../assets/js/theme-init.js?v=20260717-1"></script>
   </head>
-    <!-- Header -->
-    <header>
-      <div class="container header-container">
-        <h1 class="site-title">סדנת בסיסי נתונים</h1>
-
+  <body class="site-2026 legacy-page">
+    <a class="skip-link" href="#content">דילוג לתוכן המרכזי</a>
+    <header class="site-header">
+      <div class="site-container site-header__inner">
+        <a class="site-brand" href="../../index.html" aria-label="עמוד הבית של אלמוג שטייגמן">
+          <span class="site-brand__mark" aria-hidden="true">AS</span>
+          <span class="site-brand__text">אלמוג שטייגמן</span>
+        </a>
         <button
-          class="menu-toggle"
+          class="site-menu-button"
+          type="button"
+          aria-label="פתיחת הניווט"
+          aria-controls="site-navigation"
           aria-expanded="false"
-          aria-controls="main-nav"
+          data-site-menu-button
         >
-          <span class="visually-hidden">Toggle navigation</span>
-          <i class="fas fa-bars"></i>
+          <span aria-hidden="true">תפריט</span>
         </button>
-
-        <nav class="nav-main collapsed" id="main-nav">
-          <a
-            href="javascript:void(0)"
-            onclick="location.href='../../index.html'"
-            >Home</a
-          >
-          <a
-            href="javascript:void(0)"
-            onclick="location.href='../work-experience/index.html'"
-            >Work Experience</a
-          >
-          <a
-            href="javascript:void(0)"
-            onclick="location.href='../projects/index.html'"
-            >Personal Projects</a
-          >
-          <a
-            href="javascript:void(0)"
-            onclick="location.href='../c-lab/index.html'"
-            >C-Lab Course</a
-          >
-          <a
-            href="javascript:void(0)"
-            onclick="location.href='./index.html'"
-            class="active"
-            >Database Workshop</a
-          >
+        <nav
+          class="site-nav"
+          id="site-navigation"
+          aria-label="ניווט ראשי"
+          data-site-navigation
+        >
+          <a href="../../index.html">בית</a>
+          <a href="../work-experience/index.html">ניסיון מקצועי</a>
+          <a href="../projects/index.html">פרויקטים</a>
+          <a href="../c-lab/index.html">מעבדת C</a>
+          <a href="./index.html" aria-current="page">סדנת בסיסי נתונים</a>
         </nav>
       </div>
     </header>
 
-    <!-- Header Banner -->
-    <div
-      class="header-banner"
-      style="
-        background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
-        color: white;
-        padding: 20px;
-        text-align: center;
-      "
+    <!-- Course Spotlight -->
+    <section
+      class="course-spotlight"
+      data-course-video
+      lang="he"
+      dir="rtl"
+      aria-labelledby="course-spotlight-title"
     >
-      <h2 style="color: #fff">Check Out My New Course on Univeli</h2>
-      <h2 style="color: #fff">Zero To Hero - קורס למציאת משרה ראשונה</h2>
-      <p>Prepare for high-tech interviews with practical tips and guidance.</p>
-      <a
-        href="https://www.univeli.com/link/4BP8Zb?url=https%3A%2F%2Fwww.univeli.com%2Fcourse%2Fprepare-me-for-high-tech"
-        target="_blank"
-        class="btn learn-more-btn"
-      >
-        <i class="fas fa-arrow-right"></i> Learn More
-      </a>
-    </div>
+      <div class="course-spotlight__content">
+        <p class="course-spotlight__kicker">קורס פרקטי למציאת העבודה הראשונה</p>
+        <h2 id="course-spotlight-title">
+          <span class="course-spotlight__name" lang="en" dir="ltr">Zero To Hero</span>
+          מהחיפוש הראשון ועד להצעת העבודה
+        </h2>
+        <p class="course-spotlight__lede">
+          מסלול ממוקד לקורות חיים ולינקדאין, פרויקט אישי, חיפוש משרות,
+          ראיונות, תרגול אלגוריתמים וליטקוד ושימוש נכון בכלי בינה מלאכותית.
+        </p>
+        <ul class="course-spotlight__topics" aria-label="נושאים מרכזיים בקורס">
+          <li>קו"ח ולינקדאין</li>
+          <li>פרויקט אישי</li>
+          <li>חיפוש משרות</li>
+          <li>ראיונות</li>
+          <li>ליטקוד ואלגוריתמים</li>
+          <li>כלי בינה מלאכותית</li>
+        </ul>
+        <a
+          class="course-spotlight__cta"
+          href="https://cs24.co.il/courses/83"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="לפרטי הקורס Zero To Hero - נפתח בחלון חדש"
+        >
+          <span>לפרטי הקורס</span>
+          <span class="course-spotlight__cta-arrow" aria-hidden="true">←</span>
+        </a>
+      </div>
+      <aside class="course-spotlight__proof" aria-label="נתוני הקורס והצלחות לומדים">
+        <div class="course-spotlight__metrics">
+          <div class="course-spotlight__metric">
+            <strong data-course-student-count>240+</strong>
+            <span>לומדים בקורס</span>
+          </div>
+          <div class="course-spotlight__metric">
+            <strong>אלפים</strong>
+            <span>בקהילה הפעילה</span>
+          </div>
+        </div>
+        <div>
+          <p class="course-spotlight__proof-title">רוכשי הקורס כבר השתלבו בתעשייה</p>
+          <p class="course-spotlight__companies">
+            Microsoft, Google, Intel, Amazon, Qualcomm, Wix, CyberArk,
+            Palo Alto Networks ועוד.
+          </p>
+        </div>
+      </aside>
+    </section>
 
     <main id="content">
       <!-- Page Intro -->
@@ -133,7 +159,7 @@
           <div class="grid grid-1 grid-md-3 card-container animate-on-scroll">
             <!-- How to Enroll -->
             <a
-              href="javascript:void(0)"
+              href="./guides/how-to-enroll.html"
               onclick="trackWorkshopNavigation('How to Enroll', './guides/how-to-enroll.html')"
               class="card"
             >
@@ -148,7 +174,7 @@
 
             <!-- Workshop Overview -->
             <a
-              href="javascript:void(0)"
+              href="./guides/intro.html"
               onclick="trackWorkshopNavigation('Workshop Overview', './guides/intro.html')"
               class="card"
             >
@@ -163,7 +189,7 @@
 
             <!-- Project Requirements -->
             <a
-              href="javascript:void(0)"
+              href="./guides/project-spec.html"
               onclick="trackWorkshopNavigation('Project Requirements', './guides/project-spec.html')"
               class="card"
             >
@@ -178,7 +204,7 @@
 
             <!-- My Project -->
             <a
-              href="javascript:void(0)"
+              href="./guides/my-project.html"
               onclick="trackWorkshopNavigation('My Project', './guides/my-project.html')"
               class="card"
             >
@@ -192,7 +218,7 @@
             </a>
 
             <a
-              href="javascript:void(0)"
+              href="./guides/presentation.html"
               onclick="trackWorkshopNavigation('Presentation Example', './guides/presentation.html')"
               class="card"
             >
@@ -204,7 +230,7 @@
 
             <!-- Project Presentation Guide -->
             <a
-              href="javascript:void(0)"
+              href="./guides/project-presentation.html"
               onclick="trackWorkshopNavigation('Project Presentation Guide', './guides/project-presentation.html')"
               class="card"
             >
@@ -222,7 +248,7 @@
 
             <!-- Full Comprehensive Guide -->
             <a
-              href="javascript:void(0)"
+              href="./guides/my-project.html"
               onclick="trackWorkshopNavigation('Full Premium Guide', './guides/my-project.html')"
               class="card special-card"
             >
@@ -246,21 +272,24 @@
       </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container text-center">
-        <p>&copy; 2025 Almog Shtaigmann. All rights reserved.</p>
-        <div class="social-links">
-          <a href="https://linkedin.com/in/almogshtaigmann" target="_blank">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="https://github.com/almogshkt" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="mailto:a.shtaigmann@gmail.com">
-            <i class="fas fa-envelope"></i>
-          </a>
+    <footer class="site-footer" id="contact">
+      <div class="site-container">
+        <div class="site-footer__grid">
+          <div>
+            <p class="eyebrow">יצירת קשר</p>
+            <h2>יש שאלה על הסדנה או על אחד המדריכים?</h2>
+            <p>אפשר לפנות אליי או להמשיך לעקוב אחרי תכנים ופרויקטים נוספים.</p>
+          </div>
+          <a class="site-button" href="mailto:a.shtaigmann@gmail.com">שליחת הודעה</a>
         </div>
+        <nav class="site-footer__links" aria-label="קישורים חברתיים">
+          <a href="mailto:a.shtaigmann@gmail.com">דוא״ל</a>
+          <a href="https://www.linkedin.com/in/almog-shtaigmann" target="_blank" rel="noopener noreferrer">לינקדאין</a>
+          <a href="https://github.com/almogshkt" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+        <p class="site-footer__meta">
+          © <span data-current-year>2026</span> אלמוג שטייגמן · כל הזכויות שמורות
+        </p>
       </div>
     </footer>
 
@@ -285,5 +314,6 @@
         }, 100);
       }
     </script>
+      <script src="../../assets/js/site-2026.js?v=20260718-4"></script>
   </body>
 </html>

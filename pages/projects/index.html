@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../../assets/css/main.css" />
     <link rel="stylesheet" href="../../assets/css/responsive.css" />
     <link rel="stylesheet" href="./projects-styles.css" />
+    <link rel="stylesheet" href="../../assets/css/site-2026.css?v=20260718-14" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -41,8 +42,9 @@
       gtag("js", new Date());
       gtag("config", "G-34DFKV9RWM");
     </script>
+      <script src="../../assets/js/theme-init.js?v=20260717-1"></script>
   </head>
-  <body>
+  <body class="site-2026 legacy-page">
     <!-- Header -->
     <header>
       <div class="container header-container">
@@ -58,26 +60,11 @@
         </button>
 
         <nav class="nav-main collapsed" id="main-nav">
-          <a
-            href="javascript:void(0)"
-            onclick="location.href = '../../index.html'"
-            >Home</a
-          >
-          <a
-            href="javascript:void(0)"
-            onclick="location.href = '../../pages/work-experience/index.html'"
-            >Work Experience</a
-          >
-          <a
-            href="javascript:void(0)"
-            onclick="location.href = '../../pages/projects/index.html'"
-            >Personal Projects</a
-          >
-          <a
-            href="javascript:void(0)"
-            onclick="location.href = '../../pages/c-lab/index.html'"
-            >C-Lab Course</a
-          >
+          <a href="../../index.html">Home</a>
+          <a href="../work-experience/index.html">Work Experience</a>
+          <a href="./index.html" class="active">Personal Projects</a>
+          <a href="../c-lab/index.html">C-Lab Course</a>
+          <a href="../database-workshop/index.html">Database Workshop</a>
         </nav>
       </div>
     </header>
@@ -86,11 +73,7 @@
       <!-- Navigation Button -->
       <section class="section">
         <div class="container">
-          <a
-            href="javascript:void(0)"
-            onclick="location.href = '../../index.html'"
-            class="btn mb-lg"
-          >
+          <a href="../../index.html" class="btn mb-lg">
             <i class="fas fa-arrow-left"></i> Back to Home
           </a>
         </div>
@@ -466,8 +449,9 @@
     <script src="../../assets/js/main.js"></script>
     <script>
       // Update the current year
-      document.getElementById("current-year").textContent =
-        new Date().getFullYear();
+      const currentYear = document.getElementById("current-year");
+      if (currentYear) currentYear.textContent = new Date().getFullYear();
     </script>
+      <script src="../../assets/js/site-2026.js?v=20260718-4"></script>
   </body>
 </html>

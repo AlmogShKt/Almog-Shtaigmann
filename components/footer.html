@@ -3,7 +3,7 @@
     <div class="footer-content">
       <div class="footer-info">
         <p>
-          &copy; <span id="current-year">2023</span> Almog Shtaigmann. All
+          &copy; <span data-current-year>2026</span> Almog Shtaigmann. All
           rights reserved.
         </p>
         <p>
@@ -58,6 +58,6 @@
 
 <script>
   // Update the current year
-  document.getElementById("current-year").textContent =
-    new Date().getFullYear();
+  const currentYear = document.getElementById("current-year");
+      if (currentYear) currentYear.textContent = new Date().getFullYear();
 </script>

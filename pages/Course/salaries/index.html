@@ -13,32 +13,6 @@
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="https:/          // Create custom WhatsApp button for this page
-          const whatsappBtn = document.createElement('a');
-          whatsappBtn.className = 'whatsapp-fab salary-page-whatsapp';
-          whatsappBtn.href = 'https://chat.whatsapp.com/HjchGqZ7Wo79txPJJBLclb';
-          whatsappBtn.target = '_blank';
-          whatsappBtn.rel = 'noopener';
-          whatsappBtn.setAttribute('aria-label', 'Join WhatsApp Group');
-
-          // Add Google Analytics event tracking for WhatsApp group
-          whatsappBtn.addEventListener('click', function() {
-            if (typeof gtag !== 'undefined') {
-              gtag('event', 'click', {
-                'event_category': 'WhatsApp',
-                'event_label': 'Salary Page - WhatsApp Group Join',
-                'page_path': window.location.pathname
-              });
-            }
-          });
-
-          // Create icon
-          const icon = document.createElement('i');
-          icon.className = 'fab fa-whatsapp';imedia.org/wikipedia/commons/3/3e/Eo_circle_blue_white_graduation_cap.svg"
-    />
     <title>ניתוח שכר לפי חברה | Almog Shtaigmann</title>
 
     <!-- CSS -->
@@ -77,14 +51,16 @@
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Salary Data -->
-    <script src="salary-data.js"></script>
+    <script src="salary-data.js?v=20260718-1"></script>
+      <link rel="stylesheet" href="../../../assets/css/site-2026.css?v=20260718-14" />
+      <script src="../../../assets/js/theme-init.js?v=20260717-1"></script>
   </head>
 
-  <body>
+  <body class="site-2026 legacy-page content-page">
     <!-- Header -->
     <header>
       <div class="container header-container">
-        <h1 class="site-title">Salary Analysis</h1>
+        <p class="site-title" aria-label="Salary Analysis">Salary Analysis</p>
 
         <button
           class="menu-toggle"
@@ -96,68 +72,92 @@
         </button>
 
         <nav class="nav-main collapsed" id="main-nav">
-          <a
-            href="javascript:void(0)"
-            onclick="location.href = '../../../index.html'"
-            >Home</a
-          >
-          <a
-            href="javascript:void(0)"
-            onclick="location.href = '../../work-experience/index.html'"
-            >Work Experience</a
-          >
-          <a
-            href="javascript:void(0)"
-            onclick="location.href = '../../projects/index.html'"
-            >Personal Projects</a
-          >
-          <a
-            href="javascript:void(0)"
-            onclick="location.href = '../../c-lab/index.html'"
-            >C-Lab Course</a
-          >
+          <a href="../../../index.html">Home</a>
+          <a href="../../work-experience/index.html">Work Experience</a>
+          <a href="../../projects/index.html">Personal Projects</a>
+          <a href="../../c-lab/index.html">C-Lab Course</a>
         </nav>
       </div>
     </header>
 
-    <!-- Header Banner -->
-    <div
-      class="header-banner"
-      style="
-        background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
-        color: white;
-        padding: 20px;
-        text-align: center;
-      "
+    <!-- Course Spotlight -->
+    <section
+      class="course-spotlight"
+      data-course-video
+      lang="he"
+      dir="rtl"
+      aria-labelledby="course-spotlight-title"
     >
-      <h2 style="color: #fff">Check Out My New Course on Univeli</h2>
-      <h2 style="color: #fff">Zero To Hero - קורס למציאת משרה ראשונה</h2>
-      <h2 style="color: #fff">המון מידע שימושי כמו זה ועד הרבה טיפים!</h2>
-      <p>Prepare for high-tech interviews with practical tips and guidance.</p>
-      <a
-        href="https://www.univeli.com/link/4BP8Zb?url=https%3A%2F%2Fwww.univeli.com%2Fcourse%2Fprepare-me-for-high-tech"
-        target="_blank"
-        class="btn learn-more-btn"
-      >
-        <i class="fas fa-arrow-right"></i> Learn More
-      </a>
-    </div>
+      <div class="course-spotlight__content">
+        <p class="course-spotlight__kicker">קורס פרקטי למציאת העבודה הראשונה</p>
+        <h2 id="course-spotlight-title">
+          <span class="course-spotlight__name" lang="en" dir="ltr">Zero To Hero</span>
+          מהחיפוש הראשון ועד להצעת העבודה
+        </h2>
+        <p class="course-spotlight__lede">
+          מסלול ממוקד לקו"ח ולינקדאין, פרויקט אישי, חיפוש משרות, ראיונות,
+          LeetCode ואלגוריתמים ושימוש נכון ב-AI.
+        </p>
+        <ul class="course-spotlight__topics" aria-label="נושאים מרכזיים בקורס">
+          <li>קו"ח ולינקדאין</li>
+          <li>פרויקט אישי</li>
+          <li>חיפוש משרות</li>
+          <li>ראיונות</li>
+          <li>LeetCode</li>
+          <li>AI</li>
+        </ul>
+        <a
+          class="course-spotlight__cta"
+          href="https://cs24.co.il/courses/83"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="לפרטי הקורס Zero To Hero - נפתח בחלון חדש"
+        >
+          <span>לפרטי הקורס</span>
+          <span class="course-spotlight__cta-arrow" aria-hidden="true">←</span>
+        </a>
+      </div>
+      <aside class="course-spotlight__proof" aria-label="נתוני הקורס והצלחות לומדים">
+        <div class="course-spotlight__metrics">
+          <div class="course-spotlight__metric">
+            <strong data-course-student-count>240+</strong>
+            <span>לומדים בקורס</span>
+          </div>
+          <div class="course-spotlight__metric">
+            <strong>אלפים</strong>
+            <span>בקהילה הפעילה</span>
+          </div>
+        </div>
+        <div>
+          <p class="course-spotlight__proof-title">רוכשי הקורס כבר השתלבו בתעשייה</p>
+          <p class="course-spotlight__companies">
+            Microsoft, Google, Intel, Amazon, Qualcomm, Wix, CyberArk,
+            Palo Alto Networks ועוד.
+          </p>
+        </div>
+      </aside>
+    </section>
 
     <!-- Main Content -->
     <main>
       <style>
-        /* Dark theme overrides for salary page */
-        body {
-          background-color: #0f0f14 !important;
-          color: #f8fafc !important;
+        /* Salary page theme layer: uses the same semantic tokens as the site. */
+        body.site-2026 {
+          background: var(--site-paper) !important;
+          color: var(--site-ink) !important;
+        }
+
+        .content-page main {
+          background: var(--site-paper) !important;
         }
 
         .section {
-          background: rgba(255, 255, 255, 0.02);
-          border-radius: 16px;
+          background: var(--site-card);
+          border-radius: var(--site-radius-md);
           margin: 20px auto;
           padding: 30px;
-          border: 1px solid rgba(255, 255, 255, 0.1);
+          border: 1px solid var(--site-line);
+          box-shadow: var(--site-shadow);
         }
 
         h1,
@@ -166,22 +166,34 @@
         h4,
         h5,
         h6 {
-          color: #f8fafc !important;
+          color: var(--site-ink) !important;
         }
 
         .title-comment {
-          color: #94a3b8;
+          color: var(--site-copy);
           border-width: 5px;
-          border-right: 4px solid #8b5cf6;
+          border-right: 4px solid var(--site-accent);
           padding-right: 10px;
         }
 
         .title-comment a {
-          color: #06b6d4;
+          color: var(--site-accent);
         }
 
         .title-comment a:hover {
-          color: #8b5cf6;
+          color: var(--site-accent-dark);
+        }
+
+        #total-average {
+          color: var(--site-ink) !important;
+          background: var(--site-sage) !important;
+          border-inline-start: 4px solid var(--site-accent) !important;
+          border-left: 0 !important;
+        }
+
+        .chart-section > h4,
+        #results-counter {
+          color: var(--site-copy) !important;
         }
 
         /* Fix for Safari chart responsiveness */
@@ -273,44 +285,87 @@
           }
         }
 
-        /* Dark theme table styles */
+        .data-source-info > div {
+          color: var(--site-ink) !important;
+          background: var(--site-sage) !important;
+          border-color: var(--site-line) !important;
+        }
+
+        .data-source-info span {
+          color: var(--site-ink) !important;
+        }
+
+        /* Theme-aware table and search styles. */
         #salary-table {
-          background: rgba(255, 255, 255, 0.02) !important;
-          border: 1px solid rgba(255, 255, 255, 0.1);
+          background: var(--site-card) !important;
+          border: 1px solid var(--site-line);
+          box-shadow: none !important;
+        }
+
+        #salary-table thead tr {
+          color: var(--site-on-strong) !important;
+          background: var(--site-strong) !important;
         }
 
         #salary-table tbody tr {
-          background: rgba(255, 255, 255, 0.02) !important;
-          color: #94a3b8;
+          background: var(--site-card) !important;
+          color: var(--site-copy);
         }
 
         #salary-table tbody tr:hover {
-          background: rgba(139, 92, 246, 0.1) !important;
+          background: var(--site-sage) !important;
         }
 
         #salary-table tbody tr td {
-          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-          color: #94a3b8;
+          border-bottom: 1px solid var(--site-line);
+          color: var(--site-copy);
+        }
+
+        #salary-table tbody tr td[style*="color"] {
+          color: var(--site-accent-dark) !important;
         }
 
         #company-search {
-          background: rgba(255, 255, 255, 0.05) !important;
-          border-color: rgba(255, 255, 255, 0.2) !important;
-          color: #f8fafc !important;
+          max-width: 100%;
+          background: var(--site-card) !important;
+          border-color: var(--site-line) !important;
+          color: var(--site-ink) !important;
         }
 
         #company-search::placeholder {
-          color: #64748b;
+          color: var(--site-copy);
         }
 
         #clear-search {
-          background: rgba(255, 255, 255, 0.05) !important;
-          color: #f8fafc !important;
-          border: 1px solid rgba(255, 255, 255, 0.1) !important;
+          color: var(--site-on-accent) !important;
+          background: var(--site-accent) !important;
+          border: 1px solid var(--site-accent) !important;
         }
 
         #results-counter {
-          color: #94a3b8 !important;
+          color: var(--site-copy) !important;
+        }
+
+        @media (max-width: 768px) {
+          .section {
+            padding: 22px 16px;
+          }
+
+          .search-container {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+          }
+
+          #company-search {
+            width: 100% !important;
+            min-width: 0;
+          }
+
+          #clear-search {
+            flex: 0 0 auto;
+            margin-right: 0 !important;
+          }
         }
       </style>
       <section class="section">
@@ -660,7 +715,7 @@
       <div class="container footer-content">
         <div class="footer-info">
           <p>
-            &copy; <span id="current-year">2025</span> Almog Shtaigmann. All
+            &copy; <span data-current-year>2026</span> Almog Shtaigmann. All
             rights reserved.
           </p>
           <p>
@@ -754,6 +809,26 @@
         }, 100);
       });
 
+      const salaryCharts = [];
+
+      function getSalaryChartTheme() {
+        const styles = getComputedStyle(document.documentElement);
+        return {
+          text: styles.getPropertyValue("--site-copy").trim(),
+          line: styles.getPropertyValue("--site-line").trim(),
+        };
+      }
+
+      function applySalaryChartTheme(chart) {
+        const theme = getSalaryChartTheme();
+        chart.options.plugins.legend.labels.color = theme.text;
+        chart.options.scales.x.ticks.color = theme.text;
+        chart.options.scales.x.grid.color = theme.line;
+        chart.options.scales.y.ticks.color = theme.text;
+        chart.options.scales.y.grid.color = theme.line;
+        chart.update("none");
+      }
+
       function createChart(chartId, labels, minData, avgData, maxData) {
         const filteredLabels = [];
         const filteredMin = [];
@@ -783,7 +858,8 @@
           }
         }
 
-        new Chart(document.getElementById(chartId), {
+        const chartTheme = getSalaryChartTheme();
+        const chart = new Chart(document.getElementById(chartId), {
           type: "bar",
           data: {
             labels: filteredLabels,
@@ -826,7 +902,7 @@
               legend: {
                 position: "top",
                 labels: {
-                  color: "#e2e8f0",
+                  color: chartTheme.text,
                   font: {
                     size: 12,
                   },
@@ -846,10 +922,10 @@
                 ticks: {
                   maxRotation: 45,
                   minRotation: 0,
-                  color: "#94a3b8",
+                  color: chartTheme.text,
                 },
                 grid: {
-                  color: "rgba(148, 163, 184, 0.1)",
+                  color: chartTheme.line,
                 },
               },
               y: {
@@ -857,20 +933,27 @@
                 min: 0,
                 max: 160,
                 ticks: {
-                  color: "#94a3b8",
+                  color: chartTheme.text,
                 },
                 grid: {
-                  color: "rgba(148, 163, 184, 0.1)",
+                  color: chartTheme.line,
                 },
               },
             },
           },
         });
+
+        salaryCharts.push(chart);
       }
 
       // Initialize charts when page loads
       document.addEventListener("DOMContentLoaded", function () {
-        initializeSalaryCharts();
+        new MutationObserver(() => {
+          salaryCharts.forEach(applySalaryChartTheme);
+        }).observe(document.documentElement, {
+          attributes: true,
+          attributeFilter: ["data-theme"],
+        });
 
         // Mobile menu toggle
         const menuToggle = document.querySelector(".menu-toggle");
@@ -885,11 +968,12 @@
         }
       });
 
-      document.getElementById("current-year").textContent =
-        new Date().getFullYear();
+      const currentYear = document.getElementById("current-year");
+      if (currentYear) currentYear.textContent = new Date().getFullYear();
     </script>
 
     <!-- Accessibility Widget -->
     <script src="../../../assets/js/accessibility.js" defer></script>
+      <script src="../../../assets/js/site-2026.js?v=20260718-4"></script>
   </body>
 </html>
