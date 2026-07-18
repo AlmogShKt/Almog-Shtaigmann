@@ -49,47 +49,57 @@
       gtag("js", new Date());
       gtag("config", "G-34DFKV9RWM");
     </script>
+      <link rel="stylesheet" href="../../../assets/css/site-2026.css?v=20260718-14" />
+      <script src="../../../assets/js/theme-init.js?v=20260717-1"></script>
   </head>
-  <body>
+  <body
+    class="site-2026 legacy-page content-page learning-page"
+    data-learning-page
+    data-learning-id="database-project-spec"
+    data-learning-title="הבנת הפרויקט ודרישות המערכת"
+    data-learning-summary="מפרקים מערכת ניתוח טקסטים לרכיבים, דרישות ושלבי פיתוח שאפשר לתכנן וליישם."
+    data-learning-duration="15 דקות"
+    data-learning-level="ביניים"
+    data-learning-previous-url="./intro.html"
+    data-learning-previous-title="מבוא לסדנת בסיסי נתונים"
+    data-learning-next-url="./database-design.html"
+    data-learning-next-title="תכנון בסיס הנתונים"
+  >
     <!-- Header -->
     <header>
       <div class="container header-container">
-        <h1 class="site-title">הבנת הפרויקט ודרישות המערכת</h1>
+        <p class="site-title" aria-label="הבנת הפרויקט ודרישות המערכת">הבנת הפרויקט ודרישות המערכת</p>
 
         <button
           class="menu-toggle"
           aria-expanded="false"
           aria-controls="main-nav"
         >
-          <span class="visually-hidden">Toggle navigation</span>
+          <span class="visually-hidden">פתיחת תפריט</span>
           <i class="fas fa-bars"></i>
         </button>
 
         <nav class="nav-main collapsed" id="main-nav">
           <a
-            href="javascript:void(0)"
-            onclick="location.href = '../../../index.html'"
-            >Home</a
+            href="../../../index.html"
+            >דף הבית</a
           >
           <a
-            href="javascript:void(0)"
-            onclick="location.href = '../../work-experience/index.html'"
-            >Work Experience</a
+            href="../../work-experience/index.html"
+            >ניסיון מקצועי</a
           >
           <a
-            href="javascript:void(0)"
-            onclick="location.href = '../../projects/index.html'"
-            >Personal Projects</a
+            href="../../projects/index.html"
+            >פרויקטים</a
           >
           <a
-            href="javascript:void(0)"
-            onclick="location.href = '../../c-lab/index.html'"
-            >C-Lab Course</a
+            href="../../c-lab/index.html"
+            >קורס C-Lab</a
           >
           <a
-            href="javascript:void(0)"
+            href="../index.html"
             onclick="trackBackToWorkshop('Project Requirements')"
-            >Database Workshop</a
+            >סדנת בסיסי נתונים</a
           >
         </nav>
       </div>
@@ -100,7 +110,7 @@
       <section class="section">
         <div class="container">
           <a
-            href="javascript:void(0)"
+            href="../index.html"
             onclick="trackBackToWorkshop('Project Requirements')"
             class="btn btn-secondary"
           >
@@ -121,7 +131,7 @@
             </div>
           </header>
 
-          <div class="article-content animate-on-scroll">
+          <div class="article-content animate-on-scroll" data-learning-content>
             <h2>תיאור כללי</h2>
             <p>
               המערכת שאתם הולכים לבנות מאפשרת להעלות קבצי טקסט ולבצע עליהם ניתוח
@@ -187,8 +197,12 @@
                 <h4><i class="fas fa-server"></i> צד השרת</h4>
                 <p>
                   כאן תכתבו את הקוד שאחראי על התחברות לבסיס הנתונים, שליפת
-                  המידע, שמירה של נתונים, חישובים שונים ועוד. הכל נעשה דרך API,
-                  כלומר כתובות אינטרנט (HTTP) שמחזירות מידע בפורמט JSON.
+                  המידע, שמירה של נתונים, חישובים שונים ועוד. הכל נעשה דרך
+                  <span class="learning-term" lang="en" dir="ltr" data-learning-term="ממשק שמגדיר כיצד צד הלקוח וצד השרת מתקשרים זה עם זה">API</span>,
+                  כלומר כתובות אינטרנט
+                  (<span class="learning-term" lang="en" dir="ltr" data-learning-term="הפרוטוקול המשמש להעברת בקשות ותגובות ברשת">HTTP</span>)
+                  שמחזירות מידע בפורמט
+                  <span class="learning-term" lang="en" dir="ltr" data-learning-term="פורמט טקסט מובנה להעברת נתונים בין מערכות">JSON</span>.
                 </p>
               </div>
 
@@ -377,26 +391,37 @@
                 בצורה יעילה.
               </p>
             </div>
+
+            <section class="learning-self-check" aria-labelledby="spec-self-check-title">
+              <h2 id="spec-self-check-title">בדיקה עצמית קצרה</h2>
+              <p>פתחו את התשובה רק אחרי שניסיתם להסביר אותה במילים שלכם.</p>
+              <details>
+                <summary>למה לא שומרים את כל הטקסט בשדה אחד?</summary>
+                <p>פירוק למילים, משפטים וביטויים מאפשר לשמור מיקום וקשרים, לחפש ביעילות ולבצע ניתוחים על כל רכיב.</p>
+              </details>
+              <details>
+                <summary>מהו סדר העבודה המומלץ?</summary>
+                <p>מתחילים במודל הנתונים, ממשיכים לתכנון ה-API ולעיבוד הטקסט, ורק אז מחברים ממשק משתמש ובדיקות.</p>
+              </details>
+              <details>
+                <summary>אילו שלוש שכבות חייבות לעבוד יחד?</summary>
+                <p>בסיס הנתונים, צד השרת שמספק API, וצד הלקוח שמציג ומפעיל את המערכת עבור המשתמש.</p>
+              </details>
+            </section>
           </div>
         </div>
       </article>
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
-      <div class="container text-center">
-        <p>&copy; 2025 Almog Shtaigmann. All rights reserved.</p>
-        <div class="social-links">
-          <a href="https://linkedin.com/in/almogshtaigmann" target="_blank">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="https://github.com/almogshkt" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="mailto:a.shtaigmann@gmail.com">
-            <i class="fas fa-envelope"></i>
-          </a>
-        </div>
+    <footer class="site-footer">
+      <div class="site-container">
+        <nav class="site-footer__links" aria-label="קישורים חברתיים">
+          <a href="mailto:a.shtaigmann@gmail.com">דוא״ל</a>
+          <a href="https://www.linkedin.com/in/almog-shtaigmann" target="_blank" rel="noopener noreferrer">לינקדאין</a>
+          <a href="https://github.com/almogshkt" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+        <p class="site-footer__meta">© <span data-current-year>2026</span> אלמוג שטייגמן · כל הזכויות שמורות</p>
       </div>
     </footer>
 
@@ -406,5 +431,6 @@
       // Track page view
       trackWorkshopPageView("Project Requirements & System Specs");
     </script>
+      <script src="../../../assets/js/site-2026.js?v=20260718-4"></script>
   </body>
 </html>

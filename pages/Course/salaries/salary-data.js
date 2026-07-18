@@ -947,9 +947,9 @@ function renderTable() {
  */
 function getCategoryColor(categoryName) {
   const colors = {
-    american: "#4CAF50", // Green
-    israeli: "#2196F3", // Blue
-    other: "#FF9800", // Orange
+    american: "#216E39", // Accessible green with white text
+    israeli: "#0B5CAD", // Accessible blue with white text
+    other: "#9A4300", // Accessible orange with white text
   };
   return colors[categoryName] || "#757575";
 }

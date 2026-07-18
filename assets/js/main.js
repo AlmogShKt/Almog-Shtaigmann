@@ -383,7 +383,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Initialize all features
   createWhatsAppButton();
-  initPopupAd();
+  if (!document.body.classList.contains("site-2026")) {
+    initPopupAd();
+  }
 });
 
 // ============================================

@@ -45,12 +45,22 @@
       gtag("js", new Date());
       gtag("config", "G-34DFKV9RWM");
     </script>
+      <link rel="stylesheet" href="../../../assets/css/site-2026.css?v=20260718-14" />
+      <script src="../../../assets/js/theme-init.js?v=20260717-1"></script>
   </head>
-  <body>
+  <body class="site-2026 legacy-page content-page">
     <!-- Header -->
     <header>
       <div class="container header-container">
         <h1 class="site-title">הנחיה מוגברת - דני כלפון</h1>
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span class="visually-hidden">פתיחת תפריט ניווט</span>
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
         <nav class="nav-main collapsed" id="main-nav">
           <a href="../../../index.html">דף הבית</a>
           <a href="../../../pages/work-experience/index.html">ניסיון מקצועי</a>
@@ -60,27 +70,63 @@
       </div>
     </header>
 
-    <!-- Header Banner -->
-    <div
-      class="header-banner"
-      style="
-        background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
-        color: white;
-        padding: 20px;
-        text-align: center;
-      "
+    <!-- Course Spotlight -->
+    <section
+      class="course-spotlight"
+      data-course-video
+      lang="he"
+      dir="rtl"
+      aria-labelledby="course-spotlight-title"
     >
-      <h2 style="color: #fff">Check Out My New Course on Univeli</h2>
-      <h2 style="color: #fff">Zero To Hero - קורס למציאת משרה ראשונה</h2>
-      <p>Prepare for high-tech interviews with practical tips and guidance.</p>
-      <a
-        href="https://www.univeli.com/link/4BP8Zb?url=https%3A%2F%2Fwww.univeli.com%2Fcourse%2Fprepare-me-for-high-tech"
-        target="_blank"
-        class="btn learn-more-btn"
-      >
-        <i class="fas fa-arrow-right"></i> Learn More
-      </a>
-    </div>
+      <div class="course-spotlight__content">
+        <p class="course-spotlight__kicker">קורס פרקטי למציאת העבודה הראשונה</p>
+        <h2 id="course-spotlight-title">
+          <span class="course-spotlight__name" lang="en" dir="ltr">Zero To Hero</span>
+          מהחיפוש הראשון ועד להצעת העבודה
+        </h2>
+        <p class="course-spotlight__lede">
+          מסלול ממוקד לקו"ח ולינקדאין, פרויקט אישי, חיפוש משרות, ראיונות,
+          LeetCode ואלגוריתמים ושימוש נכון ב-AI.
+        </p>
+        <ul class="course-spotlight__topics" aria-label="נושאים מרכזיים בקורס">
+          <li>קו"ח ולינקדאין</li>
+          <li>פרויקט אישי</li>
+          <li>חיפוש משרות</li>
+          <li>ראיונות</li>
+          <li>LeetCode</li>
+          <li>AI</li>
+        </ul>
+        <a
+          class="course-spotlight__cta"
+          href="https://cs24.co.il/courses/83"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="לפרטי הקורס Zero To Hero - נפתח בחלון חדש"
+        >
+          <span>לפרטי הקורס</span>
+          <span class="course-spotlight__cta-arrow" aria-hidden="true">←</span>
+        </a>
+      </div>
+      <aside class="course-spotlight__proof" aria-label="נתוני הקורס והצלחות לומדים">
+        <div class="course-spotlight__metrics">
+          <div class="course-spotlight__metric">
+            <strong data-course-student-count>240+</strong>
+            <span>לומדים בקורס</span>
+          </div>
+          <div class="course-spotlight__metric">
+            <strong>אלפים</strong>
+            <span>בקהילה הפעילה</span>
+          </div>
+        </div>
+        <div>
+          <p class="course-spotlight__proof-title">רוכשי הקורס כבר השתלבו בתעשייה</p>
+          <p class="course-spotlight__companies">
+            Microsoft, Google, Intel, Amazon, Qualcomm, Wix, CyberArk,
+            Palo Alto Networks ועוד.
+          </p>
+        </div>
+      </aside>
+    </section>
 
     <main>
       <section class="section">
@@ -121,12 +167,13 @@
         <div class="footer-content">
           <p>
             רוצים להוסיף מידע?
-            <a href="mailto:a.shtaigmann@gmail.com">צור קשר</a>
+            <a href="mailto:a.shtaigmann@gmail.com" aria-label="Email">צור קשר</a>
           </p>
         </div>
       </div>
     </footer>
 
     <script src="../../../assets/js/main.js"></script>
+      <script src="../../../assets/js/site-2026.js?v=20260718-4"></script>
   </body>
 </html>

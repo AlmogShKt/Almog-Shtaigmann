@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="../../assets/css/main.css" />
     <link rel="stylesheet" href="../../assets/css/responsive.css" />
     <link rel="stylesheet" href="./experience-styles.css" />
+    <link rel="stylesheet" href="../../assets/css/site-2026.css?v=20260718-14" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -47,8 +48,9 @@
       gtag("js", new Date());
       gtag("config", "G-34DFKV9RWM");
     </script>
+      <script src="../../assets/js/theme-init.js?v=20260717-1"></script>
   </head>
-  <body>
+  <body class="site-2026 legacy-page">
     <!-- Header -->
     <header>
       <div class="container header-container">
@@ -64,27 +66,11 @@
         </button>
 
         <nav class="nav-main collapsed" id="main-nav">
-          <a
-            href="javascript:void(0)"
-            onclick="location.href = '../../index.html'"
-            >Home</a
-          >
-          <a
-            href="javascript:void(0)"
-            onclick="location.href = '../../pages/work-experience/index.html'"
-            class="active"
-            >Work Experience</a
-          >
-          <a
-            href="javascript:void(0)"
-            onclick="location.href = '../../pages/projects/index.html'"
-            >Personal Projects</a
-          >
-          <a
-            href="javascript:void(0)"
-            onclick="location.href = '../../pages/c-lab/index.html'"
-            >C-Lab Course</a
-          >
+          <a href="../../index.html">Home</a>
+          <a href="./index.html" class="active">Work Experience</a>
+          <a href="../projects/index.html">Personal Projects</a>
+          <a href="../c-lab/index.html">C-Lab Course</a>
+          <a href="../database-workshop/index.html">Database Workshop</a>
         </nav>
       </div>
     </header>
@@ -93,11 +79,7 @@
       <!-- Navigation Button -->
       <section class="section">
         <div class="container">
-          <a
-            href="javascript:void(0)"
-            onclick="location.href = '../../index.html'"
-            class="btn mb-lg"
-          >
+          <a href="../../index.html" class="btn mb-lg">
             <i class="fas fa-arrow-left"></i> Back to Home
           </a>
         </div>
@@ -121,8 +103,10 @@
                 class="company-logo"
               />
               <div class="experience-title-section">
-                <h3 class="experience-role">Software Engineer</h3>
-                <p class="experience-company">Microsoft Fabric</p>
+                <h3 class="experience-role">Software Engineer I</h3>
+                <p class="experience-company">
+                  Microsoft Fabric · OneLake Catalog
+                </p>
                 <span class="experience-duration">
                   <i class="fas fa-calendar-alt"></i> February 2026 – Present |
                   Full Time
@@ -131,9 +115,10 @@
             </div>
 
             <p style="font-style: italic; color: #666; margin-bottom: 1.5rem">
-              Microsoft Fabric is a large-scale distributed analytics platform
-              used by <strong>millions of users</strong> handling massive data
-              workloads across Lakehouse, Warehouse, OneLake Catalog, and more.
+              Microsoft Fabric is a large-scale distributed analytics platform.
+              On the OneLake Catalog team, I help build production experiences
+              serving <strong>hundreds of thousands of users</strong> across
+              complex data and metadata workflows.
             </p>
 
             <div class="experience-section">
@@ -141,11 +126,24 @@
                 <i class="fas fa-code"></i> Core Contributions
               </h4>
               <ul class="experience-list">
-                <li>PowerBi - Fabric - OneLake Catalog</li>
+                <li>
+                  Build production software across product interfaces, APIs,
+                  and data workflows using React, Angular, TypeScript, Signals,
+                  and RxJS.
+                </li>
+                <li>
+                  Design resilient data workflows with pagination, caching,
+                  retry strategies, and throttling mitigation.
+                </li>
+                <li>
+                  Use spec-driven, AI-assisted development workflows across
+                  implementation, testing, debugging, documentation, and review.
+                </li>
               </ul>
             </div>
 
             <div class="tech-stack">
+              <span class="tech-badge">React</span>
               <span class="tech-badge">Angular 19+</span>
               <span class="tech-badge">TypeScript</span>
               <span class="tech-badge">RxJS</span>
@@ -167,9 +165,7 @@
                 class="company-logo"
               />
               <div class="experience-title-section">
-                <h3 class="experience-role">
-                  Software Engineer Intern (Frontend + SWE)
-                </h3>
+                <h3 class="experience-role">Software Engineer Intern</h3>
                 <p class="experience-company">Microsoft Fabric</p>
                 <span class="experience-duration">
                   <i class="fas fa-calendar-alt"></i> December 2024 – February
@@ -179,9 +175,10 @@
             </div>
 
             <p style="font-style: italic; color: #666; margin-bottom: 1.5rem">
-              Microsoft Fabric is a large-scale distributed analytics platform
-              used by <strong>millions of users</strong> handling massive data
-              workloads across Lakehouse, Warehouse, OneLake Catalog, and more.
+              Microsoft Fabric is a large-scale distributed analytics platform.
+              My work supported experiences serving
+              <strong>hundreds of thousands of users</strong> across complex
+              metadata and data workflows.
             </p>
 
             <div class="experience-section">
@@ -193,7 +190,7 @@
                   Built scalable <strong>frontend features</strong> using
                   <strong>Angular (v19+)</strong>, TypeScript, Angular Signals,
                   and RxJS. Delivered performant, maintainable experiences for
-                  millions of active users across critical Fabric subsystems
+                  hundreds of thousands of users across critical Fabric subsystems
                   including schema management, metadata visualization, and
                   sub-artifact flows.
                 </li>
@@ -336,8 +333,8 @@
             </div>
 
             <p style="font-style: italic; color: #666; margin-bottom: 1.5rem">
-              Shutterfly is a large-scale, customer-facing mobile platform used
-              by <strong>millions</strong>.
+              Shutterfly is a large-scale, customer-facing mobile platform with
+              a substantial production user base.
             </p>
 
             <div class="experience-section">
@@ -510,8 +507,9 @@
     <script src="../../assets/js/main.js"></script>
     <script>
       // Update the current year
-      document.getElementById("current-year").textContent =
-        new Date().getFullYear();
+      const currentYear = document.getElementById("current-year");
+      if (currentYear) currentYear.textContent = new Date().getFullYear();
     </script>
+      <script src="../../assets/js/site-2026.js?v=20260718-4"></script>
   </body>
 </html>
