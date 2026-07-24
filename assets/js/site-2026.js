@@ -88,6 +88,124 @@ document.addEventListener("DOMContentLoaded", () => {
     element.textContent = String(new Date().getFullYear());
   });
 
+  const popupSessionKey = "almog-session-popup-shown";
+  const hasShownSessionPopup = () => {
+    try {
+      return sessionStorage.getItem(popupSessionKey) === "true";
+    } catch (_error) {
+      return false;
+    }
+  };
+
+  const markSessionPopupShown = () => {
+    try {
+      sessionStorage.setItem(popupSessionKey, "true");
+    } catch (_error) {
+      // The popup still works when session storage is unavailable.
+    }
+  };
+
+  const showSessionPopup = () => {
+    if (hasShownSessionPopup() || document.querySelector("[data-session-popup]")) {
+      return;
+    }
+
+    const previouslyFocused = document.activeElement;
+    const overlay = document.createElement("div");
+    overlay.className = "session-popup";
+    overlay.dataset.sessionPopup = "";
+    overlay.innerHTML = `
+      <section
+        class="session-popup__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="session-popup-title"
+        aria-describedby="session-popup-description"
+        dir="rtl"
+        lang="he"
+      >
+        <button
+          class="session-popup__close"
+          type="button"
+          aria-label="סגירת החלון"
+          data-session-popup-close
+        >×</button>
+        <p class="session-popup__eyebrow">אפשר לעזור?</p>
+        <h2 id="session-popup-title">צריכים הכוונה בדרך?</h2>
+        <div id="session-popup-description" class="session-popup__description">
+          <p>שיעור פרטי, הכנה למציאת עבודה ראשונה או שאלה מקצועית - אפשר לדבר איתי ישירות.</p>
+          <p><strong>כבר עזרתי למאות סטודנטים ובוגרים.</strong></p>
+        </div>
+        <div class="session-popup__actions">
+          <a
+            class="session-popup__primary"
+            href="https://wa.me/972586669888?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A2%D7%96%D7%A8%D7%94"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span aria-hidden="true">↗</span>
+            שליחת הודעה ב-WhatsApp
+          </a>
+          <button
+            class="session-popup__secondary"
+            type="button"
+            data-session-popup-close
+          >אולי מאוחר יותר</button>
+        </div>
+      </section>`;
+
+    const dialog = overlay.querySelector(".session-popup__dialog");
+    const closeButtons = overlay.querySelectorAll("[data-session-popup-close]");
+    const focusable = Array.from(
+      overlay.querySelectorAll("a[href], button:not([disabled])")
+    );
+    let isClosing = false;
+
+    const closePopup = () => {
+      if (isClosing) return;
+      isClosing = true;
+      overlay.classList.remove("is-visible");
+      document.body.classList.remove("has-session-popup");
+      window.setTimeout(() => {
+        overlay.remove();
+        if (previouslyFocused instanceof HTMLElement) previouslyFocused.focus();
+      }, 220);
+    };
+
+    closeButtons.forEach((button) => button.addEventListener("click", closePopup));
+    overlay.addEventListener("click", (event) => {
+      if (event.target === overlay) closePopup();
+    });
+    overlay.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closePopup();
+        return;
+      }
+      if (event.key !== "Tab" || focusable.length < 2) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    });
+
+    document.body.appendChild(overlay);
+    document.body.classList.add("has-session-popup");
+    markSessionPopupShown();
+    window.requestAnimationFrame(() => {
+      overlay.classList.add("is-visible");
+      dialog.querySelector("[data-session-popup-close]").focus();
+    });
+  };
+
+  if (!hasShownSessionPopup()) {
+    window.setTimeout(showSessionPopup, 3000);
+  }
+
   const courseCountBaseline = {
     count: 240,
     date: new Date(Date.UTC(2026, 6, 18)),
