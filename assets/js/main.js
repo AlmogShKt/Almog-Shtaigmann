@@ -279,6 +279,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Popup Ad Management
   function initPopupAd() {
+    // The redesigned site owns the shared session popup in site-2026.js.
+    // Keep this initializer only for pages that still use the legacy shell.
+    if (document.body.classList.contains("site-2026")) return;
+
     const hasShownPopup = sessionStorage.getItem("popupShown");
 
     // Only show popup once per session
