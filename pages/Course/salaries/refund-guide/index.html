@@ -126,6 +126,23 @@
           margin: 0 auto;
           font-size: 1.05rem;
         }
+        .course-reference {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          margin-top: 16px;
+          padding: 9px 15px;
+          border: 1px solid var(--site-line);
+          border-radius: 999px;
+          background: var(--site-card);
+          color: var(--site-accent) !important;
+          font-weight: 700;
+          text-decoration: none;
+        }
+        .course-reference:hover {
+          border-color: var(--site-accent);
+          color: var(--site-accent-dark, var(--site-accent)) !important;
+        }
         .card {
           background: var(--site-card);
           border: 1px solid var(--site-line);
@@ -150,7 +167,7 @@
           color: var(--site-copy);
           line-height: 1.7;
         }
-        /* Critical warning callout */
+        /* Important information callouts */
         .alert {
           border-radius: var(--site-radius-md, 16px);
           padding: 22px 22px;
@@ -167,6 +184,16 @@
         }
         .alert--danger h2 {
           color: #b02a37 !important;
+        }
+        .alert--attention {
+          background: rgba(232, 164, 52, 0.1);
+          border-color: #d5a03c;
+        }
+        .alert--attention h2 {
+          color: var(--site-ink) !important;
+        }
+        .alert--attention h2 i {
+          color: #b7791f;
         }
         .alert--warning {
           background: rgba(255, 193, 7, 0.12);
@@ -192,10 +219,10 @@
           color: var(--site-ink) !important;
         }
         .must-list li::before {
-          content: "\f071";
+          content: "\f05a";
           font-family: "Font Awesome 6 Free";
           font-weight: 900;
-          color: #dc3545;
+          color: #b7791f;
           position: absolute;
           inset-inline-start: 16px;
           top: 50%;
@@ -354,6 +381,39 @@
           font-size: 0.92rem;
           color: var(--site-copy);
         }
+        .success-stories__intro {
+          margin-bottom: 18px;
+        }
+        .success-stories__grid {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 18px;
+        }
+        .success-story {
+          margin: 0;
+          padding: 12px;
+          background: var(--site-paper);
+          border: 1px solid var(--site-line);
+          border-radius: 14px;
+        }
+        .success-story img {
+          display: block;
+          width: 100%;
+          height: auto;
+          border-radius: 10px;
+        }
+        .success-story figcaption {
+          margin-top: 10px;
+          color: var(--site-copy);
+          font-size: 0.92rem;
+          line-height: 1.55;
+          text-align: center;
+        }
+        @media (max-width: 640px) {
+          .success-stories__grid {
+            grid-template-columns: 1fr;
+          }
+        }
       </style>
 
       <div class="refund-wrap">
@@ -362,29 +422,40 @@
           <span class="refund-hero__kicker">מדריך למשרתי מילואים 🎗️</span>
           <h1 id="page-title">איך מקבלים החזר על הקורס</h1>
           <p>
-            אם שירתתם במילואים, ייתכן שאתם זכאים להחזר כספי על הקורס דרך אחד משני
-            מסלולים רשמיים. המדריך הזה מסביר בפשטות מה לעשות, איך לבדוק אם אתם
-            זכאים, ואיך להגיש נכון.
+            אם שירתתם במילואים, ייתכן שאתם זכאים להחזר כספי על הקורס
+            <strong>Zero To Hero</strong>
+            דרך אחד משני מסלולים רשמיים. המדריך הזה מסביר בפשטות מה לעשות, איך
+            לבדוק אם אתם זכאים, ואיך להגיש נכון.
           </p>
+          <a
+            class="course-reference"
+            href="https://cs24.co.il/courses/83"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="מעבר לעמוד הקורס Zero To Hero - נפתח בחלון חדש"
+          >
+            <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            לעמוד הקורס Zero To Hero
+          </a>
         </section>
 
-        <!-- CRITICAL: contact before buying -->
-        <section class="alert alert--danger" aria-labelledby="before-buy">
+        <!-- Important: contact before buying -->
+        <section class="alert alert--attention" aria-labelledby="before-buy">
           <h2 id="before-buy">
-            <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
-            עצרו! קראו לפני שאתם רוכשים
+            <i class="fas fa-circle-info" aria-hidden="true"></i>
+            שימו לב לפני רכישת הקורס
           </h2>
           <p>
-            כדי לקבל את ההחזר בצורה בטוחה ונכונה, <strong>חובה</strong> ליצור
-            איתי קשר בוואטסאפ <strong>לפני</strong> רכישת הקורס. אל תרכשו לבד לפני
-            שדיברנו — כך אני מוודא שתקבלו את המסמכים הנכונים ותהיו זכאים להחזר.
+            כדי להתחיל את תהליך ההחזר בצורה מסודרת, חשוב ליצור איתי קשר בוואטסאפ
+            <strong>לפני רכישת הקורס</strong>. בשיחה קצרה נבדוק יחד את המסלול
+            המתאים ואוודא שתקבלו את המסמכים הנכונים להגשה.
           </p>
           <ul class="must-list">
-            <li>ראשית — דברו איתי בוואטסאפ לפני הרכישה.</li>
+            <li>לפני הרכישה — שלחו לי הודעה קצרה בוואטסאפ.</li>
             <li>
-              את הבקשה להחזר מגישים עם הקבלה שאני מנפיק לכם — ולא הקבלה מהאתר!
+              את הבקשה מגישים עם הקבלה הייעודית שאנפיק לכם, ולא עם הקבלה מהאתר.
             </li>
-            <li>ודאו שאתם עומדים בתנאי הזכאות (מפורטים למטה) לפני התשלום.</li>
+            <li>נעבור יחד על תנאי הזכאות המפורטים בהמשך לפני התשלום.</li>
           </ul>
           <div class="cta-center">
             <a
@@ -398,6 +469,42 @@
               <span>דברו איתי בוואטסאפ לפני הרכישה</span>
             </a>
           </div>
+        </section>
+
+        <!-- Real reimbursement examples -->
+        <section class="card success-stories" aria-labelledby="success-title">
+          <h2 id="success-title">
+            <i class="fas fa-circle-check" aria-hidden="true"></i>
+            סטודנטים שכבר קיבלו החזר
+          </h2>
+          <p class="success-stories__intro">
+            שתי דוגמאות אמיתיות מסטודנטים שפעלו לפי התהליך וקיבלו הודעת אישור
+            להחזר מקרן הסיוע למילואים.
+          </p>
+          <div class="success-stories__grid">
+            <figure class="success-story">
+              <img
+                src="4358B7E4-FCC4-46A2-998E-AA4EF4A0B605.jpeg"
+                alt="הודעת אישור להחזר בסך 340 שקלים לסטודנט מקרן הסיוע למילואים"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>אישור החזר בסך 340 ₪ לסטודנט אחד.</figcaption>
+            </figure>
+            <figure class="success-story">
+              <img
+                src="B52DEE62-2F53-4E2B-8A22-3FC40413D10D_1_105_c.jpeg"
+                alt="הודעת אישור להחזר בסך 330 שקלים לסטודנט מקרן הסיוע למילואים"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>אישור החזר בסך 330 ₪ לסטודנט נוסף.</figcaption>
+            </figure>
+          </div>
+          <p class="note">
+            הדוגמאות מוצגות להמחשה בלבד. הזכאות וגובה ההחזר נבדקים ומאושרים
+            באופן פרטני על ידי הגוף המטפל.
+          </p>
         </section>
 
         <!-- The receipt rule, emphasized -->
