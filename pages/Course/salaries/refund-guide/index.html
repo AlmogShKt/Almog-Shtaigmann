@@ -430,6 +430,8 @@
           <a
             class="course-reference"
             href="https://cs24.co.il/courses/83"
+            data-analytics-event="refund_course_click"
+            data-analytics-label="hero_course_reference"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="מעבר לעמוד הקורס Zero To Hero - נפתח בחלון חדש"
@@ -440,7 +442,11 @@
         </section>
 
         <!-- Important: contact before buying -->
-        <section class="alert alert--attention" aria-labelledby="before-buy">
+        <section
+          class="alert alert--attention"
+          aria-labelledby="before-buy"
+          data-analytics-section="before_purchase_notice"
+        >
           <h2 id="before-buy">
             <i class="fas fa-circle-info" aria-hidden="true"></i>
             שימו לב לפני רכישת הקורס
@@ -461,6 +467,8 @@
             <a
               class="wa-cta"
               href="https://wa.me/message/LI3KKETK2IV7E1"
+              data-analytics-event="refund_whatsapp_click"
+              data-analytics-label="before_purchase_cta"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="שליחת הודעה לאלמוג בוואטסאפ - נפתח בחלון חדש"
@@ -472,7 +480,11 @@
         </section>
 
         <!-- Real reimbursement examples -->
-        <section class="card success-stories" aria-labelledby="success-title">
+        <section
+          class="card success-stories"
+          aria-labelledby="success-title"
+          data-analytics-section="student_refund_examples"
+        >
           <h2 id="success-title">
             <i class="fas fa-circle-check" aria-hidden="true"></i>
             סטודנטים שכבר קיבלו החזר
@@ -522,7 +534,11 @@
         </section>
 
         <!-- Overview / route chooser -->
-        <section class="card" aria-labelledby="routes-title">
+        <section
+          class="card"
+          aria-labelledby="routes-title"
+          data-analytics-section="refund_route_overview"
+        >
           <h2 id="routes-title">
             <i class="fas fa-route" aria-hidden="true"></i>
             שני מסלולים אפשריים להחזר
@@ -532,12 +548,22 @@
             בתנאים שלו. לחצו כדי לקפוץ להסבר המלא:
           </p>
           <div class="routes">
-            <a class="route" href="#private-lesson">
+            <a
+              class="route"
+              href="#private-lesson"
+              data-analytics-event="refund_route_select"
+              data-analytics-label="private_lessons"
+            >
               <i class="fas fa-chalkboard-user" aria-hidden="true"></i>
               <strong>מסלול 1: שיעורים פרטיים</strong>
               <span>החזר עד 3,000 ₪ דרך קרן הסיוע למילואים (לפי מדרג וימים).</span>
             </a>
-            <a class="route" href="#career-counseling">
+            <a
+              class="route"
+              href="#career-counseling"
+              data-analytics-event="refund_route_select"
+              data-analytics-label="career_counseling"
+            >
               <i class="fas fa-user-tie" aria-hidden="true"></i>
               <strong>מסלול 2: ייעוץ קריירה</strong>
               <span>החזר דרך מסלול טיפול רגשי / סיוע משולב (לפי זכאות).</span>
@@ -546,7 +572,12 @@
         </section>
 
         <!-- ROUTE 1: Private lessons -->
-        <section class="card" id="private-lesson" aria-labelledby="pl-title">
+        <section
+          class="card"
+          id="private-lesson"
+          aria-labelledby="pl-title"
+          data-analytics-section="private_lessons_guide"
+        >
           <h2 id="pl-title">
             <i class="fas fa-chalkboard-user" aria-hidden="true"></i>
             מסלול 1 — החזר דרך שיעורים פרטיים
@@ -564,6 +595,8 @@
               <a
                 class="link-inline"
                 href="https://mushlam-frontend.wiz.digital.idf.il/m/v2fnx2a8lp"
+                data-analytics-event="refund_idf_form_click"
+                data-analytics-label="private_lessons"
                 target="_blank"
                 rel="noopener noreferrer"
                 >https://mushlam-frontend.wiz.digital.idf.il/m/v2fnx2a8lp</a
@@ -663,7 +696,12 @@
         </section>
 
         <!-- ROUTE 2: Career counseling -->
-        <section class="card" id="career-counseling" aria-labelledby="cc-title">
+        <section
+          class="card"
+          id="career-counseling"
+          aria-labelledby="cc-title"
+          data-analytics-section="career_counseling_guide"
+        >
           <h2 id="cc-title">
             <i class="fas fa-user-tie" aria-hidden="true"></i>
             מסלול 2 — החזר דרך ייעוץ קריירה
@@ -682,6 +720,8 @@
               <a
                 class="link-inline"
                 href="https://mushlam-frontend.wiz.digital.idf.il/m/3phvrlhpgr"
+                data-analytics-event="refund_idf_form_click"
+                data-analytics-label="career_counseling"
                 target="_blank"
                 rel="noopener noreferrer"
                 >https://mushlam-frontend.wiz.digital.idf.il/m/3phvrlhpgr</a
@@ -824,6 +864,8 @@
             <a
               class="wa-cta"
               href="https://wa.me/message/LI3KKETK2IV7E1"
+              data-analytics-event="refund_whatsapp_click"
+              data-analytics-label="bottom_cta"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="שליחת הודעה לאלמוג בוואטסאפ - נפתח בחלון חדש"
@@ -898,6 +940,98 @@
         document
           .querySelectorAll("[data-current-year]")
           .forEach((el) => (el.textContent = new Date().getFullYear()));
+
+        if (typeof gtag !== "function") return;
+
+        const referrer = document.referrer;
+        const entrySource =
+          referrer.includes("/Course/salaries/") &&
+          !referrer.includes("/refund-guide/")
+          ? "salary_analysis"
+          : referrer
+            ? "external_or_other_page"
+            : "direct";
+
+        gtag("event", "refund_guide_view", {
+          event_category: "Refund Guide",
+          event_label: "Refund guide loaded",
+          content_group: "Refund Guide",
+          entry_source: entrySource,
+          page_path: window.location.pathname,
+        });
+
+        document.addEventListener("click", function (event) {
+          const trackedLink = event.target.closest("[data-analytics-event]");
+          if (!trackedLink) return;
+
+          gtag("event", trackedLink.dataset.analyticsEvent, {
+            event_category: "Refund Guide",
+            event_label: trackedLink.dataset.analyticsLabel,
+            interaction_location: trackedLink.dataset.analyticsLabel,
+            link_url: trackedLink.href || undefined,
+            page_path: window.location.pathname,
+          });
+        });
+
+        const viewedSections = new Set();
+        const sectionObserver = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              const sectionName = entry.target.dataset.analyticsSection;
+              if (!entry.isIntersecting || viewedSections.has(sectionName)) return;
+
+              viewedSections.add(sectionName);
+              gtag("event", "refund_section_view", {
+                event_category: "Refund Guide",
+                event_label: sectionName,
+                section_name: sectionName,
+                page_path: window.location.pathname,
+              });
+              sectionObserver.unobserve(entry.target);
+            });
+          },
+          { threshold: 0.35 }
+        );
+
+        document
+          .querySelectorAll("[data-analytics-section]")
+          .forEach((section) => sectionObserver.observe(section));
+
+        const trackedDepths = new Set();
+        const depthThresholds = [25, 50, 75, 90];
+        let scrollScheduled = false;
+
+        function trackReadingDepth() {
+          const scrollableHeight =
+            document.documentElement.scrollHeight - window.innerHeight;
+          const depth = scrollableHeight > 0
+            ? Math.round((window.scrollY / scrollableHeight) * 100)
+            : 100;
+
+          depthThresholds.forEach(function (threshold) {
+            if (depth < threshold || trackedDepths.has(threshold)) return;
+
+            trackedDepths.add(threshold);
+            gtag("event", "refund_scroll_depth", {
+              event_category: "Refund Guide",
+              event_label: threshold + "%",
+              percent_scrolled: threshold,
+              page_path: window.location.pathname,
+            });
+          });
+          scrollScheduled = false;
+        }
+
+        window.addEventListener(
+          "scroll",
+          function () {
+            if (scrollScheduled) return;
+            scrollScheduled = true;
+            window.requestAnimationFrame(trackReadingDepth);
+          },
+          { passive: true }
+        );
+        trackReadingDepth();
       });
     </script>
 
