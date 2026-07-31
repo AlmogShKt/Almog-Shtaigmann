@@ -1,0 +1,801 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="מדריך ברור למילואימניקים: איך לקבל החזר על הקורס דרך שיעורים פרטיים או ייעוץ קריירה. חובה ליצור קשר לפני הרכישה."
+    />
+    <meta
+      property="og:title"
+      content="מדריך החזר למילואימניקים | Almog Shtaigmann"
+    />
+    <meta
+      property="og:description"
+      content="שני מסלולים לקבלת החזר על הקורס למשרתי מילואים - שיעורים פרטיים וייעוץ קריירה. חשוב: יש ליצור איתי קשר בוואטסאפ לפני הרכישה."
+    />
+    <title>מדריך החזר למילואימניקים | Almog Shtaigmann</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../../../assets/css/main.css" />
+    <link rel="stylesheet" href="../../../../assets/css/responsive.css" />
+    <link rel="stylesheet" href="../../../../assets/css/rtl.css" />
+    <link rel="stylesheet" href="../../../../assets/css/button-animation.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-34DFKV9RWM"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-34DFKV9RWM");
+    </script>
+
+    <link
+      rel="stylesheet"
+      href="../../../../assets/css/site-2026.css?v=20260724-1"
+    />
+    <script src="../../../../assets/js/theme-init.js?v=20260717-1"></script>
+  </head>
+
+  <body class="site-2026 legacy-page content-page">
+    <!-- Header -->
+    <header>
+      <div class="container header-container">
+        <p class="site-title" aria-label="Refund Guide">Refund Guide</p>
+
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span class="visually-hidden">Toggle navigation</span>
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="nav-main collapsed" id="main-nav">
+          <a href="../../../../index.html">Home</a>
+          <a href="../index.html">Salary Analysis</a>
+          <a href="../../../work-experience/index.html">Work Experience</a>
+          <a href="../../../projects/index.html">Personal Projects</a>
+          <a href="../../../c-lab/index.html">C-Lab Course</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <style>
+        /* Refund guide page theme layer: reuses the site's semantic tokens. */
+        body.site-2026 {
+          background: var(--site-paper) !important;
+          color: var(--site-ink) !important;
+        }
+        .content-page main {
+          background: var(--site-paper) !important;
+        }
+        .refund-wrap {
+          max-width: 900px;
+          margin: 0 auto;
+          padding: 20px 16px 60px;
+        }
+        .refund-wrap h1,
+        .refund-wrap h2,
+        .refund-wrap h3,
+        .refund-wrap h4 {
+          color: var(--site-ink) !important;
+          line-height: 1.35;
+        }
+        .refund-hero {
+          text-align: center;
+          padding: 28px 16px 8px;
+        }
+        .refund-hero__kicker {
+          display: inline-block;
+          font-weight: 700;
+          letter-spacing: 0.02em;
+          color: var(--site-accent);
+          margin-bottom: 10px;
+        }
+        .refund-hero h1 {
+          font-size: clamp(1.7rem, 4vw, 2.4rem);
+          margin: 6px 0 12px;
+        }
+        .refund-hero p {
+          color: var(--site-copy);
+          max-width: 640px;
+          margin: 0 auto;
+          font-size: 1.05rem;
+        }
+        .card {
+          background: var(--site-card);
+          border: 1px solid var(--site-line);
+          border-radius: var(--site-radius-md, 16px);
+          box-shadow: var(--site-shadow);
+          padding: 26px 24px;
+          margin: 22px 0;
+        }
+        .card h2 {
+          margin-top: 0;
+          font-size: 1.5rem;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+        .card h3 {
+          font-size: 1.15rem;
+          margin: 18px 0 8px;
+        }
+        .card p,
+        .card li {
+          color: var(--site-copy);
+          line-height: 1.7;
+        }
+        /* Critical warning callout */
+        .alert {
+          border-radius: var(--site-radius-md, 16px);
+          padding: 22px 22px;
+          margin: 18px 0;
+          border: 2px solid;
+        }
+        .alert h2,
+        .alert h3 {
+          margin-top: 0;
+        }
+        .alert--danger {
+          background: rgba(220, 53, 69, 0.08);
+          border-color: #dc3545;
+        }
+        .alert--danger h2 {
+          color: #b02a37 !important;
+        }
+        .alert--warning {
+          background: rgba(255, 193, 7, 0.12);
+          border-color: #e0a800;
+        }
+        .alert--info {
+          background: var(--site-sage, rgba(46, 117, 252, 0.06));
+          border-color: var(--site-accent);
+        }
+        .must-list {
+          list-style: none;
+          padding: 0;
+          margin: 14px 0 0;
+        }
+        .must-list li {
+          position: relative;
+          padding: 12px 44px 12px 14px;
+          margin: 10px 0;
+          background: var(--site-card);
+          border: 1px solid var(--site-line);
+          border-radius: 12px;
+          font-weight: 600;
+          color: var(--site-ink) !important;
+        }
+        .must-list li::before {
+          content: "\f071";
+          font-family: "Font Awesome 6 Free";
+          font-weight: 900;
+          color: #dc3545;
+          position: absolute;
+          inset-inline-start: 16px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        .wa-cta {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          background: #25d366;
+          color: #fff !important;
+          font-weight: 700;
+          font-size: 1.1rem;
+          padding: 14px 26px;
+          border-radius: 999px;
+          text-decoration: none;
+          box-shadow: 0 8px 22px rgba(37, 211, 102, 0.35);
+          transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+        .wa-cta:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 12px 28px rgba(37, 211, 102, 0.45);
+          color: #fff !important;
+        }
+        .wa-cta i {
+          font-size: 1.4rem;
+        }
+        .cta-center {
+          text-align: center;
+          margin: 18px 0 6px;
+        }
+        /* Route chooser */
+        .routes {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+          gap: 16px;
+          margin-top: 16px;
+        }
+        .route {
+          display: block;
+          text-decoration: none;
+          background: var(--site-card);
+          border: 1px solid var(--site-line);
+          border-radius: 14px;
+          padding: 18px;
+          transition: transform 0.15s ease, border-color 0.15s ease;
+        }
+        .route:hover {
+          transform: translateY(-3px);
+          border-color: var(--site-accent);
+        }
+        .route i {
+          font-size: 1.6rem;
+          color: var(--site-accent);
+        }
+        .route strong {
+          display: block;
+          margin: 8px 0 4px;
+          color: var(--site-ink) !important;
+          font-size: 1.1rem;
+        }
+        .route span {
+          color: var(--site-copy);
+          font-size: 0.95rem;
+        }
+        /* Steps */
+        ol.steps {
+          counter-reset: step;
+          list-style: none;
+          padding: 0;
+          margin: 12px 0;
+        }
+        ol.steps > li {
+          position: relative;
+          padding: 4px 52px 16px 8px;
+          margin: 0;
+        }
+        ol.steps > li::before {
+          counter-increment: step;
+          content: counter(step);
+          position: absolute;
+          inset-inline-start: 8px;
+          top: 0;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          background: var(--site-accent);
+          color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 700;
+        }
+        ol.steps > li strong {
+          color: var(--site-ink) !important;
+        }
+        .pill {
+          display: inline-block;
+          background: var(--site-sage, rgba(46, 117, 252, 0.1));
+          border: 1px solid var(--site-accent);
+          color: var(--site-ink) !important;
+          border-radius: 8px;
+          padding: 2px 10px;
+          font-weight: 600;
+          margin: 0 2px;
+        }
+        /* Eligibility table */
+        .elig {
+          width: 100%;
+          border-collapse: collapse;
+          margin: 12px 0;
+          font-size: 0.98rem;
+        }
+        .elig caption {
+          text-align: start;
+          font-weight: 700;
+          color: var(--site-ink);
+          margin-bottom: 8px;
+        }
+        .elig th,
+        .elig td {
+          border: 1px solid var(--site-line);
+          padding: 10px 12px;
+          text-align: start;
+          color: var(--site-copy);
+        }
+        .elig th {
+          background: var(--site-sage, rgba(46, 117, 252, 0.06));
+          color: var(--site-ink);
+        }
+        .checklist {
+          list-style: none;
+          padding: 0;
+        }
+        .checklist li {
+          position: relative;
+          padding: 8px 30px 8px 8px;
+        }
+        .checklist li::before {
+          content: "\f00c";
+          font-family: "Font Awesome 6 Free";
+          font-weight: 900;
+          color: #2e8b57;
+          position: absolute;
+          inset-inline-start: 4px;
+          top: 9px;
+        }
+        .link-inline {
+          color: var(--site-accent);
+          word-break: break-all;
+        }
+        .link-inline:hover {
+          color: var(--site-accent-dark, var(--site-accent));
+        }
+        .note {
+          font-size: 0.92rem;
+          color: var(--site-copy);
+        }
+      </style>
+
+      <div class="refund-wrap">
+        <!-- Hero -->
+        <section class="refund-hero" aria-labelledby="page-title">
+          <span class="refund-hero__kicker">מדריך למשרתי מילואים 🎗️</span>
+          <h1 id="page-title">איך מקבלים החזר על הקורס</h1>
+          <p>
+            אם שירתתם במילואים, ייתכן שאתם זכאים להחזר כספי על הקורס דרך אחד משני
+            מסלולים רשמיים. המדריך הזה מסביר בפשטות מה לעשות, איך לבדוק אם אתם
+            זכאים, ואיך להגיש נכון.
+          </p>
+        </section>
+
+        <!-- CRITICAL: contact before buying -->
+        <section class="alert alert--danger" aria-labelledby="before-buy">
+          <h2 id="before-buy">
+            <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
+            עצרו! קראו לפני שאתם רוכשים
+          </h2>
+          <p>
+            כדי לקבל את ההחזר בצורה בטוחה ונכונה, <strong>חובה</strong> ליצור
+            איתי קשר בוואטסאפ <strong>לפני</strong> רכישת הקורס. אל תרכשו לבד לפני
+            שדיברנו — כך אני מוודא שתקבלו את המסמכים הנכונים ותהיו זכאים להחזר.
+          </p>
+          <ul class="must-list">
+            <li>ראשית — דברו איתי בוואטסאפ לפני הרכישה.</li>
+            <li>
+              את הבקשה להחזר מגישים עם הקבלה שאני מנפיק לכם — ולא הקבלה מהאתר!
+            </li>
+            <li>ודאו שאתם עומדים בתנאי הזכאות (מפורטים למטה) לפני התשלום.</li>
+          </ul>
+          <div class="cta-center">
+            <a
+              class="wa-cta"
+              href="https://wa.me/message/LI3KKETK2IV7E1"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="שליחת הודעה לאלמוג בוואטסאפ - נפתח בחלון חדש"
+            >
+              <i class="fab fa-whatsapp" aria-hidden="true"></i>
+              <span>דברו איתי בוואטסאפ לפני הרכישה</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- The receipt rule, emphasized -->
+        <section class="alert alert--warning" aria-labelledby="receipt-rule">
+          <h3 id="receipt-rule">
+            <i class="fas fa-receipt" aria-hidden="true"></i>
+            הקבלה להגשה — ממני, לא מהאתר
+          </h3>
+          <p>
+            לצורך ההחזר יש להגיש את
+            <strong>הקבלה / חשבונית המס שאני מנפיק לכם</strong>. הקבלה האוטומטית
+            שמתקבלת מאתר הקורס <strong>אינה</strong> הקבלה שיש להגיש. בקבלה שלי
+            יופיע סוג השירות הנכון (שיעור פרטי או ייעוץ קריירה) כפי שהמסלול דורש.
+          </p>
+        </section>
+
+        <!-- Overview / route chooser -->
+        <section class="card" aria-labelledby="routes-title">
+          <h2 id="routes-title">
+            <i class="fas fa-route" aria-hidden="true"></i>
+            שני מסלולים אפשריים להחזר
+          </h2>
+          <p>
+            בחרו את המסלול שמתאים לזכאות שלכם. אפשר להגיש רק במסלול שאתם עומדים
+            בתנאים שלו. לחצו כדי לקפוץ להסבר המלא:
+          </p>
+          <div class="routes">
+            <a class="route" href="#private-lesson">
+              <i class="fas fa-chalkboard-user" aria-hidden="true"></i>
+              <strong>מסלול 1: שיעורים פרטיים</strong>
+              <span>החזר עד 3,000 ₪ דרך קרן הסיוע למילואים (לפי מדרג וימים).</span>
+            </a>
+            <a class="route" href="#career-counseling">
+              <i class="fas fa-user-tie" aria-hidden="true"></i>
+              <strong>מסלול 2: ייעוץ קריירה</strong>
+              <span>החזר דרך מסלול טיפול רגשי / סיוע משולב (לפי זכאות).</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- ROUTE 1: Private lessons -->
+        <section class="card" id="private-lesson" aria-labelledby="pl-title">
+          <h2 id="pl-title">
+            <i class="fas fa-chalkboard-user" aria-hidden="true"></i>
+            מסלול 1 — החזר דרך שיעורים פרטיים
+          </h2>
+          <p>
+            ההגשה מתבצעת תחת הקטגוריה <span class="pill">שיעורים פרטיים</span>
+            בלבד. הקבלה שאנפיק לכם היא עבור <strong>שיעור פרטי</strong>, ולכן גם
+            הבקשה בטופס צריכה להיות מוגשת בהתאם.
+          </p>
+
+          <h3>איך מגישים — שלב אחרי שלב</h3>
+          <ol class="steps">
+            <li>
+              <strong>נכנסים לטופס</strong> קרן הסיוע למילואים:<br />
+              <a
+                class="link-inline"
+                href="https://mushlam-frontend.wiz.digital.idf.il/m/v2fnx2a8lp"
+                target="_blank"
+                rel="noopener noreferrer"
+                >https://mushlam-frontend.wiz.digital.idf.il/m/v2fnx2a8lp</a
+              >
+            </li>
+            <li>
+              בשדה <strong>נושא הפנייה</strong> בוחרים:
+              <span class="pill"
+                >פיצוי בגין שיעורים פרטיים ביטול קורס או קורס חוזר</span
+              >
+            </li>
+            <li>
+              בשאלה <strong>עבור מה הבקשה</strong> בוחרים:
+              <span class="pill">עזרה בשיעורים פרטיים</span>
+            </li>
+            <li>
+              ממלאים את הפרטים האישיים ומצרפים:
+              <ul>
+                <li>אישור לימודים רשמי ועדכני לשנת הלימודים הרלוונטית</li>
+                <li>
+                  קבלה או חשבונית מס עבור שיעור פרטי (הקבלה שקיבלתם ממני) — יופיע
+                  בה שהתשלום הוא עבור <strong>שיעור פרטי</strong>
+                </li>
+              </ul>
+            </li>
+          </ol>
+
+          <div class="alert alert--danger" style="margin-top: 18px">
+            <h3><i class="fas fa-ban" aria-hidden="true"></i> אין לבחור</h3>
+            <p>
+              הבקשה מוגשת כהחזר עבור <strong>שיעורים פרטיים</strong>. אל תבחרו:
+            </p>
+            <ul>
+              <li>ביטול קורס</li>
+              <li>דחיית קורס</li>
+              <li>קורס עזר</li>
+            </ul>
+          </div>
+
+          <h3>תנאי הזכאות</h3>
+          <table class="elig">
+            <caption>שנת הלימודים תשפ״ו (אוקטובר 2025 – ספטמבר 2026)</caption>
+            <thead>
+              <tr>
+                <th>דרישה / מדרג</th>
+                <th>גובה ההחזר</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>לפחות 21 ימי מילואים במהלך שנת הלימודים</td>
+                <td>תנאי סף</td>
+              </tr>
+              <tr>
+                <td>מדרג א+ ו-א׳</td>
+                <td>עד 3,000 ₪</td>
+              </tr>
+              <tr>
+                <td>מדרג ב׳</td>
+                <td>עד 2,500 ₪</td>
+              </tr>
+              <tr>
+                <td>מדרגים ג׳–ה׳</td>
+                <td>עד 2,000 ₪</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="elig">
+            <caption>שנות הלימודים תשפ״ד ותשפ״ה (משרתי צו 8 בחרבות ברזל)</caption>
+            <thead>
+              <tr>
+                <th>דרישה</th>
+                <th>גובה ההחזר</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>לוחמים שביצעו 100 ימים ומעלה</td>
+                <td>עד 3,000 ₪</td>
+              </tr>
+              <tr>
+                <td>כלל המשרתים שביצעו 21 ימים ומעלה</td>
+                <td>עד 2,000 ₪</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>לפני השליחה — רשימת בדיקה</h3>
+          <ul class="checklist">
+            <li>הקבלה ברורה וקריאה</li>
+            <li>הפרטים בקבלה תואמים לפרטים שהוזנו בטופס</li>
+            <li>הסכום שהוזן תואם לסכום שמופיע בקבלה</li>
+            <li>צורף אישור לימודים רשמי ועדכני</li>
+            <li>הבקשה הוגשה תחת <strong>שיעורים פרטיים</strong></li>
+          </ul>
+        </section>
+
+        <!-- ROUTE 2: Career counseling -->
+        <section class="card" id="career-counseling" aria-labelledby="cc-title">
+          <h2 id="cc-title">
+            <i class="fas fa-user-tie" aria-hidden="true"></i>
+            מסלול 2 — החזר דרך ייעוץ קריירה
+          </h2>
+          <p>
+            הבקשה מוגשת דרך מסלול הסיוע לטיפול רגשי או טיפול משולב, תחת סוג הטיפול
+            <span class="pill">ייעוץ קריירה</span>. חשוב לבחור את המסלול המתאים
+            לזכאות שלכם ולצרף קבלה רשמית (שקיבלתם ממני) שבה מופיעים שם נותן השירות
+            וסוג השירות.
+          </p>
+
+          <h3>איך מגישים — שלב אחרי שלב</h3>
+          <ol class="steps">
+            <li>
+              <strong>נכנסים לטופס</strong> דרך הקישור:<br />
+              <a
+                class="link-inline"
+                href="https://mushlam-frontend.wiz.digital.idf.il/m/3phvrlhpgr"
+                target="_blank"
+                rel="noopener noreferrer"
+                >https://mushlam-frontend.wiz.digital.idf.il/m/3phvrlhpgr</a
+              >
+            </li>
+            <li>
+              בשדה <strong>נושא הפנייה</strong> בוחרים את האפשרות המתאימה לזכאות
+              שלכם:
+              <ul>
+                <li>בקשה להחזר עבור סיוע משולב 2025</li>
+                <li>בקשה להחזר עבור טיפול רגשי</li>
+              </ul>
+            </li>
+            <li>
+              בוחרים בסוג הטיפול:
+              <span class="pill">ייעוץ קריירה</span>
+            </li>
+            <li>ממלאים את הפרטים האישיים ואת פרטי השירות.</li>
+            <li>
+              מצרפים קבלה רשמית (חשבונית מס / קבלה) שבה חייבים להופיע:
+              <ul>
+                <li>שם נותן השירות או המכון</li>
+                <li>סוג השירות (צריך להופיע כ<strong>ייעוץ קריירה</strong>)</li>
+                <li>הסכום ששולם</li>
+                <li>תאריך התשלום</li>
+              </ul>
+            </li>
+            <li>בודקים שכל הפרטים בטופס תואמים לקבלה — ושולחים.</li>
+          </ol>
+
+          <h3>אפשרות א׳ — טיפול משולב (אישי או זוגי)</h3>
+          <p class="note">
+            המסלול מיועד לסיוע במימון טיפולים לחיזוק החוסן האישי, הזוגי והמשפחתי.
+            תחת ההתפתחות האישית נכללים גם אימון אישי, קבוצות תמיכה, ייעוץ קריירה
+            וייעוץ פיננסי.
+          </p>
+          <table class="elig">
+            <caption>תנאי זכאות למענק משולב ייעודי לשנת 2025</caption>
+            <thead>
+              <tr>
+                <th>דרישה / מערך</th>
+                <th>גובה ההחזר</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  60 ימי שמ״פ במצטבר בצו 8 מתחילת המלחמה (7.10.2023), מתוכם לפחות
+                  30 ימים בשנת 2025
+                </td>
+                <td>תנאי סף</td>
+              </tr>
+              <tr>
+                <td>מערך הלוחם בייעוד 0–2</td>
+                <td>עד 2,500 ₪</td>
+              </tr>
+              <tr>
+                <td>יתר המערכים</td>
+                <td>עד 1,000 ₪</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="note">ניתן להגיש בקשות במסלול זה עד סוף שנת 2027.</p>
+
+          <h3>אפשרות ב׳ — טיפול רגשי</h3>
+          <p class="note">
+            גם במסלול זה ייעוץ קריירה מופיע כאחד מסוגי השירותים המותרים תחת
+            ההתפתחות האישית.
+          </p>
+          <table class="elig">
+            <caption>תנאי זכאות לסיוע כללי לטיפול רגשי</caption>
+            <thead>
+              <tr>
+                <th>דרישה</th>
+                <th>פרטים</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>שירות נדרש</td>
+                <td>30 ימי שמ״פ בצו 8 במצטבר בין 7.10.2023 ל-31.12.2025</td>
+              </tr>
+              <tr>
+                <td>גובה ההחזר</td>
+                <td>עד 1,500 ₪</td>
+              </tr>
+              <tr>
+                <td>עבור מי</td>
+                <td>משרת/ת המילואים, בן/בת הזוג, או ילדים עד גיל 14</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="note">ניתן להגיש בקשות במסלול זה עד סוף שנת 2026.</p>
+
+          <h3>מסמכים שצריך לצרף</h3>
+          <ul>
+            <li>קבלה רשמית או חשבונית מס / קבלה (זו שקיבלתם ממני)</li>
+            <li>מסמך ברור וקריא</li>
+            <li>קבלה שבה מופיעים שם נותן השירות וסוג השירות</li>
+            <li>מסמכים נוספים אם הטופס מבקש, בהתאם למסלול</li>
+          </ul>
+          <p class="note"><strong>שימו לב:</strong> לא יתקבלו אישורים בכתב יד.</p>
+
+          <div class="alert alert--info" style="margin-top: 18px">
+            <h3>
+              <i class="fas fa-circle-info" aria-hidden="true"></i> חשוב לדעת
+            </h3>
+            <ul>
+              <li>ההגשה מתבצעת תחת <strong>ייעוץ קריירה</strong></li>
+              <li>יש לבחור את מסלול הסיוע המתאים לתנאי הזכאות שלכם</li>
+              <li>אין להגיש במסלול שאינכם עומדים בתנאים שלו</li>
+              <li>פרטי השירות בטופס חייבים להתאים לפרטים שבקבלה</li>
+              <li>ההחזר כפוף לבדיקה ולאישור של הגוף המטפל בבקשה</li>
+              <li>אין להשתמש בסיוע לרכישת מוצרים או רכיבים אלקטרוניים</li>
+            </ul>
+          </div>
+
+          <h3>לפני השליחה — רשימת בדיקה</h3>
+          <ul class="checklist">
+            <li>בחרתם במסלול הנכון</li>
+            <li>בחרתם <strong>ייעוץ קריירה</strong> כסוג השירות</li>
+            <li>הקבלה רשמית וברורה</li>
+            <li>שם נותן השירות מופיע בקבלה</li>
+            <li>סוג השירות מופיע כייעוץ קריירה</li>
+            <li>הסכום והתאריך תואמים לפרטים שהוזנו בטופס</li>
+          </ul>
+        </section>
+
+        <!-- Final reminder + CTA -->
+        <section class="alert alert--info" aria-labelledby="final-cta">
+          <h2 id="final-cta">
+            <i class="fas fa-comments" aria-hidden="true"></i>
+            יש שאלה? דברו איתי לפני שאתם מתחילים
+          </h2>
+          <p>
+            כדי שהכול יתנהל חלק ותהיו זכאים להחזר — צרו איתי קשר בוואטסאפ עוד לפני
+            רכישת הקורס, ואני אלווה אתכם בתהליך ואנפיק לכם את הקבלה הנכונה להגשה.
+          </p>
+          <div class="cta-center">
+            <a
+              class="wa-cta"
+              href="https://wa.me/message/LI3KKETK2IV7E1"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="שליחת הודעה לאלמוג בוואטסאפ - נפתח בחלון חדש"
+            >
+              <i class="fab fa-whatsapp" aria-hidden="true"></i>
+              <span>שליחת הודעה בוואטסאפ</span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-content">
+        <div class="footer-info">
+          <p>
+            &copy; <span data-current-year>2026</span> Almog Shtaigmann. All
+            rights reserved.
+          </p>
+          <p>
+            View the source code on
+            <a href="https://github.com/AlmogShKt/" target="_blank">GitHub</a>.
+          </p>
+        </div>
+        <div class="footer-links">
+          <ul class="social-links-footer">
+            <li>
+              <a href="mailto:a.shtaigmann@gmail.com" aria-label="Email"
+                ><i class="fas fa-envelope"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/almog-shtaigmann"
+                target="_blank"
+                aria-label="LinkedIn"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/almogshkt"
+                target="_blank"
+                aria-label="GitHub"
+                ><i class="fab fa-github"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-metrics text-center mt-md">
+        <img
+          src="https://komarev.com/ghpvc/?username=almogshkt&color=blue"
+          alt="Site-Views"
+        />
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle + current year
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navMain = document.querySelector(".nav-main");
+        if (menuToggle && navMain) {
+          menuToggle.addEventListener("click", function () {
+            const isExpanded = this.getAttribute("aria-expanded") === "true";
+            this.setAttribute("aria-expanded", !isExpanded);
+            navMain.classList.toggle("collapsed");
+          });
+        }
+        document
+          .querySelectorAll("[data-current-year]")
+          .forEach((el) => (el.textContent = new Date().getFullYear()));
+      });
+    </script>
+
+    <!-- Accessibility Widget -->
+    <script src="../../../../assets/js/accessibility.js" defer></script>
+    <script src="../../../../assets/js/site-2026.js?v=20260724-1"></script>
+  </body>
+</html>
