@@ -398,6 +398,7 @@
             </p>
             <a
               href="refund-guide/index.html"
+              data-analytics="refund-guide-entry"
               style="
                 display: inline-flex;
                 align-items: center;
@@ -1004,6 +1005,23 @@
 
       const currentYear = document.getElementById("current-year");
       if (currentYear) currentYear.textContent = new Date().getFullYear();
+
+      const refundGuideEntry = document.querySelector(
+        '[data-analytics="refund-guide-entry"]'
+      );
+      if (refundGuideEntry) {
+        refundGuideEntry.addEventListener("click", function () {
+          if (typeof gtag === "function") {
+            gtag("event", "refund_guide_entry_click", {
+              event_category: "Refund Guide",
+              event_label: "Salary page refund guide button",
+              source_page: "salary_analysis",
+              destination_page: "refund_guide",
+              link_url: this.href,
+            });
+          }
+        });
+      }
     </script>
 
     <!-- Accessibility Widget -->
