@@ -1,6 +1,9 @@
 // Salary data structure
 // Configuration: Set to true to use Google Sheets data, false for hardcoded data
 const USE_GOOGLE_SHEETS_DATA = true;
+const GOOGLE_SHEETS_URL =
+  "https://docs.google.com/spreadsheets/d/1U-RbrFvbKeileTTnS08HyFP_IS0mWkhBZ7IHKOTgBdk/gviz/tq?tqx=out:json&gid=1400753440";
+const GOOGLE_SHEETS_TIMEOUT_MS = 8000;
 
 const salaryData = {
   companies: {
@@ -178,11 +181,34 @@ async function fetchSalaryData() {
  * @returns {Promise<Object>} Promise that resolves to processed salary data
  */
 async function fetchFromGoogleSheets() {
-  const response = await fetch(
-    "https://docs.google.com/spreadsheets/d/1U-RbrFvbKeileTTnS08HyFP_IS0mWkhBZ7IHKOTgBdk/gviz/tq?tqx=out:json&gid=1400753440"
+  const controller = new AbortController();
+  const timeoutId = setTimeout(
+    () => controller.abort(),
+    GOOGLE_SHEETS_TIMEOUT_MS
   );
+  let response;
+
+  try {
+    response = await fetch(GOOGLE_SHEETS_URL, {
+      signal: controller.signal,
+      cache: "no-store",
+    });
+  } finally {
+    clearTimeout(timeoutId);
+  }
+
+  if (!response.ok) {
+    throw new Error(`Google Sheets returned HTTP ${response.status}`);
+  }
+
   const data = await response.text();
-  const json = JSON.parse(data.substring(47).slice(0, -2));
+  const payloadStart = data.indexOf("{");
+  const payloadEnd = data.lastIndexOf("}");
+  if (payloadStart === -1 || payloadEnd === -1) {
+    throw new Error("Google Sheets returned an invalid response");
+  }
+
+  const json = JSON.parse(data.slice(payloadStart, payloadEnd + 1));
   const rows = json.table.rows;
 
   const rawSalaryData = rows.map((row) => {
@@ -199,6 +225,9 @@ async function fetchFromGoogleSheets() {
       specialNotes: cells[8]?.v || "", // Column 9 - Special notes
     };
   });
+
+  // Keep the successful response so charts and the table share one request.
+  window.currentRawSalaryData = rawSalaryData;
 
   // Process and categorize the data
   return processGoogleSheetsData(rawSalaryData);
@@ -553,70 +582,46 @@ async function initializeSalaryCharts() {
       "other-average"
     ).textContent = `ממוצע כללי: ₪${otherAvg} לשעה`;
 
-    // Create charts for each category
-    createChart(
-      "americanChart",
-      data.companies.american,
-      getSalariesForCompanies(data.companies.american, "min"),
-      getSalariesForCompanies(data.companies.american, "avg"),
-      getSalariesForCompanies(data.companies.american, "max")
-    );
-
-    createChart(
-      "israeliChart",
-      data.companies.israeli,
-      getSalariesForCompanies(data.companies.israeli, "min"),
-      getSalariesForCompanies(data.companies.israeli, "avg"),
-      getSalariesForCompanies(data.companies.israeli, "max")
-    );
-
-    createChart(
-      "otherChart",
-      data.companies.other,
-      getSalariesForCompanies(data.companies.other, "min"),
-      getSalariesForCompanies(data.companies.other, "avg"),
-      getSalariesForCompanies(data.companies.other, "max")
-    );
-
-    // Populate the data table
-    if (USE_GOOGLE_SHEETS_DATA) {
-      // If using Google Sheets, we need to get the raw data for the table
+    // Charts are optional. A blocked CDN must never prevent table rendering.
+    if (typeof Chart === "function") {
       try {
-        const response = await fetch(
-          "https://docs.google.com/spreadsheets/d/1U-RbrFvbKeileTTnS08HyFP_IS0mWkhBZ7IHKOTgBdk/gviz/tq?tqx=out:json&gid=1400753440"
+        createChart(
+          "americanChart",
+          data.companies.american,
+          getSalariesForCompanies(data.companies.american, "min"),
+          getSalariesForCompanies(data.companies.american, "avg"),
+          getSalariesForCompanies(data.companies.american, "max")
         );
-        const rawData = await response.text();
-        const json = JSON.parse(rawData.substring(47).slice(0, -2));
-        const rows = json.table.rows;
-
-        const googleSheetsData = rows.map((row) => {
-          const cells = row.c;
-          return {
-            timestamp: cells[0]?.v || "",
-            isStudent: cells[1]?.v || "",
-            company: cells[2]?.v || "",
-            jobTitle: cells[3]?.v || "",
-            semester: cells[4]?.v || "",
-            previousExperience: cells[5]?.v || "",
-            hourlySalary: cells[6]?.v || 0,
-            pensionFund: cells[7]?.v || "",
-            specialNotes: cells[8]?.v || "",
-          };
-        });
-
-        // For Google Sheets data, populate table with raw responses
-        populateTableFromGoogleSheets(googleSheetsData);
-      } catch (googleError) {
-        console.error(
-          "Error loading Google Sheets data for table:",
-          googleError
+        createChart(
+          "israeliChart",
+          data.companies.israeli,
+          getSalariesForCompanies(data.companies.israeli, "min"),
+          getSalariesForCompanies(data.companies.israeli, "avg"),
+          getSalariesForCompanies(data.companies.israeli, "max")
         );
-        // Fallback to processed data
-        populateDataTable(data);
+        createChart(
+          "otherChart",
+          data.companies.other,
+          getSalariesForCompanies(data.companies.other, "min"),
+          getSalariesForCompanies(data.companies.other, "avg"),
+          getSalariesForCompanies(data.companies.other, "max")
+        );
+      } catch (chartError) {
+        console.error("Error rendering salary charts:", chartError);
+        markChartsUnavailable();
       }
     } else {
-      // Use processed hardcoded data
+      console.warn("Chart.js unavailable; continuing with the salary table");
+      markChartsUnavailable();
+    }
+
+    // Populate the data table
+    if (window.currentRawSalaryData?.length) {
+      populateTableFromGoogleSheets(window.currentRawSalaryData);
+      setDataSourceStatus(true);
+    } else {
       populateDataTable(data);
+      setDataSourceStatus(false);
     }
   } catch (error) {
     console.error("Error loading salary data:", error);
@@ -639,6 +644,27 @@ async function initializeSalaryCharts() {
             `;
     }
   }
+}
+
+function setDataSourceStatus(isLive) {
+  const status = document.querySelector("#salary-data-source > div span:last-child");
+  if (!status) return;
+
+  status.textContent = isLive
+    ? "מציג נתונים חיים מגוגל שיטס (טופס)"
+    : "מציג נתונים שמורים; הנתונים החיים אינם זמינים כרגע";
+}
+
+function markChartsUnavailable() {
+  document.querySelectorAll(".chart-section").forEach((section) => {
+    const container = section.querySelector(".chart-container");
+    if (!container) return;
+
+    container.style.height = "auto";
+    container.style.minHeight = "0";
+    container.innerHTML =
+      '<p class="text-center" role="status">לא ניתן להציג את התרשים כרגע. הנתונים המלאים זמינים בטבלה שבהמשך.</p>';
+  });
 }
 
 // Data table management functions
