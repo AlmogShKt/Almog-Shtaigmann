@@ -200,16 +200,19 @@
         .chart-section {
           margin: 40px 0;
           width: 100%;
-          overflow-x: auto;
+          min-width: 0;
         }
 
         .chart-container {
           position: relative;
           width: 100%;
+          max-width: 100%;
+          min-width: 0;
           min-height: 400px;
           height: 400px;
           margin: 20px auto;
           padding: 0 20px;
+          box-sizing: border-box;
         }
 
         .chart-container canvas {
@@ -219,24 +222,12 @@
           display: block;
         }
 
-        /* Safari specific fixes */
-        @media screen and (-webkit-min-device-pixel-ratio: 0) {
-          .chart-container {
-            min-width: 800px;
-            width: 100%;
-          }
-
-          .chart-section {
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-          }
-        }
-
         /* Mobile responsiveness */
         @media (max-width: 768px) {
           .chart-container {
-            min-width: 600px;
-            padding: 0 10px;
+            height: 320px;
+            min-height: 320px;
+            padding: 0;
           }
         }
 
@@ -297,9 +288,18 @@
 
         /* Theme-aware table and search styles. */
         #salary-table {
+          min-width: 850px;
           background: var(--site-card) !important;
           border: 1px solid var(--site-line);
           box-shadow: none !important;
+        }
+
+        .table-container {
+          width: 100%;
+          max-width: 100%;
+          overflow-x: auto;
+          overscroll-behavior-inline: contain;
+          -webkit-overflow-scrolling: touch;
         }
 
         #salary-table thead tr {
@@ -349,6 +349,11 @@
         @media (max-width: 768px) {
           .section {
             padding: 22px 16px;
+          }
+
+          .section > .container {
+            width: 100% !important;
+            padding-inline: 0;
           }
 
           .search-container {
