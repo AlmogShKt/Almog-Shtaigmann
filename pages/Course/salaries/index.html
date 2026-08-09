@@ -48,10 +48,10 @@
       gtag("config", "G-34DFKV9RWM");
     </script>
 
-    <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Chart.js is hosted locally so mobile privacy/content filters cannot block it. -->
+    <script src="../../../assets/vendor/chart.umd.min.js?v=4.5.1"></script>
     <!-- Salary Data -->
-    <script src="salary-data.js?v=20260718-1"></script>
+    <script src="salary-data.js?v=20260809-1"></script>
       <link rel="stylesheet" href="../../../assets/css/site-2026.css?v=20260724-1" />
       <script src="../../../assets/js/theme-init.js?v=20260717-1"></script>
   </head>
@@ -494,6 +494,7 @@
 
           <!-- Data Source Info -->
           <div
+            id="salary-data-source"
             class="data-source-info"
             style="text-align: center; margin-bottom: 20px"
           >
