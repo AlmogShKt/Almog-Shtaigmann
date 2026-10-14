@@ -288,6 +288,37 @@
           color: var(--site-copy);
           font-size: 0.95rem;
         }
+        /* Current availability notice for the private lessons route. */
+        .private-lesson-unavailable {
+          overflow: hidden;
+        }
+        .private-lesson-status {
+          position: relative;
+          z-index: 1;
+          margin: 12px -36px 36px;
+          padding: 18px 42px;
+          background: #9f2433;
+          color: #fff;
+          text-align: center;
+          transform: rotate(-3deg);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+        }
+        .private-lesson-status strong,
+        .private-lesson-status span {
+          display: block;
+          color: #fff !important;
+          line-height: 1.6;
+        }
+        .private-lesson-status strong {
+          font-size: clamp(1rem, 2.5vw, 1.2rem);
+        }
+        @media (max-width: 640px) {
+          .private-lesson-status {
+            margin-bottom: 28px;
+            padding: 16px 42px;
+          }
+        }
+
         /* Steps */
         ol.steps {
           counter-reset: step;
@@ -573,11 +604,15 @@
 
         <!-- ROUTE 1: Private lessons -->
         <section
-          class="card"
+          class="card private-lesson-unavailable"
           id="private-lesson"
           aria-labelledby="pl-title"
           data-analytics-section="private_lessons_guide"
         >
+          <div class="private-lesson-status" role="note" aria-label="עדכון זמינות מסלול שיעורים פרטיים">
+            <strong>נכון לעכשיו, לא ניתן להגיש בקשה למימוש הזכאות במסלול שיעורים פרטיים.</strong>
+            <span>אעדכן כאן אם האפשרות תתחדש בשנה הבאה.</span>
+          </div>
           <h2 id="pl-title">
             <i class="fas fa-chalkboard-user" aria-hidden="true"></i>
             מסלול 1 — החזר דרך שיעורים פרטיים
